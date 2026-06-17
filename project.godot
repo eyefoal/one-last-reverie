@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="OneLastReverie"
+run/main_scene="uid://by07ewj5lnuni"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -24,6 +25,9 @@ DevGlobal="*uid://bcxvnn8tjd8y5"
 
 window/size/viewport_width=640
 window/size/viewport_height=360
+window/size/window_width_override=640
+window/size/window_height_override=360
+window/stretch/aspect="expand"
 
 [editor_plugins]
 
@@ -38,6 +42,10 @@ folder_colors={
 "res://main/": "green",
 "res://systems/": "yellow"
 }
+
+[gui]
+
+theme/custom_font="uid://cc5ys13inmio4"
 
 [input]
 

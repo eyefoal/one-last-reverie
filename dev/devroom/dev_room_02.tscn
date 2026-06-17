@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="3_5nch5"]
 [ext_resource type="Resource" uid="uid://bshavsh44v6lt" path="res://dev/dialogue/gbkitties.dialogue" id="4_h3erh"]
 [ext_resource type="Resource" uid="uid://c404hclbs62n0" path="res://dev/dialogue/devdiary01.dialogue" id="4_v70wk"]
-[ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://dev/devroom/32gradient.tres" id="5_eoslb"]
+[ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://dev/lofi/32gradient.tres" id="5_eoslb"]
 [ext_resource type="PackedScene" uid="uid://bigr4kk0fgl8r" path="res://dev/lofi/dev_lofi.tscn" id="6_3jv3l"]
 [ext_resource type="Resource" uid="uid://d2iia7bdbk27j" path="res://dev/dialogue/nathan.dialogue" id="6_5nch5"]
 
@@ -107,7 +107,6 @@ texture = ExtResource("5_eoslb")
 
 [node name="DevLofi" parent="." unique_id=1286364634 instance=ExtResource("6_3jv3l")]
 position = Vector2(325, 256)
-SPEED = 67.67
 
 [node name="Camera2D" type="Camera2D" parent="DevLofi" unique_id=1123730391]
 zoom = Vector2(2, 2)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bigr4kk0fgl8r"]
 
 [ext_resource type="Script" uid="uid://bdmxfkocr4i08" path="res://dev/lofi/dev_lofi.gd" id="1_8lx6r"]
-[ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://dev/devroom/32gradient.tres" id="3_a3vhr"]
+[ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://dev/lofi/32gradient.tres" id="3_a3vhr"]
 [ext_resource type="Texture2D" uid="uid://ccufhl3tre686" path="res://dev/lofi/loafsheet.png" id="4_1ehcx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nnaav"]
@@ -117,7 +117,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_qwprc"]
 resource_name = "walk_down"
-length = 0.28067973
+length = 0.24196528
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -126,7 +126,7 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.13333334, 0.26666668),
+"times": PackedFloat32Array(0, 0.10550734, 0.2315817),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [2, 1, 0]
@@ -348,7 +348,6 @@ shape = SubResource("CircleShape2D_nnaav")
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=561724238]
 position = Vector2(0, 2)
 color = Color(0.88715106, 0.8528852, 0, 1)
-energy = 0.88
 texture = ExtResource("3_a3vhr")
 
 [node name="CheckDetection" type="Area2D" parent="." unique_id=1879264087]
