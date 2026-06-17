@@ -11,13 +11,16 @@ config_version=5
 [application]
 
 config/name="OneLastReverie"
-run/main_scene="uid://by07ewj5lnuni"
+config/description="This is a game about playing games to unlock more games. 
+"
+run/main_scene="uid://f6sltxv64kdp"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://dqwalpxxoamga"
 
 [autoload]
 
 DialogueManager="*uid://c3rodes2l3gxb"
+Main="*uid://cq70tdov0aa3t"
 
 [display]
 

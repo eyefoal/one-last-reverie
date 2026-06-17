@@ -48,7 +48,7 @@ texture = ExtResource("4_dlv6m")
 
 [node name="DevLofi" parent="." unique_id=1286364634 instance=ExtResource("1_wn2e7")]
 position = Vector2(325, 256)
-SPEED = 50.5
+SPEED = 67.5
 
 [node name="Camera2D" type="Camera2D" parent="DevLofi" unique_id=1123730391]
 zoom = Vector2(2, 2)
