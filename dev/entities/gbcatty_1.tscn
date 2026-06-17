@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://ctb3w35vbedu0"]
+
+[ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="1_m4ps2"]
+[ext_resource type="Resource" uid="uid://bshavsh44v6lt" path="res://dev/dialogue/gbkitties.dialogue" id="2_p46ai"]
+[ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://dev/lofi/32gradient.tres" id="3_6kd0j"]
+[ext_resource type="Texture2D" uid="uid://ot5tvssrbmh0" path="res://dev/devroom/gbcatty1.png" id="4_xe8te"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_14cuj"]
+radius = 6.0827627
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dlv6m"]
+
+[node name="Gbcatty1" type="CharacterBody2D" unique_id=1513276687]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1024088700]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_14cuj")
+debug_color = Color(0.9969805, 0, 0.18511602, 0.41960785)
+
+[node name="Interactable" type="Area2D" parent="." unique_id=783163528]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("1_m4ps2")
+dialogue_resource = ExtResource("2_p46ai")
+metadata/_custom_type_script = "uid://c0qmfecxerwv8"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=726032550]
+shape = SubResource("CircleShape2D_dlv6m")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=2145561718]
+color = Color(0.50980395, 1, 0.6156863, 1)
+energy = 0.5
+texture = ExtResource("3_6kd0j")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1023378401]
+texture = ExtResource("4_xe8te")

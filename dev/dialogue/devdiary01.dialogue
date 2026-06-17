@@ -12,4 +12,7 @@ Any questions?
 - Yes
 	Are we ok?
 - No
-	do DevGlobal.change_room()
+	Ok.
+- Did we almost break the game?
+	Yes.
+	Please be careful and seperate dialogue from state.
