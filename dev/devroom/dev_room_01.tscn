@@ -1,10 +1,11 @@
 [gd_scene format=4 uid="uid://by07ewj5lnuni"]
 
+[ext_resource type="Script" uid="uid://bmxuu16kkk3o3" path="res://dev/devroom/dev_room.gd" id="1_nvp3v"]
 [ext_resource type="Texture2D" uid="uid://b0rxww1kiwbp3" path="res://dev/devroom/woodtilemk2.png" id="1_nxcyv"]
-[ext_resource type="PackedScene" uid="uid://bigr4kk0fgl8r" path="res://dev/lofi/dev_lofi.tscn" id="1_wn2e7"]
+[ext_resource type="PackedScene" uid="uid://bigr4kk0fgl8r" path="res://dev/entities/lofi/dev_lofi.tscn" id="1_wn2e7"]
 [ext_resource type="Texture2D" uid="uid://ot5tvssrbmh0" path="res://dev/devroom/gbcatty1.png" id="3_kp2ys"]
 [ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="3_uac2n"]
-[ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://dev/lofi/32gradient.tres" id="4_dlv6m"]
+[ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://dev/entities/lofi/32gradient.tres" id="4_dlv6m"]
 [ext_resource type="Resource" uid="uid://c404hclbs62n0" path="res://dev/dialogue/devdiary01.dialogue" id="4_x08fn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kp2ys"]
@@ -16,7 +17,9 @@ sources/0 = SubResource("TileSetAtlasSource_kp2ys")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dlv6m"]
 
-[node name="DevRoom01" type="Node2D" unique_id=1564371796]
+[node name="DevRoom01" type="Node2D" unique_id=1564371796 node_paths=PackedStringArray("player")]
+script = ExtResource("1_nvp3v")
+player = NodePath("DevLofi")
 
 [node name="Layers" type="Node2D" parent="." unique_id=1630045788]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="1_m4ps2"]
 [ext_resource type="Resource" uid="uid://bshavsh44v6lt" path="res://dev/dialogue/gbkitties.dialogue" id="2_p46ai"]
-[ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://dev/lofi/32gradient.tres" id="3_6kd0j"]
+[ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://dev/entities/lofi/32gradient.tres" id="3_6kd0j"]
 [ext_resource type="Texture2D" uid="uid://ot5tvssrbmh0" path="res://dev/devroom/gbcatty1.png" id="4_xe8te"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_14cuj"]

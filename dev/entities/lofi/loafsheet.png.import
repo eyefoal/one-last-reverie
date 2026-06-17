@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccufhl3tre686"
-path="res://.godot/imported/loafsheet.png-86ab40b2364ec895c5283a9217b004d0.ctex"
+path="res://.godot/imported/loafsheet.png-a7eb0bce66e4fef5e896456342e960ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dev/lofi/loafsheet.png"
-dest_files=["res://.godot/imported/loafsheet.png-86ab40b2364ec895c5283a9217b004d0.ctex"]
+source_file="res://dev/entities/lofi/loafsheet.png"
+dest_files=["res://.godot/imported/loafsheet.png-a7eb0bce66e4fef5e896456342e960ab.ctex"]
 
 [params]
 

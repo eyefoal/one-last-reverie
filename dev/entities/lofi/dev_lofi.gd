@@ -33,7 +33,7 @@ func _physics_process(_delta: float) -> void:
 	animate()
 	
 func dev_dialog():
-	if Input.is_action_just_pressed('dev'):
+	if Input.is_action_just_pressed('dev01'):
 		DialogueManager.show_dialogue_balloon(load("res://dev/dialogue/devdiary01.dialogue"), "start")
 
 

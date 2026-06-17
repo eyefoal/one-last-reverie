@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bigr4kk0fgl8r"]
 
-[ext_resource type="Script" uid="uid://bdmxfkocr4i08" path="res://dev/lofi/dev_lofi.gd" id="1_8lx6r"]
-[ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://dev/lofi/32gradient.tres" id="3_a3vhr"]
-[ext_resource type="Texture2D" uid="uid://ccufhl3tre686" path="res://dev/lofi/loafsheet.png" id="4_1ehcx"]
+[ext_resource type="Script" uid="uid://bdmxfkocr4i08" path="res://dev/entities/lofi/dev_lofi.gd" id="1_8lx6r"]
+[ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://dev/entities/lofi/32gradient.tres" id="3_a3vhr"]
+[ext_resource type="Texture2D" uid="uid://ccufhl3tre686" path="res://dev/entities/lofi/loafsheet.png" id="4_1ehcx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nnaav"]
 radius = 4.0
