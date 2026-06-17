@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c404hclbs62n0"
+path="res://.godot/imported/devdiary01.dialogue-0849a1855a45c232e78b689599b07b02.tres"
+
+[deps]
+
+source_file="res://dev/dialogue/devdiary01.dialogue"
+dest_files=["res://.godot/imported/devdiary01.dialogue-0849a1855a45c232e78b689599b07b02.tres"]
+
+[params]
+
+defaults=true
