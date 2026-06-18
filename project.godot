@@ -21,11 +21,13 @@ config/icon="uid://dqwalpxxoamga"
 
 DialogueManager="*uid://c3rodes2l3gxb"
 Main="*uid://cq70tdov0aa3t"
+DevGlobal="*uid://bcxvnn8tjd8y5"
 
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=360
+window/size/always_on_top=true
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/aspect="expand"
@@ -143,7 +145,7 @@ aim_right={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://indev/dialogue/devdiary01.dialogue", "res://indev/dialogue/gbkitties.dialogue", "res://indev/dialogue/devdiary08.dialogue", "res://indev/dialogue/leanfi.dialogue")
+locale/translations_pot_files=PackedStringArray("res://indev/dialogue/devdiary01.dialogue", "res://indev/dialogue/gbkitties.dialogue", "res://indev/dialogue/devdiary08.dialogue", "res://indev/dialogue/leanfi.dialogue", "res://dev/dialogue/devdiary01.dialogue", "res://dev/dialogue/gbkitties.dialogue")
 
 [layer_names]
 

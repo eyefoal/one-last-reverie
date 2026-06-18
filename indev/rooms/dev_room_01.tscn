@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://by07ewj5lnuni"]
+[gd_scene format=4 uid="uid://ycuvfew8ocu5"]
 
 [ext_resource type="Script" uid="uid://bmxuu16kkk3o3" path="res://indev/rooms/dev_room.gd" id="1_nvp3v"]
 [ext_resource type="Texture2D" uid="uid://b0rxww1kiwbp3" path="res://graphics/legacyart/woodtilemk2.png" id="1_nxcyv"]

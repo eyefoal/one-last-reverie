@@ -5,6 +5,8 @@ class_name DevRoom
 var path : String = "user://test_data.tres"
 
 func _ready() -> void:
+	_save()
+	_load()
 	var data = ResourceLoader.load(path) as LevelData
 	if data:
 		player.global_position = data.player_pos
