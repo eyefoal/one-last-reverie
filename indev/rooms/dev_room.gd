@@ -2,7 +2,7 @@ extends Node2D
 class_name DevRoom
 
 @export var player : Node2D
-var path : String = "user://test_data.tres"
+var path : String = "user://user_data.tres"
 
 func _ready() -> void:
 	_save()
@@ -29,8 +29,11 @@ func _save() -> void:
 	print("saved!")
 
 func _load() -> void:
+	
 	var data = ResourceLoader.load(path) as LevelData
-	player.global_position = data.player_pos
+	if data:
+		player.global_position = data.player_pos
+	
 	
 	print("loaded!")
 	print(data.quirkiness)

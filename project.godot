@@ -21,7 +21,6 @@ config/icon="uid://dqwalpxxoamga"
 
 DialogueManager="*uid://c3rodes2l3gxb"
 Main="*uid://cq70tdov0aa3t"
-DevGlobal="*uid://bcxvnn8tjd8y5"
 
 [display]
 
