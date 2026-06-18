@@ -1,18 +1,28 @@
 ~ start
-june 16 2026
-we are ready to begin production on "One Last Reverie"
-today we will add:
-top-down lofi,
-first interactable,
-change scene to fish,
-graybox purple room,
-next purple room
-...
+flow
+act 0
+devroom 01
+devroom 02
+act 1 
+bedroom
+splish
+platformer
+shooter
+polish
+[rainbow] sigh [/rainbow]
+pause menu
+button remapping
+dialogue sounds
+atmosphere audio
+further polish
+
 Any questions?
-- Yes
-	Are we ok?
+- What does this mean?
+	Wel wel wel w el ll welll wel come ot toto toto toto to oto Reverieeeeee ieee ieie.
+	You dig?
+	Lofi: No.
+	Well, I tried.
+	=> END
 - No
-	Ok.
-- Did we almost break the game?
-	Yes.
-	Please be careful and seperate dialogue from state.
+	Ok. Have a nice day.
+=> END

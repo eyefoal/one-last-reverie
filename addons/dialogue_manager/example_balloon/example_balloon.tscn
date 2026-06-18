@@ -100,7 +100,7 @@ _data = {
 &"progress": SubResource("Animation_qkmqt")
 }
 
-[node name="ExampleBalloon" type="CanvasLayer" unique_id=1434168376]
+[node name="MyBalloon" type="CanvasLayer" unique_id=1434168376]
 layer = 100
 script = ExtResource("1_36de5")
 
@@ -115,6 +115,8 @@ grow_vertical = 2
 theme = SubResource("Theme_qq3yp")
 
 [node name="DialoguePanel" type="MarginContainer" parent="Balloon" unique_id=1011109179]
+custom_maximum_size = Vector2(360, 128)
+propagate_maximum_size = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.572
@@ -145,7 +147,11 @@ modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
 theme_override_fonts/normal_font = ExtResource("2_nlsx6")
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
+theme_override_font_sizes/bold_italics_font_size = 16
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/mono_font_size = 16
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -157,7 +163,12 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/normal_font = ExtResource("2_nlsx6")
 theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
+theme_override_font_sizes/bold_italics_font_size = 16
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/mono_font_size = 16
 text = "Dialogue..."
+skip_action = &"b"
 
 [node name="Control" type="Control" parent="Balloon/DialoguePanel/PanelContainer/MarginContainer/HBoxContainer" unique_id=1162966119]
 custom_minimum_size = Vector2(20, 10)

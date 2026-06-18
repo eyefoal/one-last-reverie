@@ -5,13 +5,10 @@ class_name DevRoom
 var path : String = "user://user_data.tres"
 
 func _ready() -> void:
-	_save()
-	_load()
-	var data = ResourceLoader.load(path) as LevelData
-	if data:
-		player.global_position = data.player_pos
-	else:
-		pass
+	if path:
+		_load()
+	
+	
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("dev03"):

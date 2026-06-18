@@ -1,14 +1,14 @@
 extends CharacterBody2D
-
+class_name Shark
 
 const SPEED = 500.5
-const JUMP_VELOCITY = -400.0
-
 var move_dir : float = -1.0
 
 func _physics_process(_delta: float) -> void:
 	velocity.x = move_dir * SPEED
-
-
-
+	
 	move_and_slide()
+
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	queue_free()
+	print("+ 1 point")
