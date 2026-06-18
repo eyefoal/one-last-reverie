@@ -55,7 +55,7 @@ position = Vector2(325, 256)
 SPEED = 67.5
 
 [node name="Camera2D" type="Camera2D" parent="DevLofi" unique_id=1123730391]
-zoom = Vector2(3, 3)
+zoom = Vector2(2, 2)
 limit_left = 0
 limit_top = 0
 limit_right = 620
