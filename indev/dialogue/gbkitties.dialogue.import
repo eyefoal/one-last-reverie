@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bshavsh44v6lt"
+path="res://.godot/imported/gbkitties.dialogue-0811bde392056acb136e4cc36a783bb9.tres"
+
+[deps]
+
+source_file="res://indev/dialogue/gbkitties.dialogue"
+dest_files=["res://.godot/imported/gbkitties.dialogue-0811bde392056acb136e4cc36a783bb9.tres"]
+
+[params]
+
+defaults=true

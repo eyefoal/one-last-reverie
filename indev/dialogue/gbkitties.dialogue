@@ -1,0 +1,47 @@
+~ start
+bob.
+=> act_01
+=> END
+
+do StringState.act_01_state = "bob"
+~ act_01
+Once upon a time.
+When all that existed was two floating masses of information floating in the aether. 
+They existed as the world.
+Their thoughts were pantheons for universes beyond.
+
+~ kitty06
+Kitty # 06: You may not believe this. But I am actually the second GreenBitCatty to ever exist. 
+Kitty 06: Don't believe me?
+- Sure
+	I'm joshing you. 
+	I'm actually the sixth. 
+	Check the commits.
+	[color=yellow][i] Whatever that means...
+	I can tell you're bored.
+	I will let you go now.
+	=> END
+- No
+	This conversation will now close.
+	=> END
+	
+~ kitty07
+Kitty 07: [b] Looking for something interesting?
+Lofi: Yes.
+Kitty 07: [b] Well, you're not gonna find anything here. 
+[b] I'd say travel eastward. 
+[b] You might find a cool little doodad off the side of the void.
+Lofi: Thank you.
+Kitty 07: Not a thing. Take it easy.
+=> END
+	
+~ kitty08
+[shake] Grrrrr [/shake] QUICKLY! time runs [s]short[/s]. quickly! we must use the power of olympia! return the platforms. create the faux splish minigame!
+its time to get to "["hyper link blocked]"
+meow meow i am mewo
+Kitty 08: i am
+We must traverse the purple system
+Tt's so... so dark here
+Lofi: What the hell are you talking about?
+[rainbow](^'.'^) (^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)
+Do you get it now?

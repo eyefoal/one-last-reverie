@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dj3gm62yl350w"]
+
+[ext_resource type="Script" uid="uid://cd21t33mx63ox" path="res://systems/components/door_area.gd" id="1_t087f"]
+
+[node name="DoorArea" type="Area2D" unique_id=298221497]
+collision_layer = 129
+collision_mask = 129
+script = ExtResource("1_t087f")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

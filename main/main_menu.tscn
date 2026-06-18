@@ -1,3 +1,78 @@
 [gd_scene format=3 uid="uid://f6sltxv64kdp"]
 
+[ext_resource type="Script" uid="uid://cymds5njdx0sw" path="res://main/main_menu.gd" id="1_4l7av"]
+
 [node name="MainMenu" type="CanvasLayer" unique_id=1690640991]
+script = ExtResource("1_4l7av")
+
+[node name="Control" type="Control" parent="." unique_id=1257133825]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control" unique_id=770698552]
+self_modulate = Color(1, 1, 1, 0.09019608)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/Panel" unique_id=1150924520]
+self_modulate = Color(1, 1, 1, 0.48235294)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.30600002
+anchor_right = 0.69200003
+anchor_bottom = 1.0
+offset_left = 0.1599884
+offset_right = 0.11999512
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/PanelContainer" unique_id=2048576805]
+layout_mode = 2
+
+[node name="TitleLabel" type="RichTextLabel" parent="Control/Panel/PanelContainer/VBoxContainer" unique_id=1777555184]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "[ rainbow] One Last Reverie [/rainbow]"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/PanelContainer/VBoxContainer" unique_id=1107970579]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="Prologue" type="Button" parent="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer" unique_id=2095931415]
+layout_mode = 2
+text = "Prologue"
+
+[node name="QuickShplish" type="Button" parent="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer" unique_id=511494734]
+layout_mode = 2
+text = "Quick Play (Shplish)"
+
+[node name="QuickAGU" type="Button" parent="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer" unique_id=1150344856]
+layout_mode = 2
+text = "Quick Play (Anything Goes U.F.O.)"
+
+[node name="Options" type="Button" parent="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer" unique_id=455955588]
+layout_mode = 2
+text = "Options
+"
+
+[node name="Quit" type="Button" parent="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer" unique_id=212759749]
+layout_mode = 2
+text = "Quit
+
+"
+
+[connection signal="pressed" from="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer/Prologue" to="." method="_on_prologue_pressed"]
+[connection signal="pressed" from="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer/QuickShplish" to="." method="_on_quick_shplish_pressed"]
+[connection signal="pressed" from="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

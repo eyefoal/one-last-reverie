@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bawqdrayqg0sl"]
+
+[ext_resource type="Script" uid="uid://c5gh5yjx314jo" path="res://content/splish/dev/shark/shark.gd" id="1_von82"]
+[ext_resource type="Texture2D" uid="uid://c4ofep2c6lmju" path="res://icon.svg" id="2_jqws6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kym45"]
+size = Vector2(130, 14)
+
+[node name="Shark" type="CharacterBody2D" unique_id=1461274065]
+scale = Vector2(3, 3)
+motion_mode = 1
+script = ExtResource("1_von82")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=514181083]
+scale = Vector2(1, 0.109375)
+texture = ExtResource("2_jqws6")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=200651761]
+position = Vector2(-2.3841858e-07, -14)
+rotation = -0.5569069
+scale = Vector2(0.390625, 0.109375)
+texture = ExtResource("2_jqws6")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1901785480]
+position = Vector2(1.0000019, -7)
+rotation = -0.053107172
+scale = Vector2(0.3935188, 0.119245924)
+texture = ExtResource("2_jqws6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2118618890]
+shape = SubResource("RectangleShape2D_kym45")

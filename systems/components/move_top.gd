@@ -1,7 +1,6 @@
 class_name MoveComponentTop extends Node
 
 @export var body: CharacterBody2D
-@export var sprite: Node2D
 @export var speed := 420.0
 var direction: Vector2 = Vector2.ZERO
 
@@ -9,8 +8,11 @@ var direction: Vector2 = Vector2.ZERO
 func _ready() -> void:
 		print("Movement Component Ready!")
 
+func _physics_process(_delta: float) -> void:
+	tick(_delta)
 
 func tick(_delta:float) -> void:
+	direction = Input.get_vector("left", "right", "up", "down")
 	if body == null:
 		return
 	
