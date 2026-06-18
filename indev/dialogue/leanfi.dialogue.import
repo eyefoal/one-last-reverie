@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d2iia7bdbk27j"
+path="res://.godot/imported/leanfi.dialogue-616bfdd80a9bf154506175f4f77879ae.tres"
+
+[deps]
+
+source_file="res://indev/dialogue/leanfi.dialogue"
+dest_files=["res://.godot/imported/leanfi.dialogue-616bfdd80a9bf154506175f4f77879ae.tres"]
+
+[params]
+
+defaults=true

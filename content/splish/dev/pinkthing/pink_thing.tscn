@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b4n4w1bccj4f3"]
+
+[ext_resource type="Texture2D" uid="uid://c1nn04e2yyjpj" path="res://content/splish/dev/pinkthing/pink_thing.png" id="1_dtby0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m3cb0"]
+radius = 17.029387
+
+[node name="PinkThing" type="CharacterBody2D" unique_id=1756094662]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1659643043]
+texture = ExtResource("1_dtby0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=481905140]
+shape = SubResource("CircleShape2D_m3cb0")
