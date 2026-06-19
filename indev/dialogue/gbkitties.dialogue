@@ -1,9 +1,14 @@
 ~ start
+do Main.global_state = "bob"
 bob.
-=> act_01
+
+if Main.global_state == "bob"
+	=> act_01
 => END
 
-do StringState.act_01_state = "bob"
+~ bob
+beware of bob. you have been warned.
+
 ~ act_01
 Once upon a time.
 When all that existed was two floating masses of information floating in the aether. 
@@ -45,3 +50,4 @@ Tt's so... so dark here
 Lofi: What the hell are you talking about?
 [rainbow](^'.'^) (^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)
 Do you get it now?
+=> END

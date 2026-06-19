@@ -8,9 +8,11 @@
 [ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="3_uac2n"]
 [ext_resource type="Texture2D" uid="uid://dw5svi0f0fkoq" path="res://graphics/legacyart/brickv1.png" id="4_4iuf4"]
 [ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://indev/entities/lofi/32gradient.tres" id="4_dlv6m"]
-[ext_resource type="Resource" uid="uid://c404hclbs62n0" path="res://indev/dialogue/devdiary01.dialogue" id="4_x08fn"]
 [ext_resource type="Texture2D" uid="uid://wyypouxki6r6" path="res://graphics/legacyart/brickv2.png" id="5_4iuf4"]
 [ext_resource type="PackedScene" uid="uid://ctb3w35vbedu0" path="res://indev/entities/gbcatty/gbcatty_1.tscn" id="8_rcm6n"]
+[ext_resource type="Resource" uid="uid://bshavsh44v6lt" path="res://indev/dialogue/gbkitties.dialogue" id="9_4iuf4"]
+[ext_resource type="PackedScene" uid="uid://bcr6q4n74jf5w" path="res://systems/components/doors/catdoor/cat_door.tscn" id="12_ssqbr"]
+[ext_resource type="PackedScene" uid="uid://c14b3fhwr6vcw" path="res://indev/rooms/dev_room_02.tscn" id="13_s7qp4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kp2ys"]
 texture = ExtResource("1_nxcyv")
@@ -46,7 +48,13 @@ sources/1 = SubResource("TileSetAtlasSource_ssqbr")
 sources/2 = SubResource("TileSetAtlasSource_s7qp4")
 sources/3 = SubResource("TileSetAtlasSource_tnwkh")
 
+[sub_resource type="Environment" id="Environment_nswqg"]
+glow_enabled = true
+glow_bloom = 1.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_dlv6m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nswqg"]
 
 [node name="DevRoom01" type="Node2D" unique_id=1564371796 node_paths=PackedStringArray("player")]
 script = ExtResource("1_nvp3v")
@@ -60,6 +68,9 @@ tile_set = SubResource("TileSet_uac2n")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Layers" unique_id=965373661]
 color = Color(0.19874004, 0.12601584, 0.40001467, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Layers" unique_id=975120830]
+environment = SubResource("Environment_nswqg")
 
 [node name="DevLofi" parent="." unique_id=1286364634 instance=ExtResource("1_wn2e7")]
 position = Vector2(325, 256)
@@ -75,37 +86,49 @@ limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 4.2
 
-[node name="Gbcatty1" type="Sprite2D" parent="." unique_id=693198005]
+[node name="Catty" type="Node2D" parent="." unique_id=2074176893]
+
+[node name="Gbcatty3" parent="Catty" unique_id=874502959 instance=ExtResource("8_rcm6n")]
+z_index = 10
+position = Vector2(324, 146)
+
+[node name="Interactable" parent="Catty/Gbcatty3" index="1" unique_id=783163528]
+dialogue_start = "kitty08"
+
+[node name="Gbcatty1" type="Sprite2D" parent="Catty" unique_id=693198005]
+z_index = 5
 position = Vector2(399, 226)
 texture = ExtResource("3_kp2ys")
 
-[node name="Interactable" type="Area2D" parent="Gbcatty1" unique_id=581494644]
+[node name="Interactable" type="Area2D" parent="Catty/Gbcatty1" unique_id=581494644]
 collision_layer = 128
 collision_mask = 128
 script = ExtResource("3_uac2n")
-dialogue_resource = ExtResource("4_x08fn")
+dialogue_resource = ExtResource("9_4iuf4")
 metadata/_custom_type_script = "uid://c0qmfecxerwv8"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gbcatty1/Interactable" unique_id=2036555665]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Catty/Gbcatty1/Interactable" unique_id=2036555665]
 shape = SubResource("CircleShape2D_dlv6m")
 
-[node name="PointLight2D" type="PointLight2D" parent="Gbcatty1" unique_id=910164433]
+[node name="PointLight2D" type="PointLight2D" parent="Catty/Gbcatty1" unique_id=910164433]
 color = Color(0.50980395, 1, 0.6156863, 1)
 energy = 0.5
 texture = ExtResource("4_dlv6m")
 
-[node name="Gbcatty2" parent="." unique_id=1513276687 instance=ExtResource("8_rcm6n")]
+[node name="Gbcatty2" parent="Catty" unique_id=1829724170 instance=ExtResource("8_rcm6n")]
+z_index = 5
 position = Vector2(248, 227)
 
-[node name="Interactable" parent="Gbcatty2" index="1" unique_id=783163528]
+[node name="Interactable" parent="Catty/Gbcatty2" index="1" unique_id=783163528]
 dialogue_start = "kitty07"
 
-[node name="Gbcatty3" parent="." unique_id=874502959 instance=ExtResource("8_rcm6n")]
-z_index = 10
-position = Vector2(324, 146)
+[node name="CatDoor" parent="." unique_id=1271951493 instance=ExtResource("12_ssqbr")]
+position = Vector2(576, 12)
+to_level = ExtResource("13_s7qp4")
 
-[node name="Interactable" parent="Gbcatty3" index="1" unique_id=783163528]
-dialogue_start = "kitty08"
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CatDoor" unique_id=1311648463]
+position = Vector2(1, -8)
+shape = SubResource("CircleShape2D_nswqg")
 
-[editable path="Gbcatty2"]
-[editable path="Gbcatty3"]
+[editable path="Catty/Gbcatty3"]
+[editable path="Catty/Gbcatty2"]
