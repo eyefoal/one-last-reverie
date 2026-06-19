@@ -2,6 +2,8 @@ extends Node
 class_name Spawner
 
 @export var spawnables: Array[PackedScene]
+@export var max_spawn_height := 100
+@export var min_spawn_height := 240
 @onready var marker: Marker2D = $Marker2D
 
 func _ready() -> void:

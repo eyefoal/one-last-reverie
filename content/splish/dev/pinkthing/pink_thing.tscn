@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://b4n4w1bccj4f3"]
 
 [ext_resource type="Texture2D" uid="uid://c1nn04e2yyjpj" path="res://content/splish/dev/pinkthing/pink_thing.png" id="1_dtby0"]
+[ext_resource type="Script" uid="uid://b3oaa3bmjiftj" path="res://systems/components/basic_input.gd" id="2_rftqg"]
+[ext_resource type="Script" uid="uid://bwnishes82xne" path="res://systems/components/move_top.gd" id="3_p7a2n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m3cb0"]
 radius = 17.029387
@@ -12,3 +14,16 @@ texture = ExtResource("1_dtby0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=481905140]
 shape = SubResource("CircleShape2D_m3cb0")
+
+[node name="BasicInput" type="Node" parent="." unique_id=1637318085]
+script = ExtResource("2_rftqg")
+metadata/_custom_type_script = "uid://b3oaa3bmjiftj"
+
+[node name="MoveComponentTop" type="Node" parent="." unique_id=1250674649 node_paths=PackedStringArray("body")]
+script = ExtResource("3_p7a2n")
+body = NodePath("..")
+metadata/_custom_type_script = "uid://bwnishes82xne"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=222874020]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true

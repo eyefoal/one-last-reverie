@@ -3,21 +3,30 @@
 [ext_resource type="Script" uid="uid://dqk4pinj64urd" path="res://content/splish/dev/spawner.gd" id="1_g0v27"]
 [ext_resource type="PackedScene" uid="uid://bawqdrayqg0sl" path="res://content/splish/dev/shark/shark.tscn" id="2_uieog"]
 [ext_resource type="PackedScene" uid="uid://b4n4w1bccj4f3" path="res://content/splish/dev/pinkthing/pink_thing.tscn" id="3_x2g8v"]
+[ext_resource type="Script" uid="uid://bbqistra7bvc5" path="res://content/splish/dev/pinkthing/pink_thing.gd" id="4_uieog"]
 
-[node name="DevRoom" type="Node2D" unique_id=100100137]
+[node name="Splish01" type="Node2D" unique_id=100100137]
 
 [node name="Spawner" type="Node" parent="." unique_id=1278337681]
 script = ExtResource("1_g0v27")
 spawnables = Array[PackedScene]([ExtResource("2_uieog")])
 
 [node name="Timer" type="Timer" parent="Spawner" unique_id=547217984]
-wait_time = 1.5
 autostart = true
 
 [node name="Marker2D" type="Marker2D" parent="Spawner" unique_id=1428066638]
-position = Vector2(859, 184)
+position = Vector2(1239, 184)
 
 [node name="PinkThing" parent="." unique_id=1756094662 instance=ExtResource("3_x2g8v")]
 position = Vector2(197, 180)
+script = ExtResource("4_uieog")
+
+[node name="Camera2D" parent="PinkThing" index="4" unique_id=222874020]
+limit_left = 0
+limit_top = 0
+limit_right = 640
+limit_bottom = 360
 
 [connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]
+
+[editable path="PinkThing"]

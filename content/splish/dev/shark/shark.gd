@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Shark
 
-const SPEED = 500.5
+@export var SPEED = 500.5
 var move_dir : float = -1.0
 
 func _physics_process(_delta: float) -> void:
