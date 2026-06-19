@@ -7,12 +7,13 @@ var path : String = "user://user_data.tres"
 var data = ResourceLoader.load(path) as LevelData
 
 func _ready() -> void:
-	current_level = data.current_level
-	print(current_level)
-	print(data)
-	_save()
-	_load()
-	dev_print()
+	if data:
+		current_level = data.current_level
+		print(current_level)
+		print(data)
+		_save()
+		_load()
+		dev_print()
 	
 func dev_print():
 	print(current_level)
@@ -20,6 +21,8 @@ func dev_print():
 	#print(gb_cat_state)
 
 func _save() -> void:
+	data = LevelData.new()
+	data.current_level = current_level
 	print("saved!")
 
 func _load() -> void:

@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dnjotiiqoym6m"]
+
+[ext_resource type="Script" uid="uid://dy4tuiaeb522h" path="res://main_global/pause_menu.gd" id="1_4res2"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=725464776]
+process_mode = 3
+script = ExtResource("1_4res2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1544586051]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=387449051]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -21.0
+offset_right = 46.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResumeButton" type="Button" parent="VBoxContainer" unique_id=477722449]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Resume"
+
+[node name="SaveQuitButton" type="Button" parent="VBoxContainer" unique_id=1377587966]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Save and Quit"
+
+[connection signal="pressed" from="VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SaveQuitButton" to="." method="_on_save_quit_button_pressed"]
