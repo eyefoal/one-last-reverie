@@ -3,17 +3,24 @@ do Main.global_state = "bob"
 bob.
 
 if Main.global_state == "bob"
-	=> act_01
+	=> bob
 => END
 
 ~ bob
 beware of bob. you have been warned.
+=> END
 
 ~ act_01
 Once upon a time.
 When all that existed was two floating masses of information floating in the aether. 
 They existed as the world.
 Their thoughts were pantheons for universes beyond.
+All was peaceful. All was right in the [rainbow] Hyperverse [/rainbows]
+Until...
+Lofi: Until what?!
+I forgor
+Lofi: [color:yellow] >:/
+=> END
 
 ~ kitty06
 Kitty # 06: You may not believe this. But I am actually the second GreenBitCatty to ever exist. 

@@ -11,9 +11,9 @@ func _process(_delta: float) -> void:
 	
 	
 func warp() -> void:
-	#await FadeTransition.fade(1.0, 1.0).finished
+	await FadeTransition.fade(1.0, 1.0).finished
 	get_tree().call_deferred("change_scene_to_packed", to_level)
-	#await FadeTransition.fade(0.0, 1.0).finished
+	await FadeTransition.fade(0.0, 1.0).finished
 		
 		
 func _on_body_entered(body: Node2D) -> void:

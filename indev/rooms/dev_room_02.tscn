@@ -1,13 +1,12 @@
 [gd_scene format=4 uid="uid://c14b3fhwr6vcw"]
 
 [ext_resource type="Texture2D" uid="uid://b0rxww1kiwbp3" path="res://graphics/legacyart/woodtilemk2.png" id="1_jub80"]
+[ext_resource type="Script" uid="uid://bmxuu16kkk3o3" path="res://indev/rooms/dev_room.gd" id="1_mqpxi"]
 [ext_resource type="Texture2D" uid="uid://ot5tvssrbmh0" path="res://indev/entities/gbcatty/gbcatty1.png" id="2_h3erh"]
 [ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="3_5nch5"]
 [ext_resource type="Resource" uid="uid://bshavsh44v6lt" path="res://indev/dialogue/gbkitties.dialogue" id="4_h3erh"]
-[ext_resource type="Resource" uid="uid://c404hclbs62n0" path="res://indev/dialogue/devdiary01.dialogue" id="4_v70wk"]
 [ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://indev/entities/lofi/32gradient.tres" id="5_eoslb"]
 [ext_resource type="PackedScene" uid="uid://bigr4kk0fgl8r" path="res://indev/entities/lofi/dev_lofi.tscn" id="6_3jv3l"]
-[ext_resource type="Resource" uid="uid://d2iia7bdbk27j" path="res://indev/dialogue/leanfi.dialogue" id="6_5nch5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kp2ys"]
 texture = ExtResource("1_jub80")
@@ -18,7 +17,9 @@ sources/0 = SubResource("TileSetAtlasSource_kp2ys")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dlv6m"]
 
-[node name="DevRoom01" type="Node2D" unique_id=1564371796]
+[node name="DevRoom02" type="Node2D" unique_id=1564371796 node_paths=PackedStringArray("player")]
+script = ExtResource("1_mqpxi")
+player = NodePath("DevLofi")
 
 [node name="Layers" type="Node2D" parent="." unique_id=1630045788]
 
@@ -29,63 +30,6 @@ tile_set = SubResource("TileSet_uac2n")
 [node name="CanvasModulate" type="CanvasModulate" parent="Layers" unique_id=965373661]
 color = Color(0.2481207, 0.2575015, 0.3579603, 1)
 
-[node name="Gbcatty1" type="Sprite2D" parent="." unique_id=693198005]
-position = Vector2(205, 217)
-texture = ExtResource("2_h3erh")
-
-[node name="Interactable" type="Area2D" parent="Gbcatty1" unique_id=581494644]
-collision_layer = 128
-collision_mask = 128
-script = ExtResource("3_5nch5")
-dialogue_resource = ExtResource("4_h3erh")
-metadata/_custom_type_script = "uid://c0qmfecxerwv8"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gbcatty1/Interactable" unique_id=2036555665]
-shape = SubResource("CircleShape2D_dlv6m")
-
-[node name="PointLight2D" type="PointLight2D" parent="Gbcatty1" unique_id=910164433]
-color = Color(0.50980395, 1, 0.6156863, 1)
-energy = 0.5
-texture = ExtResource("5_eoslb")
-
-[node name="Gbcatty2" type="Sprite2D" parent="." unique_id=1434888432]
-position = Vector2(279, 216)
-texture = ExtResource("2_h3erh")
-
-[node name="Interactable" type="Area2D" parent="Gbcatty2" unique_id=957546861]
-collision_layer = 128
-collision_mask = 128
-script = ExtResource("3_5nch5")
-dialogue_resource = ExtResource("6_5nch5")
-metadata/_custom_type_script = "uid://c0qmfecxerwv8"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gbcatty2/Interactable" unique_id=1998120463]
-shape = SubResource("CircleShape2D_dlv6m")
-
-[node name="PointLight2D" type="PointLight2D" parent="Gbcatty2" unique_id=2038237418]
-color = Color(0.50980395, 1, 0.6156863, 1)
-energy = 0.5
-texture = ExtResource("5_eoslb")
-
-[node name="Gbcatty3" type="Sprite2D" parent="." unique_id=1046074752]
-position = Vector2(352, 217)
-texture = ExtResource("2_h3erh")
-
-[node name="Interactable" type="Area2D" parent="Gbcatty3" unique_id=306159689]
-collision_layer = 128
-collision_mask = 128
-script = ExtResource("3_5nch5")
-dialogue_resource = ExtResource("4_v70wk")
-metadata/_custom_type_script = "uid://c0qmfecxerwv8"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gbcatty3/Interactable" unique_id=457584209]
-shape = SubResource("CircleShape2D_dlv6m")
-
-[node name="PointLight2D" type="PointLight2D" parent="Gbcatty3" unique_id=1166501811]
-color = Color(0.50980395, 1, 0.6156863, 1)
-energy = 0.5
-texture = ExtResource("5_eoslb")
-
 [node name="Gbcatty4" type="Sprite2D" parent="." unique_id=1258809795]
 position = Vector2(424, 218)
 texture = ExtResource("2_h3erh")
@@ -94,7 +38,7 @@ texture = ExtResource("2_h3erh")
 collision_layer = 128
 collision_mask = 128
 script = ExtResource("3_5nch5")
-dialogue_resource = ExtResource("4_v70wk")
+dialogue_resource = ExtResource("4_h3erh")
 metadata/_custom_type_script = "uid://c0qmfecxerwv8"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gbcatty4/Interactable" unique_id=1750501265]
@@ -109,6 +53,6 @@ texture = ExtResource("5_eoslb")
 position = Vector2(325, 256)
 
 [node name="Camera2D" type="Camera2D" parent="DevLofi" unique_id=1123730391]
-zoom = Vector2(2, 2)
+zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0

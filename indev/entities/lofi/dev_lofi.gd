@@ -31,7 +31,8 @@ func _physics_process(_delta: float) -> void:
 	
 func dev_dialog():
 	if Input.is_action_just_pressed('dev01'):
-		DialogueManager.show_dialogue_balloon(load("res://dev/dialogue/devdiary08.dialogue"), "start")
+		print("yawn")
+		#DialogueManager.show_dialogue_balloon(load("res://dev/dialogue/devdiary08.dialogue"), "start")
 
 
 func _on_check_detection_area_entered(area: Area2D) -> void:
