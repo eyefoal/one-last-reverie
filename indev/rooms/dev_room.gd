@@ -4,15 +4,16 @@ class_name DevRoom
 @export var player : Node2D
 var path : String = "user://user_data.tres"
 
+
 func _ready() -> void:
 	var data = LevelData.new()
 	data.player_pos = player.global_position
 	data.quirkiness = randi_range(0, 100)
-	ResourceSaver.save(data, path)
-	print("saved!")
+	data.current_level = str(self.scene_file_path)
+	_save()
 	
-	if path:
-		_load()
+	print(self.scene_file_path)
+	_load()
 	
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("quicksave"):
@@ -25,7 +26,11 @@ func _save() -> void:
 	var data = LevelData.new()
 	data.player_pos = player.global_position
 	data.quirkiness = randi_range(0, 100)
+	data.current_level = str(self.scene_file_path)
+	print(data.current_level)
 	ResourceSaver.save(data, path)
+	Main.current_level = data.current_level
+	print(Main.current_level)
 	print("saved!")
 
 func _load() -> void:

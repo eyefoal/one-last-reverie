@@ -2,10 +2,33 @@ extends Node
 
 var global_state : String = "Act -1"
 var gb_cat_state : String = "unknown"
+var current_level : String = ""
+var path : String = "user://user_data.tres"
+var data = ResourceLoader.load(path) as LevelData
 
 func _ready() -> void:
+	current_level = data.current_level
+	print(current_level)
+	print(data)
+	_save()
+	_load()
 	dev_print()
 	
 func dev_print():
-	print(global_state)
-	print(gb_cat_state)
+	print(current_level)
+	#print(global_state)
+	#print(gb_cat_state)
+
+func _save() -> void:
+	print("saved!")
+
+func _load() -> void:
+	print(data)
+	print("load")
+	
+
+func switch_level(to_level : String):
+	to_level = Main.current_level
+	get_tree().change_scene_to_file(to_level)
+	print(to_level)
+	print("changing")

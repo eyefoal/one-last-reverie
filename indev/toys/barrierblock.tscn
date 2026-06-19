@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dypijp7oc27uh"]
+
+[ext_resource type="Texture2D" uid="uid://cwgs13oldq5we" path="res://graphics/legacyart/barrier.png" id="1_wlf7s"]
+[ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="2_nukc5"]
+[ext_resource type="Resource" uid="uid://c404hclbs62n0" path="res://indev/dialogue/devdiary01.dialogue" id="3_qxvc7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nswqg"]
+size = Vector2(16, 18)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nswqg"]
+
+[node name="BarrierBlock" type="StaticBody2D" unique_id=1590390593]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=526474481]
+shape = SubResource("RectangleShape2D_nswqg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=270807701]
+texture = ExtResource("1_wlf7s")
+
+[node name="Interactable" type="Area2D" parent="." unique_id=666051396]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("2_nukc5")
+dialogue_resource = ExtResource("3_qxvc7")
+dialogue_start = "barrier"
+metadata/_custom_type_script = "uid://c0qmfecxerwv8"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=287060273]
+shape = SubResource("CircleShape2D_nswqg")
+debug_color = Color(0.72787815, 0.4752016, 0, 0.41960785)

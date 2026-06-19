@@ -43,6 +43,7 @@ layout_mode = 2
 theme_override_font_sizes/normal_font_size = 28
 bbcode_enabled = true
 text = "[ rainbow] One Last Reverie [/rainbow]"
+fit_content = true
 scroll_active = false
 horizontal_alignment = 1
 
@@ -54,13 +55,13 @@ size_flags_vertical = 6
 layout_mode = 2
 text = "Prologue"
 
+[node name="Continue" type="Button" parent="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer" unique_id=1150344856]
+layout_mode = 2
+text = "Continue"
+
 [node name="QuickShplish" type="Button" parent="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer" unique_id=511494734]
 layout_mode = 2
 text = "Quick Play (Shplish)"
-
-[node name="QuickAGU" type="Button" parent="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer" unique_id=1150344856]
-layout_mode = 2
-text = "Quick Play (Anything Goes U.F.O.)"
 
 [node name="Options" type="Button" parent="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer" unique_id=455955588]
 layout_mode = 2
@@ -74,5 +75,6 @@ text = "Quit
 "
 
 [connection signal="pressed" from="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer/Prologue" to="." method="_on_prologue_pressed"]
+[connection signal="pressed" from="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer/QuickShplish" to="." method="_on_quick_shplish_pressed"]
 [connection signal="pressed" from="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

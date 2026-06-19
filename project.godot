@@ -17,10 +17,14 @@ run/main_scene="uid://f6sltxv64kdp"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="uid://dqwalpxxoamga"
 
+[audio]
+
+buses/default_bus_layout="uid://bh2xjy3w4s8f1"
+
 [autoload]
 
-DialogueManager="*uid://c3rodes2l3gxb"
 Main="*uid://cq70tdov0aa3t"
+DialogueManager="*uid://c3rodes2l3gxb"
 FadeTransition="*uid://nofhvu38d3w"
 
 [display]
@@ -131,12 +135,12 @@ dev02={
 }
 quicksave={
 "deadzone": 0.2,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194336,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194334,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
 quickload={
 "deadzone": 0.2,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194340,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194335,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
 aim_up={
@@ -163,7 +167,7 @@ aim_right={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://indev/dialogue/devdiary01.dialogue", "res://indev/dialogue/gbkitties.dialogue", "res://indev/dialogue/devdiary08.dialogue", "res://indev/dialogue/leanfi.dialogue")
+locale/translations_pot_files=PackedStringArray("res://indev/dialogue/devdiary01.dialogue", "res://indev/dialogue/gbkitties.dialogue", "res://indev/dialogue/devdiary08.dialogue", "res://indev/dialogue/leanfi.dialogue", "res://indev/dialogue/ghosts.dialogue")
 
 [layer_names]
 
@@ -179,4 +183,4 @@ textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0, 0, 0, 0.29411766)
+environment/defaults/default_clear_color=Color(0, 0, 0.016295018, 0.6901961)

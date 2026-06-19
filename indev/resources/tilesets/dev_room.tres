@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://dw5svi0f0fkoq" path="res://graphics/legacyart/brickv1.png" id="3_4xr22"]
 [ext_resource type="Texture2D" uid="uid://wyypouxki6r6" path="res://graphics/legacyart/brickv2.png" id="4_f66y2"]
 [ext_resource type="Texture2D" uid="uid://b64pgks3iqe0e" path="res://graphics/legacyart/black.png" id="5_y41v5"]
+[ext_resource type="Texture2D" uid="uid://d0jujrhduchgg" path="res://graphics/legacyart/greentile.png" id="6_4xr22"]
+[ext_resource type="PackedScene" uid="uid://dypijp7oc27uh" path="res://indev/toys/barrierblock.tscn" id="7_f66y2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kp2ys"]
 texture = ExtResource("1_fb4rj")
@@ -37,6 +39,16 @@ texture = ExtResource("5_y41v5")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f66y2"]
+texture = ExtResource("6_4xr22")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_f4gif"]
+scenes/1/scene = ExtResource("7_f66y2")
+
 [resource]
 occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
@@ -45,3 +57,5 @@ sources/1 = SubResource("TileSetAtlasSource_ssqbr")
 sources/2 = SubResource("TileSetAtlasSource_s7qp4")
 sources/3 = SubResource("TileSetAtlasSource_tnwkh")
 sources/4 = SubResource("TileSetAtlasSource_4xr22")
+sources/5 = SubResource("TileSetAtlasSource_f66y2")
+sources/6 = SubResource("TileSetScenesCollectionSource_f4gif")
