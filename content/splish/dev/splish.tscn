@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bawqdrayqg0sl" path="res://content/splish/dev/shark/shark.tscn" id="2_uieog"]
 [ext_resource type="PackedScene" uid="uid://b4n4w1bccj4f3" path="res://content/splish/dev/pinkthing/pink_thing.tscn" id="3_x2g8v"]
 [ext_resource type="Script" uid="uid://bbqistra7bvc5" path="res://content/splish/dev/pinkthing/pink_thing.gd" id="4_uieog"]
+[ext_resource type="Script" uid="uid://b5jqi02oartml" path="res://content/splish/dev/v_spawner.gd" id="5_x2g8v"]
 
 [node name="Splish01" type="Node2D" unique_id=100100137]
 
@@ -26,6 +27,11 @@ limit_left = 0
 limit_top = 0
 limit_right = 640
 limit_bottom = 360
+
+[node name="VSpawner" type="Node" parent="." unique_id=396089264]
+script = ExtResource("5_x2g8v")
+
+[node name="Marker2D" type="Marker2D" parent="VSpawner" unique_id=163823740]
 
 [connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]
 

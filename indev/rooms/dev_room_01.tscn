@@ -51,13 +51,6 @@ position_smoothing_speed = 4.2
 
 [node name="Catty" type="Node2D" parent="." unique_id=2074176893]
 
-[node name="Gbcatty3" parent="Catty" unique_id=874502959 instance=ExtResource("8_rcm6n")]
-z_index = 10
-position = Vector2(324, 146)
-
-[node name="Interactable" parent="Catty/Gbcatty3" index="1" unique_id=783163528]
-dialogue_start = "kitty08"
-
 [node name="Gbcatty1" type="Sprite2D" parent="Catty" unique_id=693198005]
 z_index = 5
 position = Vector2(399, 226)
@@ -85,6 +78,13 @@ position = Vector2(248, 227)
 [node name="Interactable" parent="Catty/Gbcatty2" index="1" unique_id=783163528]
 dialogue_start = "kitty07"
 
+[node name="Gbcatty3" parent="Catty" unique_id=874502959 instance=ExtResource("8_rcm6n")]
+z_index = 10
+position = Vector2(324, 146)
+
+[node name="Interactable" parent="Catty/Gbcatty3" index="1" unique_id=783163528]
+dialogue_start = "kitty08"
+
 [node name="CatDoor" parent="." unique_id=1271951493 instance=ExtResource("12_ssqbr")]
 position = Vector2(576, 12)
 to_level = ExtResource("13_s7qp4")
@@ -93,5 +93,8 @@ to_level = ExtResource("13_s7qp4")
 position = Vector2(1, -8)
 shape = SubResource("CircleShape2D_nswqg")
 
-[editable path="Catty/Gbcatty3"]
+[node name="Entities" type="Node2D" parent="." unique_id=200298637]
+position = Vector2(-1, 0)
+
 [editable path="Catty/Gbcatty2"]
+[editable path="Catty/Gbcatty3"]

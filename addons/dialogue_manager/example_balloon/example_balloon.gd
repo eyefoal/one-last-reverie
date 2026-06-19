@@ -215,3 +215,10 @@ func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 
 
 #endregion
+
+
+func _on_dialogue_label_spoke(letter: String, letter_index: int, speed: float) -> void:
+	if not letter in [".", " "]:
+		audio_stream_player.pitch_scale = randf_range(0.42, 0.64)
+		audio_stream_player.play()
+	pass # Replace with function body.
