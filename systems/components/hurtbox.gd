@@ -5,7 +5,7 @@ class_name HurtBox
 
 func damage(attack: Attack):
 	if health:
-		health.damage(attack)
+		health.hit(attack)
 	
 	if health == null:
 		pass

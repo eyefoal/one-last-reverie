@@ -4,8 +4,10 @@ class_name Lofi
 @onready var check_detection: Area2D = $CheckDetection
 @export var tree : AnimationTree
 @export var SPEED : float = 67.67
+@export var current_weapon : PackedScene
 var input
 var playback : AnimationNodeStateMachinePlayback
+var fire_direction : Vector2 = Vector2.RIGHT
 
 func _ready() -> void:
 	print("it sure is boring around here")
@@ -27,13 +29,13 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	select_animation()
 	dev_dialog()
+	attack()
 	animate()
 	
 func dev_dialog():
 	if Input.is_action_just_pressed('dev01'):
 		print("yawn")
 		#DialogueManager.show_dialogue_balloon(load("res://dev/dialogue/devdiary08.dialogue"), "start")
-
 
 func _on_check_detection_area_entered(area: Area2D) -> void:
 	if area is Interactable:
@@ -46,12 +48,27 @@ func select_animation():
 		playback.travel("Walk")
 	
 func animate():
-	#if input == Vector2.ZERO:
-		#return
-	#tree["parameters/Idle/blend_position"] = input
-	#tree["parameters/Walk/blend_position"] = input
-	if input:
+	
+	if input: #This controls the blend position for the idle and walk states based on direction.
 		var anim_direction = Vector2(round(input.x), round(input.y))
 		tree.set("parameters/Idle/blend_position", anim_direction)
 		tree.set("parameters/Walk/blend_position", anim_direction)
+
+func attack():
+	var input_dir : Vector2 = Vector2(
+		Input.get_axis("left", "right"),
+		Input.get_axis("up", "down")
+	).normalized()
 	
+	if input_dir.x != 0.0:
+		fire_direction.x = input_dir.x
+		
+	if Input.is_action_just_pressed("b") and current_weapon:
+		var final_dir : Vector2 = fire_direction
+		if input_dir.y != 0 and input_dir.x == 0:
+			final_dir.x = 0
+		final_dir.y = input_dir.y
+		var bullet_instance = current_weapon.instantiate() as Bullet
+		bullet_instance.setup(position, final_dir.normalized())
+		get_parent().add_child(bullet_instance)
+		print(current_weapon)

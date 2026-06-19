@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bigr4kk0fgl8r"]
 
 [ext_resource type="Script" uid="uid://bdmxfkocr4i08" path="res://indev/entities/lofi/dev_lofi.gd" id="1_8lx6r"]
+[ext_resource type="PackedScene" uid="uid://camresqrntdsc" path="res://indev/toys/bullet.tscn" id="2_ix3kf"]
 [ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://indev/entities/lofi/32gradient.tres" id="3_a3vhr"]
 [ext_resource type="Texture2D" uid="uid://ccufhl3tre686" path="res://indev/entities/lofi/loafsheet.png" id="4_1ehcx"]
 
@@ -354,6 +355,7 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 motion_mode = 1
 script = ExtResource("1_8lx6r")
 tree = NodePath("CheckDetection/AnimationPlayer/AnimationTree")
+current_weapon = ExtResource("2_ix3kf")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=561724238]
 z_index = 4

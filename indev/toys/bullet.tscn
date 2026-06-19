@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://camresqrntdsc"]
+
+[ext_resource type="Script" uid="uid://ckwxdi4578xmw" path="res://systems/components/bullet.gd" id="1_xe0kn"]
+[ext_resource type="Texture2D" uid="uid://bmel3xi6gfygy" path="res://graphics/legacyart/debug_bullet.png" id="2_8en3d"]
+[ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://indev/entities/lofi/32gradient.tres" id="3_ts6x5"]
+[ext_resource type="Script" uid="uid://bwi1qgfapsc3q" path="res://systems/components/hitbox.gd" id="4_hm85d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nswqg"]
+radius = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2lqgq"]
+radius = 6.0827627
+
+[node name="Bullet" type="Area2D" unique_id=1084597069]
+script = ExtResource("1_xe0kn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=591966704]
+modulate = Color(1, 0.9098039, 0.23921569, 1)
+texture = ExtResource("2_8en3d")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=69278183]
+shadow_enabled = true
+texture = ExtResource("3_ts6x5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1049179359]
+shape = SubResource("CircleShape2D_nswqg")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=365794387]
+script = ExtResource("4_hm85d")
+metadata/_custom_type_script = "uid://bwi1qgfapsc3q"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=838262019]
+shape = SubResource("CircleShape2D_2lqgq")
+debug_color = Color(0.9817453, 0.102193944, 0.22886682, 0.41960785)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=230968466]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
