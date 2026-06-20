@@ -177,7 +177,7 @@ select={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://indev/dialogue/devdiary01.dialogue", "res://indev/dialogue/gbkitties.dialogue", "res://indev/dialogue/devdiary08.dialogue", "res://indev/dialogue/leanfi.dialogue", "res://indev/dialogue/ghosts.dialogue")
+locale/translations_pot_files=PackedStringArray("res://indev/dialogue/devdiary01.dialogue", "res://indev/dialogue/gbkitties.dialogue", "res://indev/dialogue/devdiary08.dialogue", "res://indev/dialogue/leanfi.dialogue", "res://indev/dialogue/ghosts.dialogue", "res://bob/bob/falsebob.dialogue", "res://indev/dialogue/hearts.dialogue")
 
 [layer_names]
 

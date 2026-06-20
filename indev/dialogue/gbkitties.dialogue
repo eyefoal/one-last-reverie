@@ -76,16 +76,48 @@ No, I am not a catty.
 I am Unit C+111926
 Please refer to me as Chromni.
 Chromni: I am the keeper of this world's secrets. The lore of the Gods has been bestowed upon me.
-Chromni: Do you wish to listen? 
+Chromni: Do you wish to listen? Please answer yes or no.
 - Yes
 	Chromni: Are you sure? It's kind of a long story...
 	- Yes!
 		Chromni:  ok
+		Chromni: Here goes...
+		do FadeTransition.fade(1, 1)
+		Once upon a time...
+		There were three creators.
+		Beings whose ages were so primordial that their names have been lost to time.
+		For efficiency's sake, I shall refer to them as Zero, One and Two.
+		Zero carried the archetype of the Fool.
+		Scholars suggest they were responsible for creativity and holding the balance of chaos and order.
+		Their counterpart, Two had domain over the lives and heat deaths of universes uncountable.
+		Zero and Two worked together and much like two human colleagues, had a shared creative vision. One that still affects us today.
+		This vision allowed for countless worlds to be formed. Stories were told. Lovers came and went. Civilizations rose and fell like cherry blossoms across the event horizon.
+		Anything goes.
+		That was their mantra. All except their divine intervention past initial creation and the seperation of different universes.
+		But One, fitting to this codename, had a special ambition.
+		He saught the unification of the universes. And one by one he took his hands and fused universes together like clay.
+		[color=yellow]  [i] Yawn...[/i] [color=yellow]
+		And then... ARE YOU YAWNING?!
+		Lofi: So... boring... When does it get good?
+		Chromni: It was just about to get good.
+		Chromni: Do you wish to keep hearing the story?
+		- Yes
+			Chromni: ok
+		- No
+			Chromni: This conversation will now close.
+			=> END
+		
 	- Nevermind! 
 		Chromni: ok.
-- No
-	Chromni: This conversation will now close.
-	=> END
+		Chromni: This conversation will now close.
 - Maybe
-	Perhaps attention spans are experiencing diminishing returns.
+	Chromni: I did specify yes or no...
+	=> END
+	
+- No
+	Chromni:Perhaps attention spans are experiencing diminishing returns. 
+	This conversation will now close.
+	=> END
+- 
+	
 

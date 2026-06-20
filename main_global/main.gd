@@ -7,6 +7,7 @@ var path : String = "user://user_data.tres"
 var data = ResourceLoader.load(path) as LevelData
 
 func _ready() -> void:
+	global_state = "Act 0"
 	if data:
 		current_level = data.current_level
 		print(current_level)

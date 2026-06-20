@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bmxuu16kkk3o3" path="res://indev/rooms/dev_room.gd" id="1_nvp3v"]
 [ext_resource type="PackedScene" uid="uid://bigr4kk0fgl8r" path="res://indev/entities/lofi/dev_lofi.tscn" id="1_wn2e7"]
 [ext_resource type="TileSet" uid="uid://bb10dyfh4eq3o" path="res://indev/resources/tilesets/dev_room.tres" id="2_kyeim"]
+[ext_resource type="PackedScene" uid="uid://dk46iu6gs81ej" path="res://indev/entities/hearts/heart.tscn" id="3_4iuf4"]
 [ext_resource type="Texture2D" uid="uid://ot5tvssrbmh0" path="res://indev/entities/gbcatty/gbcatty1.png" id="3_kp2ys"]
 [ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="3_uac2n"]
 [ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://indev/entities/lofi/32gradient.tres" id="4_dlv6m"]
@@ -34,6 +35,12 @@ color = Color(0.19874004, 0.12601584, 0.40001467, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Layers" unique_id=975120830]
 environment = SubResource("Environment_nswqg")
+
+[node name="Heart" parent="Layers" unique_id=520435909 instance=ExtResource("3_4iuf4")]
+position = Vector2(303, 231)
+
+[node name="Interactable" parent="Layers/Heart" index="1" unique_id=82614214]
+collision_layer = 128
 
 [node name="Entities" type="Node2D" parent="." unique_id=200298637]
 position = Vector2(-1, 0)
@@ -98,5 +105,6 @@ to_level = ExtResource("13_s7qp4")
 position = Vector2(1, -8)
 shape = SubResource("CircleShape2D_nswqg")
 
+[editable path="Layers/Heart"]
 [editable path="Entities/Catty/Gbcatty2"]
 [editable path="Entities/Catty/Gbcatty3"]

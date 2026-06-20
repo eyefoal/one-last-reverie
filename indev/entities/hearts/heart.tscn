@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dk46iu6gs81ej"]
+
+[ext_resource type="Texture2D" uid="uid://duium8070s5ds" path="res://graphics/legacyart/nerdheartv2.png" id="1_xny8b"]
+[ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="2_08vut"]
+[ext_resource type="Resource" uid="uid://dyqhw3jxlygq8" path="res://indev/dialogue/hearts.dialogue" id="3_08vut"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2lqgq"]
+radius = 3.1622777
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nswqg"]
+
+[sub_resource type="Animation" id="Animation_8bidq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kadjy"]
+resource_name = "float"
+length = 0.73333335
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(0.68302, 1),
+"update": 0,
+"values": [Vector2(0, 2), Vector2(0, -2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5vpqt"]
+_data = {
+&"RESET": SubResource("Animation_8bidq"),
+&"float": SubResource("Animation_kadjy")
+}
+
+[node name="Heart" type="CharacterBody2D" unique_id=520435909]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2007794247]
+shape = SubResource("CircleShape2D_2lqgq")
+
+[node name="Interactable" type="Area2D" parent="." unique_id=82614214]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("2_08vut")
+dialogue_resource = ExtResource("3_08vut")
+metadata/_custom_type_script = "uid://c0qmfecxerwv8"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1517778868]
+shape = SubResource("CircleShape2D_nswqg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1076420639]
+texture = ExtResource("1_xny8b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1342523102]
+libraries/ = SubResource("AnimationLibrary_5vpqt")
+autoplay = &"float"

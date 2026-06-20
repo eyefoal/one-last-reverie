@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cnkxpokmi5c6u"]
+
+[ext_resource type="Texture2D" uid="uid://dqwalpxxoamga" path="res://bob/false_bob.png" id="1_y6ioo"]
+[ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="2_kwelp"]
+[ext_resource type="Resource" uid="uid://smyanqk2oajj" path="res://bob/bob/falsebob.dialogue" id="3_m0tuh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nswqg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nswqg"]
+
+[node name="FalseBob" type="CharacterBody2D" unique_id=1887824298]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=218395512]
+texture = ExtResource("1_y6ioo")
+
+[node name="Interactable" type="Area2D" parent="." unique_id=605744432]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("2_kwelp")
+dialogue_resource = ExtResource("3_m0tuh")
+dialogue_start = "bob"
+metadata/_custom_type_script = "uid://c0qmfecxerwv8"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1007087870]
+shape = SubResource("CapsuleShape2D_nswqg")
+debug_color = Color(0.5540774, 0.5552642, 0.26206002, 0.41960785)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=382730110]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_nswqg")

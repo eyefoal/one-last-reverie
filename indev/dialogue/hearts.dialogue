@@ -1,0 +1,11 @@
+~ start
+Erm. Is this your first time playing?
+- Yes
+	How may I assist you?
+	- Where are we?
+	- What should I do?
+- No
+	if Main.global_state == "Act 0"
+		Erm. It literally is. I'm checking the global state right now.
+	
+=> END

@@ -11,6 +11,8 @@
 [node name="Spawner" type="Node" parent="." unique_id=1278337681]
 script = ExtResource("1_g0v27")
 spawnables = Array[PackedScene]([ExtResource("2_uieog")])
+max_spawn_height = 128
+min_spawn_height = 256
 
 [node name="Timer" type="Timer" parent="Spawner" unique_id=547217984]
 autostart = true

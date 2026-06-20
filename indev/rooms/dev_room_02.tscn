@@ -4,9 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://ot5tvssrbmh0" path="res://indev/entities/gbcatty/gbcatty1.png" id="2_h3erh"]
 [ext_resource type="TileSet" uid="uid://bb10dyfh4eq3o" path="res://indev/resources/tilesets/dev_room.tres" id="2_j26ax"]
 [ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="3_5nch5"]
+[ext_resource type="PackedScene" uid="uid://dk46iu6gs81ej" path="res://indev/entities/hearts/heart.tscn" id="3_6wsq2"]
 [ext_resource type="Resource" uid="uid://bshavsh44v6lt" path="res://indev/dialogue/gbkitties.dialogue" id="4_h3erh"]
 [ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://indev/entities/lofi/32gradient.tres" id="5_eoslb"]
 [ext_resource type="PackedScene" uid="uid://bigr4kk0fgl8r" path="res://indev/entities/lofi/dev_lofi.tscn" id="6_3jv3l"]
+[ext_resource type="PackedScene" uid="uid://bcr6q4n74jf5w" path="res://systems/components/doors/catdoor/cat_door.tscn" id="7_4ijgt"]
+[ext_resource type="PackedScene" uid="uid://b03mn510hp8wf" path="res://indev/rooms/dev_room_03.tscn" id="8_6wsq2"]
 [ext_resource type="PackedScene" uid="uid://ctb3w35vbedu0" path="res://indev/entities/gbcatty/gbcatty_1.tscn" id="8_mqpxi"]
 [ext_resource type="Texture2D" uid="uid://bsm7lg4dxgaa0" path="res://graphics/legacyart/chromni2.png" id="9_mqpxi"]
 [ext_resource type="Texture2D" uid="uid://b81b0cry7j3g0" path="res://graphics/legacyart/ghost.png" id="10_yysi1"]
@@ -31,6 +34,9 @@ tile_set = ExtResource("2_j26ax")
 [node name="CanvasModulate" type="CanvasModulate" parent="Layers" unique_id=965373661]
 color = Color(0.2481207, 0.2575015, 0.3579603, 1)
 
+[node name="Heart" parent="Layers" unique_id=520435909 instance=ExtResource("3_6wsq2")]
+position = Vector2(360, 208)
+
 [node name="GBCatty" type="Sprite2D" parent="." unique_id=1258809795]
 position = Vector2(412, 202)
 texture = ExtResource("2_h3erh")
@@ -50,6 +56,10 @@ shape = SubResource("CircleShape2D_dlv6m")
 color = Color(0.50980395, 1, 0.6156863, 1)
 energy = 0.5
 texture = ExtResource("5_eoslb")
+
+[node name="CatDoor" parent="GBCatty" unique_id=736445399 instance=ExtResource("7_4ijgt")]
+position = Vector2(-594, -340)
+to_level = ExtResource("8_6wsq2")
 
 [node name="DevLofi" parent="." unique_id=1286364634 instance=ExtResource("6_3jv3l")]
 position = Vector2(325, 256)

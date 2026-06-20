@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dsuigmfuin2b5"]
+
+[ext_resource type="Script" uid="uid://c3xdq3s6fo8ty" path="res://systems/components/blocks/breakableblock.gd" id="1_pdcrj"]
+[ext_resource type="Texture2D" uid="uid://crt2gpul221ej" path="res://graphics/legacyart/stone.png" id="2_ehhu7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nswqg"]
+
+[node name="CrackedStone" type="StaticBody2D" unique_id=946278352]
+script = ExtResource("1_pdcrj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1604919462]
+shape = SubResource("RectangleShape2D_nswqg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2145305442]
+texture = ExtResource("2_ehhu7")
