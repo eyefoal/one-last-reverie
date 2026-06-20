@@ -53,7 +53,7 @@ size_flags_vertical = 6
 
 [node name="Prologue" type="Button" parent="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer" unique_id=2095931415]
 layout_mode = 2
-text = "Prologue"
+text = "New Game"
 
 [node name="Continue" type="Button" parent="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer" unique_id=1150344856]
 layout_mode = 2

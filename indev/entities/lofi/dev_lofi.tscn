@@ -351,9 +351,10 @@ states/Walk/node = SubResource("AnimationNodeBlendSpace2D_7c8x1")
 states/Walk/position = Vector2(557, 100)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_a3vhr"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_1ehcx")]
 
-[node name="DevLofi" type="CharacterBody2D" unique_id=1286364634 node_paths=PackedStringArray("tree") groups=["Player"]]
+[node name="DevLofi" type="CharacterBody2D" unique_id=1286364634 node_paths=PackedStringArray("anim_player", "tree") groups=["Player"]]
 motion_mode = 1
 script = ExtResource("1_8lx6r")
+anim_player = NodePath("AnimationPlayer")
 tree = NodePath("AnimationPlayer/AnimationTree")
 current_weapon = ExtResource("2_ix3kf")
 

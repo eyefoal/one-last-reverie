@@ -11,16 +11,19 @@ radius = 1.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_2lqgq"]
 radius = 6.0827627
 
-[node name="Bullet" type="Area2D" unique_id=1084597069]
+[node name="Bullet" type="Area2D" unique_id=1084597069 node_paths=PackedStringArray("timer")]
 script = ExtResource("1_xe0kn")
+timer = NodePath("Timer")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=591966704]
 modulate = Color(1, 0.9098039, 0.23921569, 1)
 texture = ExtResource("2_8en3d")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=69278183]
+energy = 0.65
 shadow_enabled = true
 texture = ExtResource("3_ts6x5")
+texture_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1049179359]
 shape = SubResource("CircleShape2D_nswqg")
@@ -35,5 +38,10 @@ debug_color = Color(0.9817453, 0.102193944, 0.22886682, 0.41960785)
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=230968466]
 
+[node name="Timer" type="Timer" parent="." unique_id=586438694]
+wait_time = 0.28
+autostart = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

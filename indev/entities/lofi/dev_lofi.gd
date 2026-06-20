@@ -3,8 +3,11 @@ class_name Lofi
 
 @onready var weapon_reload: Timer = $WeaponReload
 @onready var check_detection: Area2D = $CheckDetection
+@export var anim_player : AnimationPlayer
 @export var tree : AnimationTree
-@export var SPEED : float = 67.67
+@export var walk_speed :=  50.5
+@export var speed : float = walk_speed
+@export var sprint_speed : float = 100.5
 @export var current_weapon : PackedScene
 var input
 var playback : AnimationNodeStateMachinePlayback
@@ -25,8 +28,16 @@ func _unhandled_input(_event: InputEvent) -> void:
 
 func _physics_process(_delta: float) -> void:
 	input = Input.get_vector("left", "right", "up", "down")
+	
+	
+	if Input.is_action_pressed("b"): #sprinting 
+		speed = move_toward(speed, sprint_speed, 1)
+		anim_player.speed_scale = 2.0
+	else:
+		anim_player.speed_scale = 1.0
+		speed = walk_speed
 		
-	velocity = input * SPEED
+	velocity = input * speed
 	
 	move_and_slide()
 	select_animation()
@@ -79,6 +90,8 @@ func attack():
 		get_parent().add_child(bullet_instance)
 		print(current_weapon)
 
-
 func _on_weapon_reload_timeout() -> void:
 	can_shoot = true
+
+
+	

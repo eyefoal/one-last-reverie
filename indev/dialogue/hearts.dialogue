@@ -7,5 +7,11 @@ Erm. Is this your first time playing?
 - No
 	if Main.global_state == "Act 0"
 		Erm. It literally is. I'm checking the global state right now.
-	
+		So do you need my assistance?
+		- Yes
+			How may I assist you?
+			- Where are we?
+			- What should I do?
+		- No 
+			It's always ok to ask for help.
 => END

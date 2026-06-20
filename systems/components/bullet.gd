@@ -1,14 +1,17 @@
 extends Area2D
 class_name Bullet
 
+@export var timer : Timer 
+
 @export_category("Bullet Stats")
 @export var knockback_force : float = 42.0
 @export var power : float = 1.0
-@export var speed : float
+@export var speed : float = 420.0
+@export var lifetime : float
 
 var direction : Vector2
-var return_dir : Vector2
-var max_speed := 420.0
+
+
 
 
 func setup(pos: Vector2, dir: Vector2):
@@ -17,7 +20,7 @@ func setup(pos: Vector2, dir: Vector2):
 
 func _physics_process(delta: float) -> void:
 	
-	global_position += direction * max_speed * delta
+	global_position += direction * speed * delta
 
 
 func _on_body_entered(body: Node2D) -> void:
@@ -31,3 +34,8 @@ func _on_body_entered(body: Node2D) -> void:
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()
 	print("dead")
+
+
+func _on_timer_timeout() -> void:
+	queue_free()
+	print("timeout")
