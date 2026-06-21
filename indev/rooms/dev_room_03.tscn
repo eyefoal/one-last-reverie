@@ -32,7 +32,7 @@ z_index = 5
 y_sort_enabled = true
 position = Vector2(325, 256)
 
-[node name="Camera2D" type="Camera2D" parent="DevLofi" unique_id=675335295]
+[node name="Camera2D" type="Camera2D" parent="DevLofi" unique_id=675335295 groups=["Camera"]]
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0

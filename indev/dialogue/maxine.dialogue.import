@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://df7h32ch618ee"
+path="res://.godot/imported/maxine.dialogue-f988405abf7a45df51928202818aef22.tres"
+
+[deps]
+
+source_file="res://indev/dialogue/maxine.dialogue"
+dest_files=["res://.godot/imported/maxine.dialogue-f988405abf7a45df51928202818aef22.tres"]
+
+[params]
+
+defaults=true

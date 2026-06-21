@@ -116,7 +116,7 @@ Chromni: Do you wish to listen? Please answer yes or no.
 	=> END
 	
 - No
-	Chromni:Perhaps attention spans are experiencing diminishing returns. 
+	Chromni: Perhaps attention spans are experiencing diminishing returns. 
 	This conversation will now close.
 	=> END
 - 
