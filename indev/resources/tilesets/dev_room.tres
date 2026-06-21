@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d0jujrhduchgg" path="res://graphics/legacyart/greentile.png" id="6_4xr22"]
 [ext_resource type="PackedScene" uid="uid://dypijp7oc27uh" path="res://indev/toys/barrierblock.tscn" id="7_f66y2"]
 [ext_resource type="PackedScene" uid="uid://dsuigmfuin2b5" path="res://indev/toys/cracked_stone.tscn" id="8_f4gif"]
+[ext_resource type="PackedScene" uid="uid://bpq1xnpw0g2jk" path="res://indev/toys/push_block.tscn" id="9_dpwn4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kp2ys"]
 texture = ExtResource("1_fb4rj")
@@ -50,6 +51,7 @@ texture = ExtResource("6_4xr22")
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_f4gif"]
 scenes/1/scene = ExtResource("7_f66y2")
 scenes/2/scene = ExtResource("8_f4gif")
+scenes/3/scene = ExtResource("9_dpwn4")
 
 [resource]
 occlusion_layer_0/light_mask = 1

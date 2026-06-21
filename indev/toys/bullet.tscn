@@ -14,13 +14,14 @@ radius = 6.0827627
 [node name="Bullet" type="Area2D" unique_id=1084597069 node_paths=PackedStringArray("timer")]
 script = ExtResource("1_xe0kn")
 timer = NodePath("Timer")
+speed = 356.6
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=591966704]
 modulate = Color(1, 0.9098039, 0.23921569, 1)
 texture = ExtResource("2_8en3d")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=69278183]
-energy = 0.65
+energy = 0.85
 shadow_enabled = true
 texture = ExtResource("3_ts6x5")
 texture_scale = 0.5

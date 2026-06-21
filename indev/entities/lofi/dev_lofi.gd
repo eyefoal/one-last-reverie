@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Lofi
 
+@onready var push_timer: Timer = $PushTimer
 @onready var weapon_reload: Timer = $WeaponReload
 @onready var check_detection: Area2D = $CheckDetection
 @export var anim_player : AnimationPlayer
@@ -13,6 +14,7 @@ var input
 var playback : AnimationNodeStateMachinePlayback
 var fire_direction : Vector2 = Vector2.RIGHT
 var can_shoot := true
+var currentCollider
 
 func _ready() -> void:
 	print("it sure is boring around here")
@@ -46,6 +48,15 @@ func _physics_process(_delta: float) -> void:
 		can_shoot = false
 	attack()
 	animate()
+	
+	var isColliding = move_and_slide()
+	
+	if isColliding and input:
+		if push_timer.is_stopped():
+			push_timer.start()
+		currentCollider = get_last_slide_collision().get_collider()
+	else:
+		push_timer.stop()
 	
 func dev_dialog():
 	if Input.is_action_just_pressed('dev01'):
@@ -93,5 +104,6 @@ func attack():
 func _on_weapon_reload_timeout() -> void:
 	can_shoot = true
 
-
-	
+func _on_push_timer_timeout() -> void:
+	if currentCollider is PushableBlock:
+		currentCollider.push_block(input)

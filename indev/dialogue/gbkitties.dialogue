@@ -98,6 +98,7 @@ Chromni: Do you wish to listen? Please answer yes or no.
 		He saught the unification of the universes. And one by one he took his hands and fused universes together like clay.
 		[color=yellow]  [i] Yawn...[/i] [color=yellow]
 		And then... ARE YOU YAWNING?!
+		do FadeTransition.fade(0, 2)
 		Lofi: So... boring... When does it get good?
 		Chromni: It was just about to get good.
 		Chromni: Do you wish to keep hearing the story?

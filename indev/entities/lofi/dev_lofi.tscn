@@ -356,6 +356,8 @@ motion_mode = 1
 script = ExtResource("1_8lx6r")
 anim_player = NodePath("AnimationPlayer")
 tree = NodePath("AnimationPlayer/AnimationTree")
+walk_speed = 35.5
+sprint_speed = 60.5
 current_weapon = ExtResource("2_ix3kf")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=561724238]
@@ -386,10 +388,6 @@ collision_mask = 128
 shape = SubResource("CircleShape2D_8lx6r")
 debug_color = Color(0.7181799, 0.3872529, 0.7398932, 0.41960785)
 
-[node name="WeaponReload" type="Timer" parent="." unique_id=455765420]
-wait_time = 0.25
-one_shot = true
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=951527851]
 libraries/ = SubResource("AnimationLibrary_01gi1")
 autoplay = &"idle_down"
@@ -401,5 +399,13 @@ anim_player = NodePath("..")
 parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(0, 0)
 
+[node name="WeaponReload" type="Timer" parent="." unique_id=455765420]
+wait_time = 0.25
+one_shot = true
+
+[node name="PushTimer" type="Timer" parent="." unique_id=1318254546]
+wait_time = 0.8
+
 [connection signal="area_entered" from="CheckDetection" to="." method="_on_check_detection_area_entered"]
 [connection signal="timeout" from="WeaponReload" to="." method="_on_weapon_reload_timeout"]
+[connection signal="timeout" from="PushTimer" to="." method="_on_push_timer_timeout"]

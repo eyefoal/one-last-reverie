@@ -31,16 +31,13 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAA
 tile_set = ExtResource("2_kyeim")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Layers" unique_id=965373661]
-color = Color(0.19874004, 0.12601584, 0.40001467, 1)
+color = Color(0.34495717, 0.2605968, 0.57931733, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Layers" unique_id=975120830]
 environment = SubResource("Environment_nswqg")
 
 [node name="Heart" parent="Layers" unique_id=520435909 instance=ExtResource("3_4iuf4")]
 position = Vector2(303, 231)
-
-[node name="Interactable" parent="Layers/Heart" index="1" unique_id=82614214]
-collision_layer = 128
 
 [node name="Entities" type="Node2D" parent="." unique_id=200298637]
 position = Vector2(-1, 0)
@@ -85,7 +82,6 @@ dialogue_start = "kitty08"
 
 [node name="DevLofi" parent="." unique_id=1286364634 instance=ExtResource("1_wn2e7")]
 position = Vector2(325, 256)
-SPEED = 67.5
 
 [node name="Camera2D" type="Camera2D" parent="DevLofi" unique_id=1123730391]
 zoom = Vector2(3, 3)
