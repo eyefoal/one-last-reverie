@@ -1,10 +1,9 @@
-[gd_scene format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene format=4 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" uid="uid://d1wt4ma6055l8" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="FontFile" uid="uid://cc5ys13inmio4" path="res://graphics/fonts/earthbound-menu-extended.otf" id="2_nlsx6"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
-[ext_resource type="AudioStream" uid="uid://dafkme6ckl4hs" path="res://addons/dialogue_manager/example_balloon/blipSelect.wav" id="5_1337t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -101,7 +100,14 @@ _data = {
 &"progress": SubResource("Animation_qkmqt")
 }
 
+[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_nlsx6"]
+data = PackedByteArray("cW9hZgAAChsBAKxEChsEKAAAAAAAAAAAAAAAAOAAQAA9ow/uyD0BQkBJVhIaJjILOJyswNg6tIlCUSrHK9QA0zQaI+bQHzRaMXMvVFfMEAEwSCZUCxOt4zaRLzLS+DIIMkAj6peCoXMxcyrqHHuAAEIIIKsJKZlnTMphG7qeEEg2iQRY3HOkWkBTKaJVjATFPIsTidK7oFEyzmZ4TLPACTBBABu8b1ReO3EouMXXdEAw00yJ4QvqrkJKYAL3EqBBJogAH7pL7742rmF8zcZ0CCKYJJ31J3c3ME7yiEsQeEFASmACwrCwiEaLRRaIDTTRMAkEifVMwVNESrGmAUw4wDYBAJX1TMYDREXVXUAOVEAyQCTu8fhYXj4S+b3j3V1RMEgEpvcIvUU8SLAXqF8zujNzBCpnhnnyP6nUkRhifMEwSAQDd0AKikDAKb1RF3iqNgfE73eBmFkzqJ0l0m9UGkJBBALljcLRN7y6ofLpXUgkQQSWN9S99kssbhVQYM+YNgEEWL6lLjc98fmZ8Wl95EZAJBn3jBQ+NtGeNXfMz75CQWgXLKiSCiI73yfy3613MSgncy6gnUE2kTPCZ8WRLD+PydjlCNzINCoqooXUo3A+pTLPvAzPizIjD3Qn3QE5PfGyy7oo3eAyvABQgPNzdEqcqcbRIKsYNiEtIMkQkgkxLvKNygDdSiK7wX1C+6QAMfD4/Mkhyxkw8wyISTugCTI3I3Tz+HxIQFpVKhMK7oo2V8SbAzvcSUJlRVlQcYaBMElTpoEXGgA0bvDdQimxuCQKaYJLD3y4MmfEzywyvfMwGiQAR8rPCDC+qIuqcbl1QgJkEgOVNEkyJ9U5Y0yRvDI+BIHwH3jCNzxgAUboG64+dWju1PLAyDJ3SYM+JIJ3NTpWA3Nyp588vqABd82vlz1n1O733juqNVWEhiVJkEQ/rPvh9dzqmjuNCIRu6jbzNfWWWWfOwkhFUCLmxKiCCT1e6n1lOpABNwVTz5fdbhc81YPj8fiwSTCsHhE4lhIJMB6mUHcAgAgxZRugbvqNwDKdwdzT+DBnNKz4knc75ggyCCCNyiCmhzzTlABF3zVTNEgBokghgh4+c/gwHud8fiaaaJAAIA8iP6iUAECxz6gs6U0SGt6RvUTTABIJCaYKMmwAg2Ap3GxGiGmACBYLGT3G4B3IO73EOofMEkEiWfc98fgbAbF450ljIInQKZTTOWN7qcbzqfc4PmD8HuRu9T3Tlgs+sFlOP6kHdAm4j5c5c7uJZZZ8fjPxNhIBO5EoOdSyymNOdTo92twQCAbE7jJsudzu8NzNOA/Ehpgg7tE9zuDuNzunqTI3AJRIBA+IMiwrwD4mwEg/gwQQ0SUwdzBBEpB3AJEbGApogAgAEAEx8SmAfgSCQB5BJJIJJBJBIgghokZ0gEgMOiAAAAAAAA==")
+format = 3
+mix_rate = 32000
+stereo = true
+
 [node name="MyBalloon" type="CanvasLayer" unique_id=1434168376]
+process_mode = 3
 layer = 100
 script = ExtResource("1_36de5")
 
@@ -220,8 +226,10 @@ autowrap_trim_flags = 192
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1116280512]
 unique_name_in_owner = true
-stream = ExtResource("5_1337t")
+stream = SubResource("AudioStreamWAV_nlsx6")
+volume_db = -12.0
 bus = &"Effects"
+playback_type = 1
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="spoke" from="Balloon/DialoguePanel/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/DialogueLabel" to="." method="_on_dialogue_label_spoke"]

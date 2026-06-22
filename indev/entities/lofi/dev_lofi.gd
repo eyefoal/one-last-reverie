@@ -87,11 +87,10 @@ func attack():
 		Input.get_axis("up", "down")
 	).normalized()
 	
-	if input_dir.x != 0.0:
-		fire_direction.x = input_dir.x
 		
 	if Input.is_action_just_pressed("b") and current_weapon and can_shoot:
 		weapon_reload.start()
+		
 		var final_dir : Vector2 = fire_direction
 		if input_dir.y != 0 and input_dir.x == 0:
 			final_dir.x = 0

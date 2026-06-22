@@ -32,7 +32,7 @@ func _load() -> void:
 	
 
 func switch_level(to_level : String):
-	to_level = Main.current_level
+	#to_level = Main.current_level
 	get_tree().change_scene_to_file(to_level)
 	print(to_level)
 	print("changing")

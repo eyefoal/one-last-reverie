@@ -364,11 +364,8 @@ current_weapon = ExtResource("2_ix3kf")
 z_index = 4
 y_sort_enabled = true
 color = Color(0.88715106, 0.8528852, 0, 1)
-energy = 0.8
 shadow_enabled = true
-shadow_color = Color(0, 0, 0.101960786, 0)
 texture = ExtResource("3_a3vhr")
-texture_scale = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1750374186]
 z_index = 5

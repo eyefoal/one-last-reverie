@@ -16,6 +16,8 @@ func push_block(direction):
 	if not pushable or push_detection.is_colliding() or push_count == max_pushes: return
 	
 	_move(global_position + direction * 16)
+	
+	push_count += 1
 
 func _move(targetPosition):
 	var tween = get_tree().create_tween()

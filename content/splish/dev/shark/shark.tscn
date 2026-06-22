@@ -2,9 +2,13 @@
 
 [ext_resource type="Script" uid="uid://c5gh5yjx314jo" path="res://content/splish/dev/shark/shark.gd" id="1_von82"]
 [ext_resource type="Texture2D" uid="uid://c4ofep2c6lmju" path="res://icon.svg" id="2_jqws6"]
+[ext_resource type="Script" uid="uid://bwi1qgfapsc3q" path="res://systems/components/hitbox.gd" id="3_jqws6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kym45"]
 size = Vector2(128.66667, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nswqg"]
+size = Vector2(118.33334, 11.333334)
 
 [node name="Shark" type="CharacterBody2D" unique_id=1461274065]
 scale = Vector2(3, 3)
@@ -36,5 +40,14 @@ position = Vector2(-64.333336, 0)
 shape = SubResource("RectangleShape2D_kym45")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1765647960]
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1350941419]
+script = ExtResource("3_jqws6")
+metadata/_custom_type_script = "uid://bwi1qgfapsc3q"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1091061633]
+position = Vector2(-64.5, 0)
+shape = SubResource("RectangleShape2D_nswqg")
+debug_color = Color(0.92358196, 0.24035683, 0.35711023, 0.41960785)
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

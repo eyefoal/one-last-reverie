@@ -2,14 +2,32 @@
 
 [ext_resource type="Script" uid="uid://bmxuu16kkk3o3" path="res://indev/rooms/dev_room.gd" id="1_cf1po"]
 [ext_resource type="TileSet" uid="uid://bb10dyfh4eq3o" path="res://indev/resources/tilesets/dev_room.tres" id="2_3o1fp"]
+[ext_resource type="PackedScene" uid="uid://bcr6q4n74jf5w" path="res://systems/components/doors/catdoor/cat_door.tscn" id="2_k7hjd"]
 [ext_resource type="PackedScene" uid="uid://cnkxpokmi5c6u" path="res://bob/bob/false_bob.tscn" id="3_3o1fp"]
+[ext_resource type="PackedScene" uid="uid://ycuvfew8ocu5" path="res://indev/rooms/dev_room_01.tscn" id="3_6khp5"]
 [ext_resource type="PackedScene" uid="uid://bigr4kk0fgl8r" path="res://indev/entities/lofi/dev_lofi.tscn" id="3_7xslb"]
+[ext_resource type="Script" uid="uid://qegcmjdb7bmm" path="res://main_global/canvas_fx/mycamera.gd" id="5_7xslb"]
 
 [node name="DevRoom03" type="Node2D" unique_id=16534929 node_paths=PackedStringArray("player")]
 script = ExtResource("1_cf1po")
 player = NodePath("DevLofi")
 
 [node name="Enitities" type="Node2D" parent="." unique_id=1247364256]
+
+[node name="Doors" type="Node2D" parent="Enitities" unique_id=1988042959]
+
+[node name="CatDoor2" parent="Enitities/Doors" unique_id=736445399 instance=ExtResource("2_k7hjd")]
+position = Vector2(583.4683, -97.37805)
+to_level = ExtResource("3_6khp5")
+metadata/_scene_painted = true
+
+[node name="CatDoor" parent="Enitities/Doors" unique_id=1082943184 instance=ExtResource("2_k7hjd")]
+position = Vector2(-244, 139)
+
+[node name="CatDoor3" parent="Enitities/Doors" unique_id=858341147 instance=ExtResource("2_k7hjd")]
+position = Vector2(352.35834, -160.29805)
+to_level = ExtResource("3_6khp5")
+metadata/_scene_painted = true
 
 [node name="Layers" type="Node2D" parent="." unique_id=160057264]
 
@@ -36,5 +54,8 @@ position = Vector2(325, 256)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
+script = ExtResource("5_7xslb")
+max_shake = 2.1
+shake_fade = 15.0
 
 [editable path="Layers/FalseBob"]
