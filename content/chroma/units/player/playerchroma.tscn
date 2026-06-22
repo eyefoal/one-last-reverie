@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dxu05yj2o70m1"]
+
+[ext_resource type="Texture2D" uid="uid://bsm7lg4dxgaa0" path="res://indev/graphics/legacyart/chromni2.png" id="1_2prls"]
+[ext_resource type="Script" uid="uid://bqip2i54j1cwe" path="res://systems/components/move_side.gd" id="2_brg0l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nswqg"]
+size = Vector2(10, 12)
+
+[node name="ChromaPlayer" type="CharacterBody2D" unique_id=464246967]
+collision_layer = 15
+collision_mask = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1983624504]
+texture = ExtResource("1_2prls")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1864765628]
+shape = SubResource("RectangleShape2D_nswqg")
+
+[node name="MoveComponentSide" type="Node" parent="." unique_id=1461732318 node_paths=PackedStringArray("body")]
+script = ExtResource("2_brg0l")
+body = NodePath("..")
+speed = 64
+acceleration = 16
+deceleration = 256
+fall_speed = 256
+jump_speed = 104
+jump_height = 128
+max_jumps = 2
+metadata/_custom_type_script = "uid://bqip2i54j1cwe"

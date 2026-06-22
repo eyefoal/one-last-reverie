@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dypijp7oc27uh"]
 
-[ext_resource type="Texture2D" uid="uid://cwgs13oldq5we" path="res://graphics/legacyart/barrier.png" id="1_wlf7s"]
+[ext_resource type="Texture2D" uid="uid://cwgs13oldq5we" path="res://indev/graphics/legacyart/barrier.png" id="1_wlf7s"]
 [ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="2_nukc5"]
 [ext_resource type="Resource" uid="uid://c404hclbs62n0" path="res://indev/dialogue/devdiary01.dialogue" id="3_qxvc7"]
 

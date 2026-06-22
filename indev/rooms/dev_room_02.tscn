@@ -11,8 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://bcr6q4n74jf5w" path="res://systems/components/doors/catdoor/cat_door.tscn" id="7_4ijgt"]
 [ext_resource type="PackedScene" uid="uid://bvhjgbuxf6poh" path="res://indev/rooms/dev_room_04.tscn" id="8_6wsq2"]
 [ext_resource type="PackedScene" uid="uid://ctb3w35vbedu0" path="res://indev/entities/gbcatty/gbcatty_1.tscn" id="8_mqpxi"]
-[ext_resource type="Texture2D" uid="uid://bsm7lg4dxgaa0" path="res://graphics/legacyart/chromni2.png" id="9_mqpxi"]
-[ext_resource type="Texture2D" uid="uid://b81b0cry7j3g0" path="res://graphics/legacyart/ghost.png" id="10_yysi1"]
+[ext_resource type="Texture2D" uid="uid://bsm7lg4dxgaa0" path="res://indev/graphics/legacyart/chromni2.png" id="9_mqpxi"]
+[ext_resource type="Texture2D" uid="uid://b81b0cry7j3g0" path="res://indev/graphics/legacyart/ghost.png" id="10_yysi1"]
 [ext_resource type="Resource" uid="uid://6b375qexxogi" path="res://indev/dialogue/ghosts.dialogue" id="11_ivgvf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dlv6m"]

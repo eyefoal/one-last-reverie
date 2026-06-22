@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bcr6q4n74jf5w"]
 
 [ext_resource type="Script" uid="uid://b6iydgvsrxbnk" path="res://systems/components/doors/catdoor/catdoor.gd" id="1_xtota"]
-[ext_resource type="Texture2D" uid="uid://dljmh5qi4ukwo" path="res://graphics/legacyart/catdoor.png" id="2_f28gf"]
+[ext_resource type="Texture2D" uid="uid://dljmh5qi4ukwo" path="res://indev/graphics/legacyart/catdoor.png" id="2_f28gf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nswqg"]
 size = Vector2(14, 10.5)

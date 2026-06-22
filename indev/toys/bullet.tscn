@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://camresqrntdsc"]
 
 [ext_resource type="Script" uid="uid://ckwxdi4578xmw" path="res://systems/components/bullet.gd" id="1_xe0kn"]
-[ext_resource type="Texture2D" uid="uid://bmel3xi6gfygy" path="res://graphics/legacyart/debug_bullet.png" id="2_8en3d"]
+[ext_resource type="Texture2D" uid="uid://bmel3xi6gfygy" path="res://indev/graphics/legacyart/debug_bullet.png" id="2_8en3d"]
 [ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://indev/entities/lofi/32gradient.tres" id="3_ts6x5"]
 [ext_resource type="Script" uid="uid://bwi1qgfapsc3q" path="res://systems/components/hitbox.gd" id="4_hm85d"]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bpq1xnpw0g2jk"]
 
 [ext_resource type="Script" uid="uid://c4lhqpj5qvay2" path="res://systems/components/blocks/push_block.gd" id="1_3s7fy"]
-[ext_resource type="Texture2D" uid="uid://cminciaf3coe8" path="res://graphics/legacyart/checker.png" id="2_6m612"]
+[ext_resource type="Texture2D" uid="uid://cminciaf3coe8" path="res://indev/graphics/legacyart/checker.png" id="2_6m612"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nswqg"]
 size = Vector2(16, 16)

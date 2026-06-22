@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dk46iu6gs81ej"]
 
-[ext_resource type="Texture2D" uid="uid://duium8070s5ds" path="res://graphics/legacyart/nerdheartv2.png" id="1_xny8b"]
+[ext_resource type="Texture2D" uid="uid://duium8070s5ds" path="res://indev/graphics/legacyart/nerdheartv2.png" id="1_xny8b"]
 [ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="2_08vut"]
 [ext_resource type="Resource" uid="uid://dyqhw3jxlygq8" path="res://indev/dialogue/hearts.dialogue" id="3_08vut"]
 
