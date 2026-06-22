@@ -16,7 +16,6 @@ collision_layer = 0
 collision_mask = 0
 motion_mode = 1
 script = ExtResource("1_von82")
-SPEED = 555.5
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=514181083]
 position = Vector2(-64, -0.5103328)

@@ -1,17 +1,27 @@
 ~ start
 Erm. Is this your first time playing?
 - Yes
-	How may I assist you?
-	- Where are we?
-	- What should I do?
+	=> questions
 - No
 	if Main.global_state == "Act 0"
 		Erm. It literally is. I'm checking the global state right now.
 		So do you need my assistance?
 		- Yes
-			How may I assist you?
-			- Where are we?
-			- What should I do?
+			=> questions
 		- No 
 			It's always ok to ask for help.
 => END
+
+~ questions
+How may I assist you?	
+- Where are we?
+	We are in [b] The DevRooms.
+	=> questions
+- What should I do?
+	As my late friend Charlie would say, "Frolic around and find out".
+	Check things that catch your eye. You never know what collection of pixels can lead you to the correct path.
+	=> questions
+- Something is wrong...
+	Of course something is wrong. You're in a dream, silly!
+- Nevermind, no questions. Don't assist me.
+	You've made me waste precious lip moisture for this.

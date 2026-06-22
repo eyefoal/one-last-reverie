@@ -2,7 +2,7 @@ extends Camera2D
 class_name ZeldaCam 
 
 
-const SCREEN_SIZE : Vector2 = Vector2( 640, 360 )
+@export var SCREEN_SIZE : Vector2 = Vector2( 320, 180 )
 var cur_screen := Vector2( 0, 0 )
 
 @export var max_shake : float = 1.0

@@ -356,8 +356,8 @@ motion_mode = 1
 script = ExtResource("1_8lx6r")
 anim_player = NodePath("AnimationPlayer")
 tree = NodePath("AnimationPlayer/AnimationTree")
-walk_speed = 35.5
-sprint_speed = 60.5
+walk_speed = 25.5
+sprint_speed = 50.5
 current_weapon = ExtResource("2_ix3kf")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=561724238]

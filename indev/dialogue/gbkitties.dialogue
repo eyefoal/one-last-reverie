@@ -27,6 +27,17 @@ Lofi: >:/
  I have seen everything.
 => END
 
+~ kitty05
+if Main.global_state == "got past"
+	=> kitty05pt2
+
+Heh >:3
+You'll never get past me! :3
+set Main.gb_cat_state == "got past"
+=> END
+
+~ kitty05pt2
+	My defenses were greatly exaggerated. 
 ~ kitty06
 You may not believe this. But I am actually the second GreenBitCatty to ever exist. 
 Don't believe me?

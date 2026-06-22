@@ -13,6 +13,7 @@ func _process(_delta: float) -> void:
 func warp() -> void:
 	await FadeTransition.fade(1.0, 1.0).finished
 	get_tree().call_deferred("change_scene_to_packed", to_level)
+	#Main.call_deferred("switch_level", to_level)
 	await FadeTransition.fade(0.0, 1.0).finished
 		
 		

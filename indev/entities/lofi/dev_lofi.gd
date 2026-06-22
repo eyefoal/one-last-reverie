@@ -37,7 +37,8 @@ func _physics_process(_delta: float) -> void:
 		anim_player.speed_scale = 2.0
 	else:
 		anim_player.speed_scale = 1.0
-		speed = walk_speed
+		speed = move_toward(speed, walk_speed, 2)
+		
 		
 	velocity = input * speed
 	
@@ -87,14 +88,16 @@ func attack():
 		Input.get_axis("up", "down")
 	).normalized()
 	
+	if input_dir.x != 0.0:
+		fire_direction.x = input_dir.x
 		
 	if Input.is_action_just_pressed("b") and current_weapon and can_shoot:
 		weapon_reload.start()
-		
 		var final_dir : Vector2 = fire_direction
 		if input_dir.y != 0 and input_dir.x == 0:
 			final_dir.x = 0
 		final_dir.y = input_dir.y
+		
 		var bullet_instance = current_weapon.instantiate() as Bullet
 		bullet_instance.setup(position, final_dir.normalized())
 		get_parent().add_child(bullet_instance)
