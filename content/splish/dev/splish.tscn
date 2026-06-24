@@ -29,6 +29,13 @@ position = Vector2(1239, 184)
 [node name="PinkThing" parent="." unique_id=1756094662 instance=ExtResource("3_x2g8v")]
 position = Vector2(197, 180)
 
+[node name="CollisionShape2D" parent="PinkThing" index="1" unique_id=481905140]
+visible = true
+
+[node name="MoveComponentTop" parent="PinkThing" index="2" unique_id=1250674649]
+speed = 256.5
+acceleration = 2.0
+
 [node name="Camera2D" parent="PinkThing" index="3" unique_id=222874020]
 zoom = Vector2(1, 1)
 limit_left = 0

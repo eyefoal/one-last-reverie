@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://cw62ug6k5gtl3"]
+
+[ext_resource type="Texture2D" uid="uid://ccufhl3tre686" path="res://indev/entities/lofi/loafsheet.png" id="1_2gule"]
+[ext_resource type="Script" uid="uid://bwnishes82xne" path="res://systems/components/move_top.gd" id="2_egb8h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nswqg"]
+radius = 5.0990195
+
+[sub_resource type="Animation" id="Animation_f3nk4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_weh1w"]
+resource_name = "spin"
+length = 0.6333333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13088535, 0.27250507, 0.41591385, 0.570716),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 6, 4, 6, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.43333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yw2m0"]
+_data = {
+&"RESET": SubResource("Animation_f3nk4"),
+&"spin": SubResource("Animation_weh1w")
+}
+
+[node name="SpinningLofi" type="CharacterBody2D" unique_id=363507515]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=865979072]
+shape = SubResource("CircleShape2D_nswqg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1056343802]
+texture = ExtResource("1_2gule")
+hframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1154716534]
+libraries/ = SubResource("AnimationLibrary_yw2m0")
+autoplay = &"spin"
+
+[node name="MoveComponentTop" type="Node" parent="." unique_id=1115468952 node_paths=PackedStringArray("body")]
+script = ExtResource("2_egb8h")
+body = NodePath("..")
+speed = 128.5
+acceleration = 1.5
+metadata/_custom_type_script = "uid://bwnishes82xne"

@@ -27,6 +27,20 @@ Lofi: >:/
  I have seen everything.
 => END
 
+~ kitty04
+if Main.quirkiness == 42:
+	Hey you're pretty lucky!
+else:
+	Hi! I'm GreenBitKitty number 4. You're pretty lucky. Yes yes. Very good, meow.
+	My mind has been expanded. I contain knowledge of universes beyond.
+	Hear me out, will ya?
+	- Sure.
+		...
+		
+	- No.
+		Mewo mewo mewo welcome to Mewo Domain.
+		
+
 ~ kitty05
 if Main.global_state == "got past"
 	=> kitty05pt2
