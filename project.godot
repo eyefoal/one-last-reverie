@@ -27,6 +27,7 @@ Main="*uid://cq70tdov0aa3t"
 DialogueManager="*uid://c3rodes2l3gxb"
 FadeTransition="*uid://nofhvu38d3w"
 PauseMenu="*uid://dnjotiiqoym6m"
+SaveLoad="*uid://cf4ijkijk556b"
 
 [display]
 

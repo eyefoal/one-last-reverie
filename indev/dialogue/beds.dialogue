@@ -4,7 +4,7 @@ Its texture and softness feel like it could take you to another dimension.
 ...
 Would you like to rest here?
 - Save the game.
-	do Main._save()
+	do SaveLoad._save()
 	do FadeTransition.fade(1, 1)
 	Saving......[wait=1]
 	do Main.get_tree().paused = true

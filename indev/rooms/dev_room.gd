@@ -6,13 +6,8 @@ var path : String = "user://user_data.tres"
 
 
 func _ready() -> void:
-	var data = LevelData.new()
-	data.quirkiness = randi_range(0, 100)
-	data.current_level = str(self.scene_file_path)
-	_save()
-	
-	print(self.scene_file_path)
 	_load()
+	_save()
 	
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("quicksave"):
@@ -22,19 +17,14 @@ func _process(_delta: float) -> void:
 		_load()
 
 func _save() -> void:
-	var data = LevelData.new()
-	data.player_pos = player.global_position
-	data.quirkiness = randi_range(0, 100)
-	data.current_level = str(self.scene_file_path)
-	ResourceSaver.save(data, path)
-	Main.current_level = data.current_level
-	print(Main.current_level)
-	print("saved!")
+	
+	SaveLoad.contents_to_save.player_pos = player.global_position
+	SaveLoad.contents_to_save.current_level = str(self.scene_file_path)
+	print("current_level: " + SaveLoad.contents_to_save.current_level)
+	print(SaveLoad.contents_to_save.player_pos)
+	SaveLoad._save()
 
 func _load() -> void:
-	var data = ResourceLoader.load(path) as LevelData
-	if data:
-		player.global_position = data.player_pos
-	
-	print("loaded!")
-	print(data.quirkiness)
+	print("superload")
+	player.global_position = SaveLoad.contents_to_save.player_pos
+	pass

@@ -26,6 +26,6 @@ func resume():
 
 
 func _on_save_quit_button_pressed() -> void:
-	Main._save()
+	SaveLoad._save()
 	get_tree().change_scene_to_file("res://main_global/main_menu.tscn")
 	resume()
