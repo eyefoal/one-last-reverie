@@ -325,12 +325,15 @@ states/Walk/node = SubResource("AnimationNodeBlendSpace2D_qp5px")
 states/Walk/position = Vector2(422, 100)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_0rxdh"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_dhn3o")]
 
-[node name="Leanfi" type="CharacterBody2D" unique_id=1038246170 node_paths=PackedStringArray("anim_player", "tree")]
+[sub_resource type="CircleShape2D" id="CircleShape2D_ovlxh"]
+
+[node name="Leanfi" type="CharacterBody2D" unique_id=1038246170 node_paths=PackedStringArray("anim_player", "tree", "check_detection")]
 z_index = 4
 y_sort_enabled = true
 script = ExtResource("1_ovlxh")
 anim_player = NodePath("AnimationPlayer")
 tree = NodePath("AnimationPlayer/AnimationTree")
+check_detection = NodePath("CheckDetection")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=320868358]
 position = Vector2(0, -3)
@@ -352,3 +355,14 @@ tree_root = SubResource("AnimationNodeStateMachine_nswqg")
 anim_player = NodePath("..")
 parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(0, 0)
+
+[node name="CheckDetection" type="Area2D" parent="." unique_id=1951437706]
+position = Vector2(0, -8)
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckDetection" unique_id=305641968]
+shape = SubResource("CircleShape2D_ovlxh")
+debug_color = Color(0.7181799, 0.3872529, 0.7398932, 0.41960785)
+
+[connection signal="area_entered" from="CheckDetection" to="." method="_on_check_detection_area_entered"]

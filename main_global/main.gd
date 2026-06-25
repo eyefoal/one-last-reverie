@@ -3,6 +3,7 @@ extends Node
 var global_state : String = "Act -1"
 var gb_cat_state : String = "unknown"
 var current_level : String = ""
+var player_pos : Vector2
 var path : String = "user://user_data.tres"
 var data = ResourceLoader.load(path) as LevelData
 
@@ -18,8 +19,8 @@ func _ready() -> void:
 	
 func dev_print():
 	print(current_level)
-	#print(global_state)
-	#print(gb_cat_state)
+	print(global_state)
+	print(gb_cat_state)
 
 func _save() -> void:
 	data = LevelData.new()
@@ -28,6 +29,8 @@ func _save() -> void:
 
 func _load() -> void:
 	print(data)
+	current_level = data.current_level
+	
 	print("load")
 	
 

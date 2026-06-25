@@ -52,7 +52,7 @@ func _physics_process(_delta: float) -> void:
 	
 	var isColliding = move_and_slide()
 	
-	if isColliding and input:
+	if isColliding and input: # pushing blocks
 		if push_timer.is_stopped():
 			push_timer.start()
 		currentCollider = get_last_slide_collision().get_collider()

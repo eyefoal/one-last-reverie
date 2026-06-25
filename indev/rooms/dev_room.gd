@@ -7,7 +7,6 @@ var path : String = "user://user_data.tres"
 
 func _ready() -> void:
 	var data = LevelData.new()
-	data.player_pos = player.global_position
 	data.quirkiness = randi_range(0, 100)
 	data.current_level = str(self.scene_file_path)
 	_save()
@@ -27,7 +26,6 @@ func _save() -> void:
 	data.player_pos = player.global_position
 	data.quirkiness = randi_range(0, 100)
 	data.current_level = str(self.scene_file_path)
-	print(data.current_level)
 	ResourceSaver.save(data, path)
 	Main.current_level = data.current_level
 	print(Main.current_level)

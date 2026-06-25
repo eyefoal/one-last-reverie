@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bylfx7qbwqrnb"
+path="res://.godot/imported/pbkitties.dialogue-50e002774f1cc135487df3ded61804bc.tres"
+
+[deps]
+
+source_file="res://indev/dialogue/pbkitties.dialogue"
+dest_files=["res://.godot/imported/pbkitties.dialogue-50e002774f1cc135487df3ded61804bc.tres"]
+
+[params]
+
+defaults=true

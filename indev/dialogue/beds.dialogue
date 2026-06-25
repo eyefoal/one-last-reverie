@@ -1,0 +1,20 @@
+~ start
+Wow, what a comfy bed!
+Its texture and softness feel like it could take you to another dimension.
+...
+Would you like to rest here?
+- Save the game.
+	do Main._save()
+	do FadeTransition.fade(1, 1)
+	Saving......[wait=1]
+	do Main.get_tree().paused = true
+	Save complete.
+	do FadeTransition.fade(0, 2)
+	do Main.get_tree().paused = false
+	Good luck on your adventure!
+	Fold the sheets on your way out.
+
+- No
+	ok. have a good one.
+	
+=> END

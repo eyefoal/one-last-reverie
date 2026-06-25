@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cda7t0pgri63m"]
+
+[ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="1_mftmx"]
+[ext_resource type="Resource" uid="uid://bylfx7qbwqrnb" path="res://indev/dialogue/pbkitties.dialogue" id="2_7k888"]
+[ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://indev/entities/lofi/32gradient.tres" id="3_mfcbx"]
+[ext_resource type="Texture2D" uid="uid://b0s5hgwi1y8sk" path="res://indev/resources/tilesets/leanfi.png" id="4_lq05g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_14cuj"]
+radius = 6.0827627
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dlv6m"]
+
+[node name="PbCatty" type="CharacterBody2D" unique_id=1513276687]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1024088700]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_14cuj")
+debug_color = Color(0.9969805, 0, 0.18511602, 0.41960785)
+
+[node name="Interactable" type="Area2D" parent="." unique_id=783163528]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("1_mftmx")
+dialogue_resource = ExtResource("2_7k888")
+metadata/_custom_type_script = "uid://c0qmfecxerwv8"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=726032550]
+shape = SubResource("CircleShape2D_dlv6m")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=2145561718]
+color = Color(0.7223334, 0.51, 1, 1)
+energy = 0.5
+texture = ExtResource("3_mfcbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1023378401]
+texture = ExtResource("4_lq05g")
+hframes = 8
+vframes = 8
+frame = 23

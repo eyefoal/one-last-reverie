@@ -60,9 +60,9 @@ autoplay = "flame"
 frame_progress = 0.6707777
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1155284860]
-energy = 0.6
+energy = 0.8
 shadow_enabled = true
 texture = ExtResource("2_gjoqf")
-texture_scale = 0.4
+texture_scale = 0.8
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=122871850]

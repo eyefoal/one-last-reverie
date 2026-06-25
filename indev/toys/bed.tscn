@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dwiocr52babp"]
+
+[ext_resource type="Texture2D" uid="uid://b0s5hgwi1y8sk" path="res://indev/resources/tilesets/leanfi.png" id="1_oxtht"]
+[ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="2_ncsqa"]
+[ext_resource type="Resource" uid="uid://d332x1u3ec1iy" path="res://indev/dialogue/beds.dialogue" id="3_2t4ku"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nswqg"]
+size = Vector2(14, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2lqgq"]
+size = Vector2(20, 34)
+
+[node name="Bed" type="CharacterBody2D" unique_id=2120493457]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1827410343]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_nswqg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1267533927]
+texture = ExtResource("1_oxtht")
+hframes = 8
+vframes = 4
+
+[node name="Interactable" type="Area2D" parent="." unique_id=273860017]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("2_ncsqa")
+dialogue_resource = ExtResource("3_2t4ku")
+metadata/_custom_type_script = "uid://c0qmfecxerwv8"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=720317020]
+shape = SubResource("RectangleShape2D_2lqgq")
+debug_color = Color(0.6129734, 0.4467346, 0.7842586, 0.41960785)

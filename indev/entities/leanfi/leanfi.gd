@@ -6,16 +6,23 @@ class_name Leanfi
 @export var walk_speed :=  50.5
 @export var speed : float = walk_speed
 @export var sprint_speed : float = 100.5
+@export var check_detection : Area2D
 var input
 var playback : AnimationNodeStateMachinePlayback
-var fire_direction : Vector2 = Vector2.RIGHT
-var can_shoot := true
 var currentCollider
 
 func _ready() -> void:
 	print("what a good day to be purple")
 	playback = tree["parameters/playback"]
 	
+func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("a"):
+		var interactables = check_detection.get_overlapping_areas()
+		if interactables.size() > 0:
+			interactables[0].interact()
+		else:
+			return
+
 func _physics_process(_delta: float) -> void:
 	input = Input.get_vector("left", "right", "up", "down")
 	
@@ -44,3 +51,9 @@ func select_animation():
 		var anim_direction = Vector2(round(input.x), round(input.y))
 		tree.set("parameters/Idle/blend_position", anim_direction)
 		tree.set("parameters/Walk/blend_position", anim_direction)
+
+
+func _on_check_detection_area_entered(area: Area2D) -> void:
+	if area is Interactable and Input.is_action_just_pressed("a"):
+		area.interact()
+		print("Check me out!")
