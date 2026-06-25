@@ -21,6 +21,7 @@ max_spawn_height = 128
 min_spawn_height = 256
 
 [node name="Timer" type="Timer" parent="Spawner" unique_id=547217984]
+wait_time = 0.7
 autostart = true
 
 [node name="Marker2D" type="Marker2D" parent="Spawner" unique_id=1428066638]
@@ -28,6 +29,7 @@ position = Vector2(1239, 184)
 
 [node name="PinkThing" parent="." unique_id=1756094662 instance=ExtResource("3_x2g8v")]
 position = Vector2(197, 180)
+scale = Vector2(3, 3)
 
 [node name="CollisionShape2D" parent="PinkThing" index="1" unique_id=481905140]
 visible = true

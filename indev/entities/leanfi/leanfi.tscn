@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://csfs55jkc4xfd" path="res://indev/entities/leanfi/leanfi.gd" id="1_ovlxh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nswqg"]
+radius = 4.0
 
 [sub_resource type="Animation" id="Animation_ovlxh"]
 length = 0.001
@@ -325,14 +326,18 @@ states/Walk/position = Vector2(422, 100)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_0rxdh"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_dhn3o")]
 
 [node name="Leanfi" type="CharacterBody2D" unique_id=1038246170 node_paths=PackedStringArray("anim_player", "tree")]
+z_index = 4
+y_sort_enabled = true
 script = ExtResource("1_ovlxh")
 anim_player = NodePath("AnimationPlayer")
 tree = NodePath("AnimationPlayer/AnimationTree")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=320868358]
+position = Vector2(0, -3)
 shape = SubResource("CircleShape2D_nswqg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1557231290]
+position = Vector2(0, -8)
 texture = ExtResource("1_cqggm")
 hframes = 8
 vframes = 8

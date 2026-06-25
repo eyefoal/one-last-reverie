@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b4n4w1bccj4f3"]
 
-[ext_resource type="Texture2D" uid="uid://c1nn04e2yyjpj" path="res://content/splish/dev/pinkthing/pink_thing.png" id="1_dtby0"]
 [ext_resource type="Script" uid="uid://bbqistra7bvc5" path="res://content/splish/dev/pinkthing/pink_thing.gd" id="1_p7a2n"]
+[ext_resource type="Texture2D" uid="uid://b0s5hgwi1y8sk" path="res://indev/resources/tilesets/leanfi.png" id="2_p7a2n"]
 [ext_resource type="Script" uid="uid://bwnishes82xne" path="res://systems/components/move_top.gd" id="3_p7a2n"]
 [ext_resource type="Script" uid="uid://ddfsqad7oka8w" path="res://systems/components/hurtbox.gd" id="3_rftqg"]
 
@@ -9,13 +9,15 @@
 radius = 17.029387
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nswqg"]
-radius = 14.035668
 
 [node name="PinkThing" type="CharacterBody2D" unique_id=1756094662]
 script = ExtResource("1_p7a2n")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1659643043]
-texture = ExtResource("1_dtby0")
+texture = ExtResource("2_p7a2n")
+hframes = 8
+vframes = 8
+frame = 48
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=481905140]
 visible = false

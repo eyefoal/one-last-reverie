@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ccufhl3tre686" path="res://indev/entities/lofi/loafsheet.png" id="4_1ehcx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nnaav"]
-radius = 6.0
+radius = 5.0990195
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8lx6r"]
 
@@ -364,6 +364,7 @@ current_weapon = ExtResource("2_ix3kf")
 z_index = 4
 y_sort_enabled = true
 color = Color(0.88715106, 0.8528852, 0, 1)
+energy = 0.5
 shadow_enabled = true
 texture = ExtResource("3_a3vhr")
 
