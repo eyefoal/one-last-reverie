@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cnkxpokmi5c6u" path="res://bob/bob/false_bob.tscn" id="3_3o1fp"]
 [ext_resource type="PackedScene" uid="uid://bvhjgbuxf6poh" path="res://indev/rooms/dev_room_04.tscn" id="3_6khp5"]
 [ext_resource type="PackedScene" uid="uid://bigr4kk0fgl8r" path="res://indev/entities/lofi/dev_lofi.tscn" id="3_7xslb"]
-[ext_resource type="Script" uid="uid://qegcmjdb7bmm" path="res://main_global/canvas_fx/mycamera.gd" id="5_7xslb"]
+[ext_resource type="Script" uid="uid://qegcmjdb7bmm" path="res://main_global/canvas_fx/camera/mycamera.gd" id="5_7xslb"]
 
 [node name="DevRoom03" type="Node2D" unique_id=16534929 node_paths=PackedStringArray("player")]
 script = ExtResource("1_cf1po")
