@@ -128,9 +128,22 @@ metadata/_scene_painted = true
 position = Vector2(575.82983, 102.14008)
 metadata/_scene_painted = true
 
+[node name="Interactable" parent="PbCatty8" index="1" unique_id=783163528]
+dialogue_start = "pbcat04"
+
 [node name="PbCatty9" parent="." unique_id=1833932528 instance=ExtResource("11_rhq8q")]
 position = Vector2(457.2498, 99.72007)
 metadata/_scene_painted = true
 
+[node name="Interactable" parent="PbCatty9" index="1" unique_id=783163528]
+dialogue_start = "pbcat02"
+
 [editable path="Gbcatty1"]
 [editable path="PbCatty"]
+[editable path="PbCatty3"]
+[editable path="PbCatty4"]
+[editable path="PbCatty5"]
+[editable path="PbCatty6"]
+[editable path="PbCatty7"]
+[editable path="PbCatty8"]
+[editable path="PbCatty9"]

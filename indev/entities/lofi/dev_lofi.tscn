@@ -9,6 +9,7 @@
 radius = 5.0990195
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8lx6r"]
+radius = 9.0
 
 [sub_resource type="Animation" id="Animation_1ehcx"]
 length = 0.001

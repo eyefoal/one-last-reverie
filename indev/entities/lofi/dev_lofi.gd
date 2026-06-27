@@ -26,7 +26,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 		if interactables.size() > 0:
 			interactables[0].interact()
 		else:
-			return
+			print("a")
 
 func _physics_process(_delta: float) -> void:
 	input = Input.get_vector("left", "right", "up", "down")
@@ -64,9 +64,7 @@ func dev_dialog():
 		print("yawn")
 		#DialogueManager.show_dialogue_balloon(load("res://dev/dialogue/devdiary08.dialogue"), "start")
 
-func _on_check_detection_area_entered(area: Area2D) -> void:
-	if area is Interactable and Input.is_action_just_pressed("a"):
-		area.interact()
+func _on_check_detection_area_entered(_area: Area2D) -> void:
 		print("Check me out!")
 		
 func select_animation():

@@ -6,7 +6,6 @@ var path : String = "user://user_data.tres"
 
 
 func _ready() -> void:
-	_load()
 	_save()
 	
 func _process(_delta: float) -> void:

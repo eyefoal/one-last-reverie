@@ -40,7 +40,7 @@ tile_map_data = PackedByteArray("AAAAABIABgAAAAAAAgAAABMABgAAAAAAAgAAABQABgAAAAA
 tile_set = ExtResource("2_3o1fp")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Layers" unique_id=102741602]
-color = Color(0.55471444, 0.5111097, 0.9210331, 1)
+color = Color(0.2091856, 0.14533207, 0.46270162, 1)
 
 [node name="FalseBob" parent="Layers" unique_id=1887824298 instance=ExtResource("3_3o1fp")]
 position = Vector2(377, 214)
