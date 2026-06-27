@@ -2,7 +2,6 @@
 
 [ext_resource type="TileSet" uid="uid://bb10dyfh4eq3o" path="res://indev/resources/tilesets/dev_room.tres" id="1_ayt7r"]
 [ext_resource type="Script" uid="uid://bmxuu16kkk3o3" path="res://indev/rooms/dev_room.gd" id="1_ltbe3"]
-[ext_resource type="PackedScene" uid="uid://bigr4kk0fgl8r" path="res://indev/entities/lofi/dev_lofi.tscn" id="2_mlpsr"]
 [ext_resource type="PackedScene" uid="uid://cj1gta1hbehje" path="res://indev/entities/leanfi/leanfi.tscn" id="3_esa27"]
 [ext_resource type="PackedScene" uid="uid://dwiocr52babp" path="res://indev/toys/bed.tscn" id="5_wsb01"]
 
@@ -24,10 +23,6 @@ tile_set = ExtResource("1_ayt7r")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1448623923]
 color = Color(0.50380397, 0.5191959, 0.84448874, 1)
-
-[node name="DevLofi" parent="." unique_id=1286364634 instance=ExtResource("2_mlpsr")]
-visible = false
-position = Vector2(104, 93)
 
 [node name="Leanfi" parent="." unique_id=1038246170 instance=ExtResource("3_esa27")]
 position = Vector2(153, 92)

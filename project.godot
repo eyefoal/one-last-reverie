@@ -28,6 +28,7 @@ DialogueManager="*uid://c3rodes2l3gxb"
 FadeTransition="*uid://nofhvu38d3w"
 PauseMenu="*uid://dnjotiiqoym6m"
 SaveLoad="*uid://cf4ijkijk556b"
+Eventbus="*uid://dyx8ro5toqlg8"
 
 [display]
 

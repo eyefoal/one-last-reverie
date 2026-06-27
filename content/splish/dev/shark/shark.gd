@@ -11,4 +11,5 @@ func _physics_process(_delta: float) -> void:
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()
+	Eventbus.splish_point.emit()
 	print("+ 1 point")
