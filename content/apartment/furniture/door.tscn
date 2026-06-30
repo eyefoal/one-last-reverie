@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bdb4ckxs62kp1"]
 
 [ext_resource type="Texture2D" uid="uid://b0s5hgwi1y8sk" path="res://indev/resources/tilesets/leanfi.png" id="1_vglwk"]
-[ext_resource type="Script" uid="uid://cd21t33mx63ox" path="res://systems/components/door_area.gd" id="2_vl10f"]
+[ext_resource type="Script" uid="uid://cd21t33mx63ox" path="res://systems/components/doors/door_area.gd" id="2_vl10f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nswqg"]
 atlas = ExtResource("1_vglwk")

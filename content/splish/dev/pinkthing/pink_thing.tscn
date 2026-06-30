@@ -9,8 +9,9 @@
 radius = 17.029387
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nswqg"]
+radius = 9.0
 
-[node name="PinkThing" type="CharacterBody2D" unique_id=1756094662]
+[node name="PinkThing" type="CharacterBody2D" unique_id=1756094662 groups=["Player"]]
 script = ExtResource("1_p7a2n")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1659643043]
@@ -33,11 +34,14 @@ zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=1567593989]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("3_rftqg")
 metadata/_custom_type_script = "uid://ddfsqad7oka8w"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1192034063]
 shape = SubResource("CircleShape2D_nswqg")
+debug_color = Color(0.3957528, 0.59781045, 0.35476863, 0.41960785)
 
 [connection signal="area_entered" from="HurtBox" to="HurtBox" method="_on_area_entered"]
 [connection signal="hit" from="HurtBox" to="." method="_on_hurt_box_hit"]

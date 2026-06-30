@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name Shark
 
 @export var SPEED = 500.5
+@export var point_value = 1
 var move_dir : float = -1.0
 
 func _physics_process(_delta: float) -> void:
@@ -11,5 +12,5 @@ func _physics_process(_delta: float) -> void:
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()
-	Eventbus.splish_point.emit()
+	Eventbus.splish_point.emit(point_value)
 	print("+ 1 point")

@@ -9,7 +9,7 @@
 size = Vector2(24, 9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nswqg"]
-size = Vector2(53.000004, 11)
+size = Vector2(50, 7.333333)
 
 [node name="Shark" type="CharacterBody2D" unique_id=1461274065]
 scale = Vector2(3, 3)
@@ -50,7 +50,7 @@ script = ExtResource("3_jqws6")
 metadata/_custom_type_script = "uid://bwi1qgfapsc3q"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1091061633]
-position = Vector2(-29.166664, 0.83333325)
+position = Vector2(-30.666668, 2.6666667)
 shape = SubResource("RectangleShape2D_nswqg")
 debug_color = Color(0.92358196, 0.24035683, 0.35711023, 0.41960785)
 

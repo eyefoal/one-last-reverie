@@ -3,11 +3,12 @@
 [ext_resource type="Script" uid="uid://dqk4pinj64urd" path="res://content/splish/dev/spawner.gd" id="1_g0v27"]
 [ext_resource type="Script" uid="uid://5b0bptcrmco1" path="res://content/splish/splish.gd" id="1_x2g8v"]
 [ext_resource type="PackedScene" uid="uid://bawqdrayqg0sl" path="res://content/splish/dev/shark/shark.tscn" id="2_uieog"]
+[ext_resource type="PackedScene" uid="uid://cwq8h5jrx27ar" path="res://content/splish/dev/treasure/treasure.tscn" id="3_cinar"]
 [ext_resource type="PackedScene" uid="uid://b4n4w1bccj4f3" path="res://content/splish/dev/pinkthing/pink_thing.tscn" id="3_x2g8v"]
 [ext_resource type="Script" uid="uid://b5jqi02oartml" path="res://content/splish/dev/v_spawner.gd" id="5_x2g8v"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nswqg"]
-normal = Vector2(0.9999111, 0.013332148)
+normal = Vector2(1, 0)
 distance = -15.038663
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2lqgq"]
@@ -20,14 +21,20 @@ script = ExtResource("1_x2g8v")
 
 [node name="VSpawner" type="Node" parent="." unique_id=396089264]
 script = ExtResource("5_x2g8v")
+spawnables = Array[PackedScene]([ExtResource("3_cinar")])
+max_spawn_width = 600
 
 [node name="Marker2D" type="Marker2D" parent="VSpawner" unique_id=163823740]
+position = Vector2(312, -445)
+
+[node name="Timer" type="Timer" parent="VSpawner" unique_id=1183503028]
+wait_time = 3.5
+autostart = true
 
 [node name="Spawner" type="Node" parent="." unique_id=1278337681]
 script = ExtResource("1_g0v27")
 spawnables = Array[PackedScene]([ExtResource("2_uieog")])
-max_spawn_height = 128
-min_spawn_height = 270
+min_spawn_height = 0
 
 [node name="Timer" type="Timer" parent="Spawner" unique_id=547217984]
 wait_time = 0.9
@@ -42,6 +49,7 @@ position = Vector2(1239, 184)
 self_modulate = Color(0.39871275, 0.42446092, 0.51294637, 1)
 offset_right = 640.0
 offset_bottom = 40.0
+size_flags_horizontal = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Panel" unique_id=990661293]
 layout_mode = 1
@@ -88,6 +96,7 @@ shape = SubResource("WorldBoundaryShape2D_2lqgq")
 position = Vector2(319, -17)
 shape = SubResource("WorldBoundaryShape2D_6duvp")
 
+[connection signal="timeout" from="VSpawner/Timer" to="VSpawner" method="_on_timer_timeout"]
 [connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]
 
 [editable path="PinkThing"]
