@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://8wsbfp0j1o2i"]
+
+[ext_resource type="Texture2D" uid="uid://b0s5hgwi1y8sk" path="res://indev/resources/tilesets/leanfi.png" id="1_ohbmt"]
+[ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="2_tifww"]
+[ext_resource type="Resource" uid="uid://dn18gnwrwj4sx" path="res://content/apartment/furniture/furniture.dialogue" id="3_m2cso"]
+[ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://indev/entities/lofi/32gradient.tres" id="3_tifww"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nswqg"]
+atlas = ExtResource("1_ohbmt")
+region = Rect2(48, 80, 16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nswqg"]
+radius = 8.0
+
+[node name="Laptop" type="Sprite2D" unique_id=1144291061]
+texture = SubResource("AtlasTexture_nswqg")
+
+[node name="Interactable" type="Area2D" parent="." unique_id=1902633341]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("2_tifww")
+dialogue_resource = ExtResource("3_m2cso")
+dialogue_start = "devlaptop"
+metadata/_custom_type_script = "uid://c0qmfecxerwv8"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1870938600]
+shape = SubResource("CircleShape2D_nswqg")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1139359485]
+energy = 0.11
+shadow_enabled = true
+texture = ExtResource("3_tifww")
+texture_scale = 0.5

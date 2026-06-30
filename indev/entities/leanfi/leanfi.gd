@@ -18,7 +18,7 @@ func _ready() -> void:
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("a"):
 		var interactables = check_detection.get_overlapping_areas()
-		if interactables.size() > 0:
+		if interactables.size() > 0 and interactables[0] is Interactable:
 			interactables[0].interact()
 		else:
 			return
@@ -54,4 +54,4 @@ func select_animation():
 
 
 func _on_check_detection_area_entered(_area: Area2D) -> void:
-		print("Check me out!")
+	print("Check me out!")

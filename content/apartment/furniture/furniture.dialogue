@@ -16,3 +16,43 @@ Oh, I guess this is the part where I exposition dump.
 It's easier to just tell you that everything is sentient.
 Make of that what you will.
 => END
+
+~ devlaptop
+Beep boop!
+Welcome to MilkOS.
+
+=> devlapque
+
+~ devlapque
+Please select an application.
+- Splish
+	=> splish
+	~ splish
+	What do you wish to do?
+	- Play Game
+		do Main.switch_level("uid://bj5gle77lgfma")
+	- Read manual
+		Use arrow keys or WASD to move. Bumping into sharks is an instant death. (shark fins are safe to pass through)
+		Collect falling treasure to further increase your score.
+		Beat Maxine's high score of 420.
+		=> splish
+	- Nothing.
+	=> devlapque
+	
+- Read diary
+	Dear diary,
+	To be or not to be. 
+	That is the question.
+	=> END
+- Save Game
+	do SaveLoad._save()
+	do FadeTransition.fade(1, 1)
+	Saving...[wait=1]
+	do Main.get_tree().paused = true
+	By the power of laptop heat, the game is saved.
+	do FadeTransition.fade(0, 2)
+	do Main.get_tree().paused = false
+	
+	=> END
+- Close laptop.
+	=> END

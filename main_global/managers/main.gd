@@ -26,6 +26,7 @@ func _save() -> void:
 
 func _load() -> void:
 	print("underload")
+	
 
 func switch_level(to_level : String):
 	#to_level = Main.current_level
@@ -44,7 +45,7 @@ func go_to_door(scene_path : String, DoorName : String):
 	for d in len(doors):
 		if doors[d].name == DoorName:
 			current_player.global_position = doors[d].global_position
-			current_player.global_position.y += 18 
+			current_player.global_position.y += 16
 
 	await get_tree().create_timer(0.1).timeout
 	FadeTransition.fade(0.0, 1.0)

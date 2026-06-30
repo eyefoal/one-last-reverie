@@ -27,7 +27,7 @@ script = ExtResource("5_x2g8v")
 script = ExtResource("1_g0v27")
 spawnables = Array[PackedScene]([ExtResource("2_uieog")])
 max_spawn_height = 128
-min_spawn_height = 256
+min_spawn_height = 270
 
 [node name="Timer" type="Timer" parent="Spawner" unique_id=547217984]
 wait_time = 0.9

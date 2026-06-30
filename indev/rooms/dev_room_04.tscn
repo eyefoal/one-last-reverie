@@ -4,7 +4,7 @@
 [ext_resource type="TileSet" uid="uid://bb10dyfh4eq3o" path="res://indev/resources/tilesets/dev_room.tres" id="2_1w0my"]
 [ext_resource type="PackedScene" uid="uid://bigr4kk0fgl8r" path="res://indev/entities/lofi/dev_lofi.tscn" id="3_s1vbk"]
 [ext_resource type="Texture2D" uid="uid://bvivem2a0lc5s" path="res://indev/graphics/legacyart/alien.png" id="3_sigi6"]
-[ext_resource type="Script" uid="uid://bboeio8xrv8wm" path="res://systems/components/globals.gd" id="4_1w0my"]
+[ext_resource type="Script" uid="uid://bboeio8xrv8wm" path="res://systems/components/zeldacam.gd" id="4_1w0my"]
 [ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="4_tuiqi"]
 [ext_resource type="Resource" uid="uid://jjopmnsg8ne5" path="res://indev/dialogue/aliens.dialogue" id="5_yldcu"]
 [ext_resource type="PackedScene" uid="uid://dwiocr52babp" path="res://indev/toys/bed.tscn" id="6_4nblx"]

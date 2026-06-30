@@ -42,7 +42,7 @@ custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 28
 bbcode_enabled = true
-text = "[ rainbow] DIVIERTO [/rainbow]"
+text = "[ rainbow] THE SHAPE OF WORDS[/rainbow]"
 fit_content = true
 scroll_active = false
 horizontal_alignment = 1
@@ -61,7 +61,7 @@ text = "New Game"
 
 [node name="QuickShplish" type="Button" parent="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer" unique_id=511494734]
 layout_mode = 2
-text = "Quick Play (Shplish)"
+text = "Quick Play (Splish)"
 
 [node name="Options" type="Button" parent="Control/Panel/PanelContainer/VBoxContainer/VBoxContainer" unique_id=455955588]
 layout_mode = 2

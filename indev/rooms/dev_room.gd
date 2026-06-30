@@ -27,4 +27,5 @@ func _save() -> void:
 func _load() -> void:
 	print("superload")
 	player.global_position = SaveLoad.contents_to_save.player_pos
+	
 	pass

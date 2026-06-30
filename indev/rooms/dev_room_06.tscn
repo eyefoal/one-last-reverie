@@ -4,6 +4,8 @@
 [ext_resource type="TileSet" uid="uid://bb10dyfh4eq3o" path="res://indev/resources/tilesets/dev_room.tres" id="2_5ciwl"]
 [ext_resource type="PackedScene" uid="uid://bdb4ckxs62kp1" path="res://content/apartment/furniture/door.tscn" id="3_5ciwl"]
 [ext_resource type="PackedScene" uid="uid://cj1gta1hbehje" path="res://indev/entities/leanfi/leanfi.tscn" id="3_gc241"]
+[ext_resource type="PackedScene" uid="uid://cheahq2kme2ie" path="res://content/apartment/furniture/bookcase.tscn" id="4_gc241"]
+[ext_resource type="PackedScene" uid="uid://cda7t0pgri63m" path="res://indev/entities/gbcatty/pb_catty.tscn" id="5_aah4k"]
 
 [node name="DevRoom06" type="Node2D" unique_id=1797382374 node_paths=PackedStringArray("player")]
 script = ExtResource("1_6co5u")
@@ -20,12 +22,12 @@ tile_map_data = PackedByteArray("AAARAAYABgAAAAAABAA=")
 tile_set = ExtResource("2_5ciwl")
 
 [node name="FloorLayer" type="TileMapLayer" parent="Layers" unique_id=2101064578]
-tile_map_data = PackedByteArray("AAAQAAgACAAEAAMAAAAQAAkACAAEAAMAAAAQAAoACAAEAAMAAAAQAAsACAAEAAMAAAARAAgACAAEAAMAAAARAAkACAAEAAMAAAARAAoACAAEAAMAAAARAAsACAAEAAMAAAASAAgACAAEAAMAAAASAAkACAAEAAMAAAASAAoACAAEAAMAAAASAAsACAAEAAMAAAATAAgACAAEAAMAAAATAAkACAAEAAMAAAATAAoACAAEAAMAAAATAAsACAAEAAMAAAAUAAgACAAEAAMAAAAUAAkACAAEAAMAAAAUAAoACAAEAAMAAAAUAAsACAAEAAMAAAAVAAgACAAEAAMAAAAVAAkACAAEAAMAAAAVAAoACAAEAAMAAAAVAAsACAAEAAMAAAAWAAgACAAEAAMAAAAWAAkACAAEAAMAAAAWAAoACAAEAAMAAAAWAAsACAAEAAMAAAAXAAgABAAAAAAAAAAXAAkABAAAAAAAAAAXAAoABAAAAAAAAAAXAAsABAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAQAAgACAAEAAMAAAAQAAkACAAEAAMAAAAQAAoACAAEAAMAAAAQAAsACAAEAAMAAAARAAgACAAEAAMAAAARAAkACAAEAAMAAAARAAoACAAEAAMAAAARAAsACAAEAAMAAAASAAgACAAEAAMAAAASAAoACAAEAAMAAAASAAsACAAEAAMAAAATAAgACAAEAAMAAAATAAoACAAEAAMAAAATAAsACAAEAAMAAAAUAAgACAAEAAMAAAAUAAoACAAEAAMAAAAUAAsACAAEAAMAAAAVAAgACAAEAAMAAAAVAAoACAAEAAMAAAAVAAsACAAEAAMAAAAWAAgACAAEAAMAAAAWAAoACAAEAAMAAAAWAAsACAAEAAMAAAAXAAgABAAAAAAAAAAXAAkABAAAAAAAAAAXAAoABAAAAAAAAAAXAAsABAAAAAAAAAASAAkACAAEAAMAAAATAAkACAAEAAMAAAAUAAkACAAEAAMAAAAVAAkACAAEAAMAAAAWAAkACAAEAAMAAAA=")
 tile_set = ExtResource("2_5ciwl")
 collision_enabled = false
 
 [node name="Furniture" type="TileMapLayer" parent="Layers/FloorLayer" unique_id=1107486358]
-tile_map_data = PackedByteArray("AAAVAAgABgAAAAAABQAWAAgABgAAAAAABQAUAAkABgAAAAAABQAVAAkABgAAAAAABQAWAAkABgAAAAAABQAVAAoABgAAAAAABQAUAAoABgAAAAAABQATAAoABgAAAAAABQAQAAgABgAAAAAABQA=")
+tile_map_data = PackedByteArray("AAAQAAgABgAAAAAABQAQAAoABgAAAAAABQARAAoABgAAAAAABQASAAoABgAAAAAABQATAAoABgAAAAAABQAVAAgABgAAAAAABgA=")
 tile_set = ExtResource("2_5ciwl")
 
 [node name="Door" parent="Layers/FloorLayer/Furniture" unique_id=1137062243 instance=ExtResource("3_5ciwl")]
@@ -33,6 +35,16 @@ position = Vector2(280, 120)
 
 [node name="DoorArea" parent="Layers/FloorLayer/Furniture/Door" index="2" unique_id=450594468]
 door_name = "Door"
+
+[node name="Bookcase2" parent="Layers/FloorLayer/Furniture" unique_id=691913706 instance=ExtResource("4_gc241")]
+position = Vector2(296, 136)
+metadata/_scene_painted = true
+
+[node name="Interactable" parent="Layers/FloorLayer/Furniture/Bookcase2" index="2" unique_id=1519624639]
+dialogue_start = "book01"
+
+[node name="PbCatty" parent="Layers/FloorLayer" unique_id=1513276687 instance=ExtResource("5_aah4k")]
+position = Vector2(360, 184)
 
 [node name="Penumbra" type="CanvasModulate" parent="Layers" unique_id=1612672815]
 color = Color(0.15580899, 0.06973661, 0.49969995, 1)
@@ -43,7 +55,7 @@ position = Vector2(308, 152)
 speed = 4.2
 
 [node name="Camera2D" type="Camera2D" parent="Layers/Leanfi" unique_id=2133013585 groups=["Camera"]]
-zoom = Vector2(3, 3)
+zoom = Vector2(4, 4)
 limit_enabled = false
 limit_left = -64
 limit_top = -64
@@ -54,3 +66,5 @@ position_smoothing_enabled = true
 position_smoothing_speed = 4.2
 
 [editable path="Layers/FloorLayer/Furniture/Door"]
+[editable path="Layers/FloorLayer/Furniture/Bookcase2"]
+[editable path="Layers/FloorLayer/PbCatty"]
