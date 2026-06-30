@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bpq1xnpw0g2jk" path="res://indev/toys/push_block.tscn" id="9_dpwn4"]
 [ext_resource type="PackedScene" uid="uid://cd6w1sfquljpn" path="res://indev/toys/torch.tscn" id="10_n3j5r"]
 [ext_resource type="Texture2D" uid="uid://b0s5hgwi1y8sk" path="res://indev/resources/tilesets/leanfi.png" id="10_yihtn"]
+[ext_resource type="PackedScene" uid="uid://cheahq2kme2ie" path="res://content/apartment/furniture/bookcase.tscn" id="11_qo6dx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kp2ys"]
 texture = ExtResource("1_dpwn4")
@@ -55,6 +56,7 @@ scenes/1/scene = ExtResource("7_f66y2")
 scenes/2/scene = ExtResource("8_f4gif")
 scenes/3/scene = ExtResource("9_dpwn4")
 scenes/4/scene = ExtResource("10_n3j5r")
+scenes/5/scene = ExtResource("11_qo6dx")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3j5r"]
 texture = ExtResource("10_yihtn")

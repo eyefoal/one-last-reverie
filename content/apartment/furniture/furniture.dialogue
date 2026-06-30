@@ -1,0 +1,18 @@
+~ start
+Hey, I'm stuff. I'm also stuff. And, we're the Game Stuffs. ;3
+=> END
+
+~ bookcase
+What a huge bookcase. Each book is it's own story of pure dialogue text.
+If you'd like to not read anything, now's the time to choose.
+- Select a book
+	Which book?
+	- Book One
+	=> book01
+
+~ book01
+Im book number one! Yippie. 
+Oh, I guess this is the part where I exposition dump.
+It's easier to just tell you that everything is sentient.
+Make of that what you will.
+=> END

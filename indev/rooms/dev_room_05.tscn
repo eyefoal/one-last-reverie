@@ -22,10 +22,11 @@ tile_map_data = PackedByteArray("AAABAAEACAAFAAEAAAAJAAgACAADAAEAAAAJAAkACAADAAE
 tile_set = ExtResource("1_ayt7r")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1448623923]
-color = Color(0.50380397, 0.5191959, 0.84448874, 1)
+color = Color(0.282, 0.29139996, 0.47, 1)
 
 [node name="Leanfi" parent="." unique_id=1038246170 instance=ExtResource("3_esa27")]
 position = Vector2(153, 92)
+speed = 4.2
 
 [node name="Camera2D" type="Camera2D" parent="Leanfi" unique_id=1020259784 groups=["Camera"]]
 zoom = Vector2(3, 3)

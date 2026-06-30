@@ -63,6 +63,6 @@ frame_progress = 0.6707777
 energy = 0.8
 shadow_enabled = true
 texture = ExtResource("2_gjoqf")
-texture_scale = 0.8
+texture_scale = 1.5
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=122871850]

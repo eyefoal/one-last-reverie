@@ -10,6 +10,8 @@ Erm. Is this your first time playing?
 			=> questions
 		- No 
 			It's always ok to ask for help.
+	else:
+		Oki, just making sure.
 => END
 
 ~ questions

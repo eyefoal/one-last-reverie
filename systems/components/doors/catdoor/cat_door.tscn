@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nswqg"]
 size = Vector2(14, 10.5)
 
-[node name="CatDoor" type="Area2D" unique_id=736445399]
+[node name="CatDoor" type="Area2D" unique_id=736445399 groups=["Door"]]
 z_index = 8
 collision_mask = 129
 script = ExtResource("1_xtota")
@@ -20,4 +20,7 @@ z_index = 6
 position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_nswqg")
 
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1141876452]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

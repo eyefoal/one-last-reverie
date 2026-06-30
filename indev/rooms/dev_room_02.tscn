@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://indev/entities/lofi/32gradient.tres" id="5_eoslb"]
 [ext_resource type="PackedScene" uid="uid://bigr4kk0fgl8r" path="res://indev/entities/lofi/dev_lofi.tscn" id="6_3jv3l"]
 [ext_resource type="PackedScene" uid="uid://bcr6q4n74jf5w" path="res://systems/components/doors/catdoor/cat_door.tscn" id="7_4ijgt"]
-[ext_resource type="PackedScene" uid="uid://bvhjgbuxf6poh" path="res://indev/rooms/dev_room_04.tscn" id="8_6wsq2"]
 [ext_resource type="PackedScene" uid="uid://ctb3w35vbedu0" path="res://indev/entities/gbcatty/gbcatty_1.tscn" id="8_mqpxi"]
 [ext_resource type="Texture2D" uid="uid://bsm7lg4dxgaa0" path="res://indev/graphics/legacyart/chromni2.png" id="9_mqpxi"]
 [ext_resource type="Texture2D" uid="uid://b81b0cry7j3g0" path="res://indev/graphics/legacyart/ghost.png" id="10_yysi1"]
@@ -60,10 +59,6 @@ shape = SubResource("CircleShape2D_dlv6m")
 color = Color(0.50980395, 1, 0.6156863, 1)
 energy = 0.5
 texture = ExtResource("5_eoslb")
-
-[node name="CatDoor" parent="GBCatty" unique_id=736445399 instance=ExtResource("7_4ijgt")]
-position = Vector2(-594, -340)
-to_level = ExtResource("8_6wsq2")
 
 [node name="DevLofi" parent="." unique_id=1286364634 instance=ExtResource("6_3jv3l")]
 position = Vector2(325, 256)
@@ -176,5 +171,15 @@ metadata/_custom_type_script = "uid://c0qmfecxerwv8"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ghost/Interactable" unique_id=437553176]
 shape = SubResource("CircleShape2D_2lqgq")
+
+[node name="CatDoor" parent="." unique_id=736445399 instance=ExtResource("7_4ijgt")]
+position = Vector2(-182, -138)
+scene = "uid://b03mn510hp8wf"
+door_name = "CatDoor"
+
+[node name="CatDoor2" parent="." unique_id=871703800 instance=ExtResource("7_4ijgt")]
+position = Vector2(448, 328)
+scene = "uid://ycuvfew8ocu5"
+door_name = "CatDoor"
 
 [editable path="Kitties/Gbcatty1"]

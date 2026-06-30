@@ -124,6 +124,9 @@ metadata/_scene_painted = true
 position = Vector2(263.64978, 50.110046)
 metadata/_scene_painted = true
 
+[node name="Interactable" parent="PbCatty7" index="1" unique_id=783163528]
+dialogue_start = "pbkitty03"
+
 [node name="PbCatty8" parent="." unique_id=1411374157 instance=ExtResource("11_rhq8q")]
 position = Vector2(575.82983, 102.14008)
 metadata/_scene_painted = true
