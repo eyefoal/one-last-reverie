@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://b0s5hgwi1y8sk" path="res://indev/resources/tilesets/leanfi.png" id="1_cqggm"]
 [ext_resource type="Script" uid="uid://csfs55jkc4xfd" path="res://indev/entities/leanfi/leanfi.gd" id="1_ovlxh"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_nswqg"]
-radius = 7.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ovlxh"]
+size = Vector2(10, 12.5)
 
 [sub_resource type="Animation" id="Animation_ovlxh"]
 length = 0.001
@@ -326,9 +326,8 @@ states/Walk/position = Vector2(422, 100)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_0rxdh"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_dhn3o")]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ovlxh"]
-radius = 8.0
 
-[node name="Leanfi" type="CharacterBody2D" unique_id=1038246170 node_paths=PackedStringArray("anim_player", "tree", "check_detection")]
+[node name="Leanfi" type="CharacterBody2D" unique_id=1038246170 node_paths=PackedStringArray("anim_player", "tree", "check_detection") groups=["Player"]]
 z_index = 4
 y_sort_enabled = true
 script = ExtResource("1_ovlxh")
@@ -337,11 +336,11 @@ tree = NodePath("AnimationPlayer/AnimationTree")
 check_detection = NodePath("CheckDetection")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=320868358]
-position = Vector2(0, -6)
-shape = SubResource("CircleShape2D_nswqg")
+position = Vector2(0, 2.25)
+shape = SubResource("RectangleShape2D_ovlxh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1557231290]
-position = Vector2(0, -8)
+z_index = 1
 texture = ExtResource("1_cqggm")
 hframes = 8
 vframes = 8
@@ -358,7 +357,7 @@ parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(0, 0)
 
 [node name="CheckDetection" type="Area2D" parent="." unique_id=1951437706]
-position = Vector2(0, -8)
+position = Vector2(0, -1)
 collision_layer = 128
 collision_mask = 128
 

@@ -9,32 +9,33 @@ atlas = ExtResource("1_xylyn")
 region = Rect2(112, 48, 16, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nswqg"]
-size = Vector2(14, 11)
+size = Vector2(14, 2)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2lqgq"]
-size = Vector2(16, 14)
+size = Vector2(18, 16)
 
 [node name="Bookcase" type="StaticBody2D" unique_id=691913706]
-z_index = 2
+z_index = 3
 y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=946609423]
-position = Vector2(0, -16)
+position = Vector2(0, -8)
 texture = SubResource("AtlasTexture_nswqg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1017122032]
-position = Vector2(0, -5.5)
+z_as_relative = false
+position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_nswqg")
 
 [node name="Interactable" type="Area2D" parent="." unique_id=1519624639]
+position = Vector2(0, 6)
 collision_layer = 128
 collision_mask = 128
 script = ExtResource("2_7i783")
 dialogue_resource = ExtResource("3_oe7gt")
-dialogue_start = "bookcase"
 metadata/_custom_type_script = "uid://c0qmfecxerwv8"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1243911280]
-position = Vector2(0, -6)
+position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_2lqgq")
 debug_color = Color(0.5992947, 0.53059757, 0.3445877, 0.41960785)

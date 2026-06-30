@@ -53,7 +53,5 @@ func select_animation():
 		tree.set("parameters/Walk/blend_position", anim_direction)
 
 
-func _on_check_detection_area_entered(area: Area2D) -> void:
-	if area is Interactable and Input.is_action_just_pressed("a"):
-		area.interact()
+func _on_check_detection_area_entered(_area: Area2D) -> void:
 		print("Check me out!")

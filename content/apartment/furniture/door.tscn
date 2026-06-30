@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bdb4ckxs62kp1"]
+
+[ext_resource type="Texture2D" uid="uid://b0s5hgwi1y8sk" path="res://indev/resources/tilesets/leanfi.png" id="1_vglwk"]
+[ext_resource type="Script" uid="uid://cd21t33mx63ox" path="res://systems/components/door_area.gd" id="2_vl10f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nswqg"]
+atlas = ExtResource("1_vglwk")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nswqg"]
+size = Vector2(12, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ciwl"]
+size = Vector2(20, 22)
+
+[node name="Door" type="StaticBody2D" unique_id=1137062243 groups=["Door"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1598026955]
+texture = SubResource("AtlasTexture_nswqg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1347893381]
+shape = SubResource("RectangleShape2D_nswqg")
+
+[node name="DoorArea" type="Area2D" parent="." unique_id=450594468]
+collision_layer = 129
+collision_mask = 129
+script = ExtResource("2_vl10f")
+scene = "uid://d4nc5fnytbhk3"
+metadata/_custom_type_script = "uid://cd21t33mx63ox"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorArea" unique_id=767800455]
+shape = SubResource("RectangleShape2D_5ciwl")
+
+[connection signal="body_entered" from="DoorArea" to="DoorArea" method="_on_body_entered"]

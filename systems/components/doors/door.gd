@@ -1,5 +1,5 @@
 extends Area2D
-class_name CatDoor
+class_name Door
 
 @export_file("*.tscn") var scene : String
 @export var door_name : String
