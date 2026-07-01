@@ -11,7 +11,7 @@ region = Rect2(80, 16, 16, 16)
 size = Vector2(12, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ciwl"]
-size = Vector2(20, 22)
+size = Vector2(12, 18)
 
 [node name="Door" type="StaticBody2D" unique_id=1137062243 groups=["Door"]]
 
@@ -29,6 +29,7 @@ scene = "uid://d4nc5fnytbhk3"
 metadata/_custom_type_script = "uid://cd21t33mx63ox"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorArea" unique_id=767800455]
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_5ciwl")
 
 [connection signal="body_entered" from="DoorArea" to="DoorArea" method="_on_body_entered"]

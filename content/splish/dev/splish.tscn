@@ -74,7 +74,7 @@ visible = true
 
 [node name="MoveComponentTop" parent="PinkThing" index="2" unique_id=1250674649]
 speed = 256.5
-acceleration = 2.0
+acceleration = 3.0
 
 [node name="Camera2D" parent="PinkThing" index="3" unique_id=222874020]
 zoom = Vector2(1, 1)

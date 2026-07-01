@@ -143,6 +143,7 @@ dialogue_start = "pbcat02"
 
 [editable path="Gbcatty1"]
 [editable path="PbCatty"]
+[editable path="PbCatty2"]
 [editable path="PbCatty3"]
 [editable path="PbCatty4"]
 [editable path="PbCatty5"]
