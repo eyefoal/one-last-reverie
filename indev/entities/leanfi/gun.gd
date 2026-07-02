@@ -14,6 +14,7 @@ func _physics_process(_delta: float) -> void:
 
 func shoot():
 	var new_weapon = weapon.instantiate() as AutoBullet
+	new_weapon.direction = Vector2.ZERO
 	new_weapon.global_position = global_position
 	new_weapon.global_rotation = global_rotation
 	self.add_child(new_weapon)
