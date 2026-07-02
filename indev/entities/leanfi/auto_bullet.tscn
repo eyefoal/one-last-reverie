@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://4oud7xsue53"]
+
+[ext_resource type="Script" uid="uid://cb67frv1ux7sy" path="res://indev/entities/leanfi/auto_bullet.gd" id="1_rhwdt"]
+[ext_resource type="Texture2D" uid="uid://bmel3xi6gfygy" path="res://indev/graphics/legacyart/debug_bullet.png" id="2_gwlr6"]
+[ext_resource type="Script" uid="uid://bwi1qgfapsc3q" path="res://systems/components/hitbox.gd" id="3_gwlr6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2lqgq"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nswqg"]
+
+[node name="AutoBullet" type="CharacterBody2D" unique_id=104430814]
+top_level = true
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_rhwdt")
+metadata/_custom_type_script = "uid://cb67frv1ux7sy"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1803300696]
+texture = ExtResource("2_gwlr6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1723427478]
+shape = SubResource("CircleShape2D_2lqgq")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1636506088]
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1768913373]
+script = ExtResource("3_gwlr6")
+metadata/_custom_type_script = "uid://bwi1qgfapsc3q"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=667474126]
+shape = SubResource("CircleShape2D_nswqg")
+debug_color = Color(0.7, 0, 0.011666489, 0.41960785)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

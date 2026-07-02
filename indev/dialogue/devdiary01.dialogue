@@ -1,21 +1,9 @@
 ~ start
-flow
-act 0
-devroom 01
-devroom 02
-act 1 
-bedroom
-splish
-platformer
-shooter
-polish
-[rainbow] sigh [/rainbow]
-pause menu
-button remapping
-dialogue sounds
-atmosphere audio
-further polish
+Further polish
 
+=> END
+
+~ misc
 Any questions?
 - What does this mean?
 	Wel wel wel w el ll welll wel come ot toto toto toto to oto Reverieeeeee ieee ieie.
@@ -31,3 +19,4 @@ Any questions?
 This area is off-limits. 
 Please come back when the game is further developed.
 Have a nice day.
+=> END

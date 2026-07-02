@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dy4tuiaeb522h" path="res://main_global/managers/pause_menu.gd" id="1_4res2"]
 [ext_resource type="Script" uid="uid://dbxecajh7ybfi" path="res://main_global/managers/audio_control.gd" id="2_qv1b4"]
 [ext_resource type="AudioStream" uid="uid://din3qk6r7jats" path="res://blipSelect (2).wav" id="3_dsleu"]
-[ext_resource type="Script" uid="uid://dh1vx70e1opcn" path="res://main_global/fullscreen.gd" id="4_6d6jw"]
+[ext_resource type="Script" uid="uid://dh1vx70e1opcn" path="res://main_global/managers/fullscreen.gd" id="4_6d6jw"]
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=725464776 node_paths=PackedStringArray("pause", "options")]
 process_mode = 3

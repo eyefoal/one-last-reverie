@@ -2,9 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://b0s5hgwi1y8sk" path="res://indev/resources/tilesets/leanfi.png" id="1_cqggm"]
 [ext_resource type="Script" uid="uid://csfs55jkc4xfd" path="res://indev/entities/leanfi/leanfi.gd" id="1_ovlxh"]
+[ext_resource type="PackedScene" uid="uid://wiqcdf80v0hf" path="res://indev/entities/leanfi/gun.tscn" id="3_m5ost"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ovlxh"]
 size = Vector2(10, 12.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ovlxh"]
 
 [sub_resource type="Animation" id="Animation_ovlxh"]
 length = 0.001
@@ -325,19 +328,18 @@ states/Walk/node = SubResource("AnimationNodeBlendSpace2D_qp5px")
 states/Walk/position = Vector2(422, 100)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_0rxdh"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_dhn3o")]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ovlxh"]
-
-[node name="Leanfi" type="CharacterBody2D" unique_id=1038246170 node_paths=PackedStringArray("anim_player", "tree", "check_detection") groups=["Player"]]
+[node name="Leanfi" type="CharacterBody2D" unique_id=1038246170 node_paths=PackedStringArray("push_timer", "anim_player", "tree", "check_detection") groups=["Player"]]
 z_index = 4
 y_sort_enabled = true
 script = ExtResource("1_ovlxh")
+push_timer = NodePath("PushTimer")
 anim_player = NodePath("AnimationPlayer")
 tree = NodePath("AnimationPlayer/AnimationTree")
+walk_speed = 25.5
+sprint_speed = 50.5
 check_detection = NodePath("CheckDetection")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=320868358]
-position = Vector2(0, 2.25)
-shape = SubResource("RectangleShape2D_ovlxh")
+[node name="Gun" parent="." unique_id=1621147265 instance=ExtResource("3_m5ost")]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1557231290]
 z_index = 1
@@ -346,15 +348,9 @@ hframes = 8
 vframes = 8
 frame = 6
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1934815156]
-libraries/ = SubResource("AnimationLibrary_4k5r3")
-
-[node name="AnimationTree" type="AnimationTree" parent="AnimationPlayer" unique_id=1811261152]
-root_node = NodePath("../..")
-tree_root = SubResource("AnimationNodeStateMachine_nswqg")
-anim_player = NodePath("..")
-parameters/Idle/blend_position = Vector2(0, 0)
-parameters/Walk/blend_position = Vector2(0, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=320868358]
+position = Vector2(0, 2.25)
+shape = SubResource("RectangleShape2D_ovlxh")
 
 [node name="CheckDetection" type="Area2D" parent="." unique_id=1951437706]
 position = Vector2(0, -1)
@@ -366,4 +362,18 @@ position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_ovlxh")
 debug_color = Color(0.7181799, 0.3872529, 0.7398932, 0.41960785)
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1934815156]
+libraries/ = SubResource("AnimationLibrary_4k5r3")
+
+[node name="AnimationTree" type="AnimationTree" parent="AnimationPlayer" unique_id=1811261152]
+root_node = NodePath("../..")
+tree_root = SubResource("AnimationNodeStateMachine_nswqg")
+anim_player = NodePath("..")
+parameters/Idle/blend_position = Vector2(0, 0)
+parameters/Walk/blend_position = Vector2(0, 0)
+
+[node name="PushTimer" type="Timer" parent="." unique_id=941697042]
+autostart = true
+
 [connection signal="area_entered" from="CheckDetection" to="." method="_on_check_detection_area_entered"]
+[connection signal="timeout" from="PushTimer" to="." method="_on_push_timer_timeout"]

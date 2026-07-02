@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Leanfi
 
+@export var push_timer : Timer
 @export var anim_player : AnimationPlayer
 @export var tree : AnimationTree
 @export var walk_speed :=  50.5
@@ -37,9 +38,11 @@ func _physics_process(_delta: float) -> void:
 		
 	velocity = input * speed
 	
+	
+	
 	move_and_slide()
 	select_animation()
-
+	push()
 
 func select_animation():
 	if velocity == Vector2.ZERO:
@@ -52,6 +55,20 @@ func select_animation():
 		tree.set("parameters/Idle/blend_position", anim_direction)
 		tree.set("parameters/Walk/blend_position", anim_direction)
 
+func push():
+	var isColliding = move_and_slide()
+	
+	if isColliding and input: # pushing blocks
+		if push_timer.is_stopped():
+			push_timer.start()
+		currentCollider = get_last_slide_collision().get_collider()
+	else:
+		push_timer.stop()
+	
 
 func _on_check_detection_area_entered(_area: Area2D) -> void:
 	print("Check me out!")
+
+func _on_push_timer_timeout() -> void:
+	if currentCollider is PushableBlock:
+		currentCollider.push_block(round(input))

@@ -8,13 +8,12 @@ signal hit
 func damage(attack: Attack):
 	if health:
 		health.hit(attack)
-	
-	if health == null:
-		pass
+	else:
+		print("I am invincible!")
 	
 
 func _on_area_entered(area: Area2D) -> void:
 	if area is Hitbox:
 		hit.emit()
-		print("hurt!")
+		print("area entered")
 		

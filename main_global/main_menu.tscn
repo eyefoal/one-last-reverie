@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cymds5njdx0sw" path="res://main_global/managers/main_menu.gd" id="1_4l7av"]
 [ext_resource type="Script" uid="uid://dbxecajh7ybfi" path="res://main_global/managers/audio_control.gd" id="2_8ey60"]
 [ext_resource type="AudioStream" uid="uid://din3qk6r7jats" path="res://blipSelect (2).wav" id="3_5663b"]
-[ext_resource type="Script" uid="uid://dh1vx70e1opcn" path="res://main_global/fullscreen.gd" id="4_inlnj"]
+[ext_resource type="Script" uid="uid://dh1vx70e1opcn" path="res://main_global/managers/fullscreen.gd" id="4_inlnj"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=1690640991 node_paths=PackedStringArray("main_buttons", "options")]
 process_mode = 3
