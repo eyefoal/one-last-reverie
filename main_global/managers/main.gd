@@ -45,7 +45,7 @@ func go_to_door(scene_path : String, DoorName : String):
 	for d in len(doors):
 		if doors[d].name == DoorName:
 			current_player.global_position = doors[d].global_position
-			current_player.global_position.y += 16
+			current_player.global_position.y += 24 # Move the player down so they won't immediately collide with the door and create a loop of entering.
 
 	await get_tree().create_timer(0.1).timeout
 	FadeTransition.fade(0.0, 1.0)

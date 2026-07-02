@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cda7t0pgri63m" path="res://indev/entities/gbcatty/pb_catty.tscn" id="5_aah4k"]
 
 [node name="DevRoom06" type="Node2D" unique_id=1797382374 node_paths=PackedStringArray("player")]
+y_sort_enabled = true
 script = ExtResource("1_6co5u")
 player = NodePath("Layers/Leanfi")
 
@@ -37,6 +38,7 @@ position = Vector2(280, 120)
 door_name = "Door"
 
 [node name="Bookcase2" parent="Layers/FloorLayer/Furniture" unique_id=691913706 instance=ExtResource("4_gc241")]
+z_index = 0
 position = Vector2(296, 136)
 metadata/_scene_painted = true
 
