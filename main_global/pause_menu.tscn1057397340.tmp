@@ -5,11 +5,10 @@
 [ext_resource type="AudioStream" uid="uid://din3qk6r7jats" path="res://blipSelect (2).wav" id="3_dsleu"]
 [ext_resource type="Script" uid="uid://dh1vx70e1opcn" path="res://main_global/fullscreen.gd" id="4_6d6jw"]
 
-[node name="PauseMenu" type="CanvasLayer" unique_id=725464776 node_paths=PackedStringArray("pause", "options")]
+[node name="PauseMenu" type="CanvasLayer" unique_id=725464776 node_paths=PackedStringArray("options")]
 process_mode = 3
 script = ExtResource("1_4res2")
-pause = NodePath("Pause")
-options = NodePath("Settings/Options")
+options = NodePath("Control/Options")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1544586051]
 anchors_preset = 15
@@ -49,27 +48,27 @@ text = "Resume"
 [node name="OptionsButton" type="Button" parent="Pause/VBoxContainer" unique_id=1543241708]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "Options"
+text = "Resume"
 
 [node name="SaveQuitButton" type="Button" parent="Pause/VBoxContainer" unique_id=1377587966]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Save and Quit"
 
-[node name="Settings" type="Control" parent="." unique_id=932948900]
+[node name="Control" type="Control" parent="." unique_id=932948900]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Options" type="Panel" parent="Settings" unique_id=2055130704]
+[node name="Options" type="Panel" parent="Control" unique_id=2055130704]
 layout_mode = 0
 offset_left = 202.0
 offset_top = 4.0
 offset_right = 437.0
 offset_bottom = 356.0
 
-[node name="Label" type="Label" parent="Settings/Options" unique_id=736154047]
+[node name="Label" type="Label" parent="Control/Options" unique_id=736154047]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -79,7 +78,7 @@ text = "Options "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Settings/Options" unique_id=31665230]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Options" unique_id=31665230]
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -91,15 +90,15 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 16
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Settings/Options/VBoxContainer" unique_id=1824838852]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Options/VBoxContainer" unique_id=1824838852]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Settings/Options/VBoxContainer/HBoxContainer" unique_id=1203091667]
+[node name="Label" type="Label" parent="Control/Options/VBoxContainer/HBoxContainer" unique_id=1203091667]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Effects"
 
-[node name="AudioControl" type="HSlider" parent="Settings/Options/VBoxContainer/HBoxContainer" unique_id=1288583910 node_paths=PackedStringArray("test_player")]
+[node name="AudioControl" type="HSlider" parent="Control/Options/VBoxContainer/HBoxContainer" unique_id=1288583910 node_paths=PackedStringArray("test_player")]
 layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1.0
@@ -110,17 +109,17 @@ test_sound = ExtResource("3_dsleu")
 audio_bus_name = "Effects"
 test_player = NodePath("AudioStreamPlayer")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Settings/Options/VBoxContainer/HBoxContainer/AudioControl" unique_id=42222743]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Options/VBoxContainer/HBoxContainer/AudioControl" unique_id=42222743]
 stream = ExtResource("3_dsleu")
 bus = &"Effects"
 
-[node name="Fullscreen" type="CheckButton" parent="Settings/Options/VBoxContainer" unique_id=502259455]
+[node name="Fullscreen" type="CheckButton" parent="Control/Options/VBoxContainer" unique_id=502259455]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Fullscreen"
 script = ExtResource("4_6d6jw")
 
-[node name="Back" type="Button" parent="Settings/Options/VBoxContainer" unique_id=1137714408]
+[node name="Back" type="Button" parent="Control/Options/VBoxContainer" unique_id=1137714408]
 layout_mode = 2
 text = "Back
 
@@ -130,6 +129,5 @@ text = "Back
 [connection signal="pressed" from="Pause/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="Pause/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="Pause/VBoxContainer/SaveQuitButton" to="." method="_on_save_quit_button_pressed"]
-[connection signal="value_changed" from="Settings/Options/VBoxContainer/HBoxContainer/AudioControl" to="Settings/Options/VBoxContainer/HBoxContainer/AudioControl" method="_on_value_changed"]
-[connection signal="toggled" from="Settings/Options/VBoxContainer/Fullscreen" to="Settings/Options/VBoxContainer/Fullscreen" method="_on_toggled"]
-[connection signal="pressed" from="Settings/Options/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="Control/Options/VBoxContainer/HBoxContainer/AudioControl" to="Control/Options/VBoxContainer/HBoxContainer/AudioControl" method="_on_value_changed"]
+[connection signal="toggled" from="Control/Options/VBoxContainer/Fullscreen" to="Control/Options/VBoxContainer/Fullscreen" method="_on_toggled"]

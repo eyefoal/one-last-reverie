@@ -5,11 +5,15 @@ Erm. Is this your first time playing?
 - No
 	if Main.global_state == "Act 0"
 		Erm. It literally is. I'm checking the global state right now.
-		So do you need my assistance?
+		do Main.change_state("Act 0.1")
+		do Main.dev_print()
+		So do you need my assistance? 
 		- Yes
+			
 			=> questions
 		- No 
 			It's always ok to ask for help.
+		
 	else:
 		Oki, just making sure.
 => END

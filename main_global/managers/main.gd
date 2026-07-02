@@ -13,9 +13,9 @@ func _ready() -> void:
 	
 func dev_print():
 	print("hai :3")
-	#print(current_level)
-	#print(global_state)
-	#print(gb_cat_state)
+	print(current_level)
+	print(global_state)
+	print(gb_cat_state)
 
 func _save() -> void:
 	
@@ -27,6 +27,9 @@ func _save() -> void:
 func _load() -> void:
 	print("underload")
 	
+
+func change_state(to_state: String):
+	global_state = to_state
 
 func switch_level(to_level : String):
 	#to_level = Main.current_level
@@ -49,5 +52,3 @@ func go_to_door(scene_path : String, DoorName : String):
 
 	await get_tree().create_timer(0.1).timeout
 	FadeTransition.fade(0.0, 1.0)
-	
-	pass

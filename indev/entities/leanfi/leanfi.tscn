@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://csfs55jkc4xfd" path="res://indev/entities/leanfi/leanfi.gd" id="1_ovlxh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ovlxh"]
-size = Vector2(10, 16)
+size = Vector2(10, 12.5)
 
 [sub_resource type="Animation" id="Animation_ovlxh"]
 length = 0.001
@@ -336,6 +336,7 @@ tree = NodePath("AnimationPlayer/AnimationTree")
 check_detection = NodePath("CheckDetection")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=320868358]
+position = Vector2(0, 2.25)
 shape = SubResource("RectangleShape2D_ovlxh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1557231290]
