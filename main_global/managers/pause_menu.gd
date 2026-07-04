@@ -15,8 +15,6 @@ func _input(_event: InputEvent) -> void:
 		get_tree().paused = true
 	
 	
-	
-	
 func _on_resume_button_pressed() -> void:
 	_ready()
 

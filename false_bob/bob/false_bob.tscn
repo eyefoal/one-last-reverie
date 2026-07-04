@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cnkxpokmi5c6u"]
 
-[ext_resource type="Texture2D" uid="uid://dqwalpxxoamga" path="res://bob/false_bob.png" id="1_y6ioo"]
+[ext_resource type="Texture2D" uid="uid://dqwalpxxoamga" path="res://false_bob/bob/false_bob.png" id="1_y6ioo"]
 [ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="2_kwelp"]
-[ext_resource type="Resource" uid="uid://smyanqk2oajj" path="res://bob/bob/falsebob.dialogue" id="3_m0tuh"]
+[ext_resource type="Resource" uid="uid://smyanqk2oajj" path="res://false_bob/bob/falsebob.dialogue" id="3_m0tuh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nswqg"]
 

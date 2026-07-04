@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://f6sltxv64kdp"]
 
 [ext_resource type="Script" uid="uid://cymds5njdx0sw" path="res://main_global/managers/main_menu.gd" id="1_4l7av"]
-[ext_resource type="Script" uid="uid://dbxecajh7ybfi" path="res://main_global/managers/audio_control.gd" id="2_8ey60"]
-[ext_resource type="AudioStream" uid="uid://din3qk6r7jats" path="res://blipSelect (2).wav" id="3_5663b"]
-[ext_resource type="Script" uid="uid://dh1vx70e1opcn" path="res://main_global/managers/fullscreen.gd" id="4_inlnj"]
+[ext_resource type="PackedScene" uid="uid://bbaykrhmyy13d" path="res://main_global/options.tscn" id="2_8ey60"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=1690640991 node_paths=PackedStringArray("main_buttons", "options")]
 process_mode = 3
@@ -82,77 +80,22 @@ text = "Quit
 
 "
 
-[node name="Options" type="Panel" parent="Control" unique_id=1234539066]
-visible = false
-layout_mode = 0
-offset_left = 202.0
-offset_top = 4.0
-offset_right = 437.0
-offset_bottom = 356.0
-
-[node name="Label" type="Label" parent="Control/Options" unique_id=1698568181]
+[node name="Options" parent="Control" unique_id=166006694 instance=ExtResource("2_8ey60")]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 29.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -117.5
+offset_top = 0.0
+offset_right = 117.5
+offset_bottom = 352.0
 grow_horizontal = 2
-text = "Options "
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/Options" unique_id=793396255]
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -16.5
-offset_bottom = 16.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 16
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/Options/VBoxContainer" unique_id=572353805]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Control/Options/VBoxContainer/HBoxContainer" unique_id=1510990807]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "Effects"
-
-[node name="AudioControl" type="HSlider" parent="Control/Options/VBoxContainer/HBoxContainer" unique_id=297832883 node_paths=PackedStringArray("test_player")]
-layout_mode = 2
-size_flags_horizontal = 3
-max_value = 1.0
-step = 0.05
-value = 0.5
-script = ExtResource("2_8ey60")
-test_sound = ExtResource("3_5663b")
-audio_bus_name = "Effects"
-test_player = NodePath("AudioStreamPlayer")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/Options/VBoxContainer/HBoxContainer/AudioControl" unique_id=1617436786]
-stream = ExtResource("3_5663b")
-bus = &"Effects"
-
-[node name="Fullscreen" type="CheckButton" parent="Control/Options/VBoxContainer" unique_id=1926497677]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "Fullscreen"
-script = ExtResource("4_inlnj")
-
-[node name="Back" type="Button" parent="Control/Options/VBoxContainer" unique_id=151271191]
-layout_mode = 2
-text = "Back
-
-
-"
 
 [connection signal="pressed" from="Control/MainButtons/PanelContainer/VBoxContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="Control/MainButtons/PanelContainer/VBoxContainer/VBoxContainer/Prologue" to="." method="_on_prologue_pressed"]
 [connection signal="pressed" from="Control/MainButtons/PanelContainer/VBoxContainer/VBoxContainer/QuickShplish" to="." method="_on_quick_shplish_pressed"]
 [connection signal="pressed" from="Control/MainButtons/PanelContainer/VBoxContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Control/MainButtons/PanelContainer/VBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
-[connection signal="value_changed" from="Control/Options/VBoxContainer/HBoxContainer/AudioControl" to="Control/Options/VBoxContainer/HBoxContainer/AudioControl" method="_on_value_changed"]
-[connection signal="toggled" from="Control/Options/VBoxContainer/Fullscreen" to="Control/Options/VBoxContainer/Fullscreen" method="_on_toggled"]
 [connection signal="pressed" from="Control/Options/VBoxContainer/Back" to="." method="_on_back_pressed"]
+
+[editable path="Control/Options"]

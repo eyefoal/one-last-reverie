@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ot5tvssrbmh0" path="res://indev/entities/gbcatty/gbcatty1.png" id="3_kp2ys"]
 [ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="3_uac2n"]
 [ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://indev/entities/lofi/32gradient.tres" id="4_dlv6m"]
-[ext_resource type="PackedScene" uid="uid://ctb3w35vbedu0" path="res://indev/entities/gbcatty/gbcatty_1.tscn" id="8_rcm6n"]
+[ext_resource type="PackedScene" uid="uid://ctb3w35vbedu0" path="res://indev/entities/gbcatty/gbcatty.tscn" id="8_rcm6n"]
 [ext_resource type="Resource" uid="uid://bshavsh44v6lt" path="res://indev/dialogue/gbkitties.dialogue" id="9_4iuf4"]
 [ext_resource type="PackedScene" uid="uid://cw62ug6k5gtl3" path="res://indev/entities/lofi/variants/spinning_lofi.tscn" id="12_s7qp4"]
 [ext_resource type="PackedScene" uid="uid://bcr6q4n74jf5w" path="res://systems/components/doors/catdoor/cat_door.tscn" id="12_ssqbr"]

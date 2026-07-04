@@ -45,10 +45,10 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 folder_colors={
 "res://addons/": "red",
-"res://bob/": "orange",
 "res://content/": "yellow",
 "res://content/chroma/": "gray",
 "res://content/splish/": "blue",
+"res://false_bob/": "orange",
 "res://indev/": "teal",
 "res://indev/dialogue/": "pink",
 "res://indev/entities/": "red",
@@ -182,7 +182,7 @@ select={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://indev/dialogue/devdiary01.dialogue", "res://indev/dialogue/gbkitties.dialogue", "res://indev/dialogue/leanfi.dialogue", "res://indev/dialogue/ghosts.dialogue", "res://bob/bob/falsebob.dialogue", "res://indev/dialogue/hearts.dialogue", "res://indev/dialogue/maxine.dialogue", "res://indev/dialogue/aliens.dialogue", "res://indev/dialogue/beds.dialogue", "res://indev/dialogue/pbkitties.dialogue", "res://content/apartment/furniture/furniture.dialogue")
+locale/translations_pot_files=PackedStringArray("res://indev/dialogue/gbkitties.dialogue", "res://indev/dialogue/leanfi.dialogue", "res://indev/dialogue/ghosts.dialogue", "res://indev/dialogue/hearts.dialogue", "res://indev/dialogue/maxine.dialogue", "res://indev/dialogue/aliens.dialogue", "res://indev/dialogue/beds.dialogue", "res://indev/dialogue/pbkitties.dialogue", "res://content/apartment/furniture/furniture.dialogue", "res://false_bob/bob/falsebob.dialogue", "res://indev/dialogue/indev.dialogue")
 
 [layer_names]
 

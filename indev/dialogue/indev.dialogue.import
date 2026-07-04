@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c404hclbs62n0"
+path="res://.godot/imported/indev.dialogue-70c74c288e70850a271b2b9bfbd81eca.tres"
+
+[deps]
+
+source_file="res://indev/dialogue/indev.dialogue"
+dest_files=["res://.godot/imported/indev.dialogue-70c74c288e70850a271b2b9bfbd81eca.tres"]
+
+[params]
+
+defaults=true

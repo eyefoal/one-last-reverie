@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bdb4ckxs62kp1" path="res://content/apartment/furniture/door.tscn" id="3_5ciwl"]
 [ext_resource type="PackedScene" uid="uid://cj1gta1hbehje" path="res://indev/entities/leanfi/leanfi.tscn" id="3_gc241"]
 [ext_resource type="PackedScene" uid="uid://cheahq2kme2ie" path="res://content/apartment/furniture/bookcase.tscn" id="4_gc241"]
-[ext_resource type="PackedScene" uid="uid://cda7t0pgri63m" path="res://indev/entities/gbcatty/pb_catty.tscn" id="5_aah4k"]
+[ext_resource type="PackedScene" uid="uid://cda7t0pgri63m" path="res://indev/entities/gbcatty/pbcatty.tscn" id="5_aah4k"]
 [ext_resource type="PackedScene" uid="uid://p6ucwekd31t2" path="res://indev/entities/foe/foe.tscn" id="6_agkwp"]
 
 [node name="DevRoom06" type="Node2D" unique_id=1797382374 node_paths=PackedStringArray("player")]
@@ -63,6 +63,9 @@ dialogue_start = "book01"
 
 [node name="PbCatty" parent="Layers/FloorLayer" unique_id=1513276687 instance=ExtResource("5_aah4k")]
 position = Vector2(360, 184)
+
+[node name="Interactable" parent="Layers/FloorLayer/PbCatty" index="1" unique_id=783163528]
+dialogue_start = "pbcat07"
 
 [node name="Foe" parent="Layers/FloorLayer" unique_id=1225681271 instance=ExtResource("6_agkwp")]
 position = Vector2(272, 170)

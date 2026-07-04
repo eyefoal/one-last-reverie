@@ -9,9 +9,9 @@
 [ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="4_tuiqi"]
 [ext_resource type="Resource" uid="uid://jjopmnsg8ne5" path="res://indev/dialogue/aliens.dialogue" id="5_yldcu"]
 [ext_resource type="PackedScene" uid="uid://dwiocr52babp" path="res://indev/toys/bed.tscn" id="6_4nblx"]
-[ext_resource type="PackedScene" uid="uid://ctb3w35vbedu0" path="res://indev/entities/gbcatty/gbcatty_1.tscn" id="8_tuiqi"]
+[ext_resource type="PackedScene" uid="uid://ctb3w35vbedu0" path="res://indev/entities/gbcatty/gbcatty.tscn" id="8_tuiqi"]
 [ext_resource type="Script" uid="uid://cha6lfx112pow" path="res://systems/components/daynightcycle.gd" id="8_yldcu"]
-[ext_resource type="PackedScene" uid="uid://cda7t0pgri63m" path="res://indev/entities/gbcatty/pb_catty.tscn" id="11_rhq8q"]
+[ext_resource type="PackedScene" uid="uid://cda7t0pgri63m" path="res://indev/entities/gbcatty/pbcatty.tscn" id="11_rhq8q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nswqg"]
 
@@ -130,7 +130,7 @@ position = Vector2(263.64978, 50.110046)
 metadata/_scene_painted = true
 
 [node name="Interactable" parent="PbCatty7" index="1" unique_id=783163528]
-dialogue_start = "pbkitty03"
+dialogue_start = "pbkitty06"
 
 [node name="PbCatty8" parent="." unique_id=1411374157 instance=ExtResource("11_rhq8q")]
 position = Vector2(575.82983, 102.14008)

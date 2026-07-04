@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://smyanqk2oajj"
+path="res://.godot/imported/falsebob.dialogue-c38a8fd90c91715758abbdb7d2b87a23.tres"
+
+[deps]
+
+source_file="res://false_bob/bob/falsebob.dialogue"
+dest_files=["res://.godot/imported/falsebob.dialogue-c38a8fd90c91715758abbdb7d2b87a23.tres"]
+
+[params]
+
+defaults=true
