@@ -8,14 +8,29 @@ If you'd like to not read anything, now's the time to choose.
 - Select a book
 	Which book?
 	- Book One
-	=> book01
+		=> book01
+	- Book Two
+		=> book02
 
 ~ book01
-Im book number one! Yippie. 
+I'm book number one! Yippie. 
 Oh, I guess this is the part where I exposition dump.
 It's easier to just tell you that everything is sentient.
 Make of that what you will.
 => END
+
+~ book02
+"Oh The Places You Won't Go" by De Veloper
+Want to read?
+- Sure
+	bob.
+- Read blurb.
+	A short read about the game design of OneLastReverie. Could've been a zine.
+	Will you read it?
+	- Yes
+	- No
+	=> END
+
 
 ~ devlaptop
 Beep boop!

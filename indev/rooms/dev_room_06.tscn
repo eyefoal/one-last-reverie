@@ -28,7 +28,7 @@ tile_set = ExtResource("2_5ciwl")
 collision_enabled = false
 
 [node name="Furniture" type="TileMapLayer" parent="Layers/FloorLayer" unique_id=1107486358]
-tile_map_data = PackedByteArray("AAAVAAgABgAAAAAABgAUAAgABgAAAAAAAwAVAAkABgAAAAAAAwAWAAgABgAAAAAAAwAVAAYABgAAAAAABAAWAAoABgAAAAAAAwAVAAoABgAAAAAAAwA=")
+tile_map_data = PackedByteArray("AAAVAAYABgAAAAAABAAUAAgABgAAAAAABgA=")
 tile_set = ExtResource("2_5ciwl")
 
 [node name="Door" parent="Layers/FloorLayer/Furniture" unique_id=1137062243 instance=ExtResource("3_5ciwl")]
@@ -45,20 +45,20 @@ metadata/_scene_painted = true
 [node name="Interactable" parent="Layers/FloorLayer/Furniture/Bookcase2" index="2" unique_id=1519624639]
 dialogue_start = "book01"
 
-[node name="Bookcase2" parent="Layers/FloorLayer/Furniture/Bookcase2" unique_id=40520666 instance=ExtResource("4_gc241")]
+[node name="Bookcase3" parent="Layers/FloorLayer/Furniture" unique_id=40520666 instance=ExtResource("4_gc241")]
 z_index = 0
-position = Vector2(-32, 0)
+position = Vector2(264, 136)
 metadata/_scene_painted = true
 
-[node name="Interactable" parent="Layers/FloorLayer/Furniture/Bookcase2/Bookcase2" index="2" unique_id=1519624639]
+[node name="Interactable" parent="Layers/FloorLayer/Furniture/Bookcase3" index="2" unique_id=1519624639]
 dialogue_start = "book01"
 
-[node name="Bookcase3" parent="Layers/FloorLayer/Furniture/Bookcase2" unique_id=1751271497 instance=ExtResource("4_gc241")]
+[node name="Bookcase4" parent="Layers/FloorLayer/Furniture" unique_id=1751271497 instance=ExtResource("4_gc241")]
 z_index = 0
-position = Vector2(15, 0)
+position = Vector2(311, 136)
 metadata/_scene_painted = true
 
-[node name="Interactable" parent="Layers/FloorLayer/Furniture/Bookcase2/Bookcase3" index="2" unique_id=1519624639]
+[node name="Interactable" parent="Layers/FloorLayer/Furniture/Bookcase4" index="2" unique_id=1519624639]
 dialogue_start = "book01"
 
 [node name="PbCatty" parent="Layers/FloorLayer" unique_id=1513276687 instance=ExtResource("5_aah4k")]
@@ -91,6 +91,6 @@ position_smoothing_speed = 4.2
 
 [editable path="Layers/FloorLayer/Furniture/Door"]
 [editable path="Layers/FloorLayer/Furniture/Bookcase2"]
-[editable path="Layers/FloorLayer/Furniture/Bookcase2/Bookcase2"]
-[editable path="Layers/FloorLayer/Furniture/Bookcase2/Bookcase3"]
+[editable path="Layers/FloorLayer/Furniture/Bookcase3"]
+[editable path="Layers/FloorLayer/Furniture/Bookcase4"]
 [editable path="Layers/FloorLayer/PbCatty"]

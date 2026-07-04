@@ -1,6 +1,8 @@
 extends CharacterBody2D
 class_name PinkThing
 
+@export var audio: AudioStreamPlayer2D
+
 signal died
 
 func _ready() -> void:
@@ -13,3 +15,5 @@ func _on_hurt_box_hit() -> void:
 	get_tree().call_deferred("reload_current_scene")
 	get_tree().paused = false
 	died.emit()
+	audio.pitch_scale = randf_range(0.9, 1.2)
+	audio.play()
