@@ -73,7 +73,7 @@ color = Color(0.15580899, 0.06973661, 0.49969995, 1)
 [node name="Leanfi" parent="Layers" unique_id=1038246170 instance=ExtResource("3_gc241")]
 z_index = 1
 position = Vector2(308, 152)
-speed = 4.2
+sprint_speed = 42.5
 
 [node name="Camera2D" type="Camera2D" parent="Layers/Leanfi" unique_id=2133013585 groups=["Camera"]]
 zoom = Vector2(4, 4)

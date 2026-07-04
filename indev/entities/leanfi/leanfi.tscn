@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://b0s5hgwi1y8sk" path="res://indev/resources/tilesets/leanfi.png" id="1_cqggm"]
 [ext_resource type="Script" uid="uid://csfs55jkc4xfd" path="res://indev/entities/leanfi/leanfi.gd" id="1_ovlxh"]
-[ext_resource type="PackedScene" uid="uid://wiqcdf80v0hf" path="res://indev/entities/leanfi/gun.tscn" id="3_m5ost"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ovlxh"]
 size = Vector2(10, 12.5)
@@ -338,8 +337,6 @@ tree = NodePath("AnimationPlayer/AnimationTree")
 walk_speed = 25.5
 sprint_speed = 50.5
 check_detection = NodePath("CheckDetection")
-
-[node name="Gun" parent="." unique_id=1621147265 instance=ExtResource("3_m5ost")]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1557231290]
 z_index = 1
