@@ -27,6 +27,7 @@ func _on_quick_shplish_pressed() -> void:
 	
 func _on_quit_pressed() ->  void:
 	get_tree().quit()
+	Eventbus.under_save.emit()
 
 # Options
 func _on_back_pressed() -> void:

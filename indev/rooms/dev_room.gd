@@ -2,11 +2,8 @@ extends Node2D
 class_name DevRoom
 
 @export var player : Node2D
-var path : String = "user://user_data.tres"
-
 
 func _ready() -> void:
-	
 	_save()
 	
 func _process(_delta: float) -> void:

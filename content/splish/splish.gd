@@ -12,7 +12,9 @@ func _ready() -> void:
 	load_score()
 	Eventbus.splish_point.connect(update_point)
 	hi_score_label.text = "[rainbow] High Score: " + str(hi_score)
-	
+	Eventbus.under_save.connect(save_score)
+	hi_score_label.text ="[rainbow] High Score: " + str(SaveLoad.contents_to_save.splish_hi)
+
 
 func update_point(value : int):
 	score += value
