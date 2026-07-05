@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cwq8h5jrx27ar"]
+
+[ext_resource type="Script" uid="uid://bijhnwy3utbq4" path="res://content/splish/dev/treasure/treasure.gd" id="1_6jyy5"]
+[ext_resource type="Texture2D" uid="uid://p1vqes2ajcje" path="res://indev/graphics/legacyart/trophie.png" id="2_lim8m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nswqg"]
+radius = 3.1622777
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2lqgq"]
+radius = 7.0
+
+[node name="Treasure" type="CharacterBody2D" unique_id=815960528]
+scale = Vector2(2, 2)
+collision_layer = 2
+script = ExtResource("1_6jyy5")
+move_dir = Vector2(0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=994962377]
+texture = ExtResource("2_lim8m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=750168485]
+shape = SubResource("CircleShape2D_nswqg")
+disabled = true
+
+[node name="CollectArea" type="Area2D" parent="." unique_id=554806186]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectArea" unique_id=125196679]
+shape = SubResource("CircleShape2D_2lqgq")
+debug_color = Color(0.6638602, 0.5114595, 0.10399068, 0.41960785)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1384234360]
+
+[connection signal="body_entered" from="CollectArea" to="." method="_on_collect_area_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

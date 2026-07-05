@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dg2gtw35u2tgm"]
+
+[ext_resource type="Texture2D" uid="uid://buse4t5fv4vm" path="res://indev/resources/tilesets/leanfi2.png" id="1_58227"]
+[ext_resource type="Script" uid="uid://c0qmfecxerwv8" path="res://systems/components/interact_area.gd" id="2_vxxbp"]
+[ext_resource type="Resource" uid="uid://c404hclbs62n0" path="res://indev/dialogue/indev.dialogue" id="3_16otq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nswqg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2lqgq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lqgq"]
+atlas = ExtResource("1_58227")
+region = Rect2(0, 80, 16, 16)
+
+[node name="CC" type="CharacterBody2D" unique_id=1173818475]
+
+[node name="Interactable" type="Area2D" parent="." unique_id=1362696464]
+script = ExtResource("2_vxxbp")
+dialogue_resource = ExtResource("3_16otq")
+dialogue_start = "cc"
+metadata/_custom_type_script = "uid://c0qmfecxerwv8"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=2700231]
+shape = SubResource("CircleShape2D_nswqg")
+debug_color = Color(0.7762404, 0.3998374, 0.49740416, 0.41960785)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=964364110]
+shape = SubResource("CircleShape2D_2lqgq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1120268674]
+texture = SubResource("AtlasTexture_2lqgq")

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://p6ucwekd31t2"]
+
+[ext_resource type="Script" uid="uid://c76r5tsd7mjbt" path="res://indev/entities/foe/foe.gd" id="1_tpp6l"]
+[ext_resource type="Texture2D" uid="uid://bm20yaprqnfle" path="res://indev/graphics/legacyart/eye.png" id="2_ajpdh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2lqgq"]
+radius = 7.615773
+
+[node name="Foe" type="CharacterBody2D" unique_id=1225681271]
+collision_layer = 16
+collision_mask = 0
+platform_on_leave = 2
+platform_floor_layers = 4294967040
+script = ExtResource("1_tpp6l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=8859521]
+texture = ExtResource("2_ajpdh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2002094245]
+shape = SubResource("CircleShape2D_2lqgq")

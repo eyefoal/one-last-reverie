@@ -1,47 +1,149 @@
 ~ start
+do Main.global_state = "bob"
 bob.
-=> act_01
+
+if Main.global_state == "bob"
+	=> bob
 => END
 
-do StringState.act_01_state = "bob"
+~ bob
+beware of bob. you have been warned.
+=> END
+
 ~ act_01
 Once upon a time.
 When all that existed was two floating masses of information floating in the aether. 
 They existed as the world.
 Their thoughts were pantheons for universes beyond.
+All was peaceful. All was right in the [rainbow] Hyperverse [/rainbow]
+Until...
+Lofi: Until what?!
+I forgor
+Lofi: >:/
+=> END
 
+~ kitty01
+ I was the first.
+ I have seen everything.
+=> END
+
+~ kitty04
+if Main.quirkiness == 42:
+	Hey you're pretty lucky!
+else:
+	Hi! I'm GreenBitKitty number 4. You're pretty lucky. Yes yes. Very good, meow.
+	My mind has been expanded. I contain knowledge of universes beyond.
+	Hear me out, will ya?
+	- Sure.
+		...
+		
+	- No.
+		Mewo mewo mewo welcome to Mewo Domain.
+		
+
+~ kitty05
+if Main.global_state == "got past"
+	=> kitty05pt2
+
+Heh >:3
+You'll never get past me! :3
+set Main.gb_cat_state == "got past"
+=> END
+
+~ kitty05pt2
+	My defenses were greatly exaggerated. 
 ~ kitty06
-Kitty # 06: You may not believe this. But I am actually the second GreenBitCatty to ever exist. 
-Kitty 06: Don't believe me?
+You may not believe this. But I am actually the second GreenBitCatty to ever exist. 
+Don't believe me?
 - Sure
 	I'm joshing you. 
 	I'm actually the sixth. 
 	Check the commits.
-	[color=yellow][i] Whatever that means...
+	[color=yellow][i] Whatever that means... Yawn...
 	I can tell you're bored.
 	I will let you go now.
 	=> END
 - No
-	This conversation will now close.
+	You gotta believe me!
 	=> END
 	
 ~ kitty07
-Kitty 07: [b] Looking for something interesting?
+Kitty 07: Looking for something interesting?
 Lofi: Yes.
-Kitty 07: [b] Well, you're not gonna find anything here. 
-[b] I'd say travel eastward. 
-[b] You might find a cool little doodad off the side of the void.
+Kitty 07: Well, you're not gonna find anything here. 
+I'd say travel eastward. 
+You might find a cool little doodad off the side of the void.
 Lofi: Thank you.
 Kitty 07: Not a thing. Take it easy.
 => END
 	
 ~ kitty08
 [shake] Grrrrr [/shake] QUICKLY! time runs [s]short[/s]. quickly! we must use the power of olympia! return the platforms. create the faux splish minigame!
-its time to get to "["hyper link blocked]"
+its time to get to [REDACTED] work
 meow meow i am mewo
 Kitty 08: i am
 We must traverse the purple system
-Tt's so... so dark here
+It's so... so dark here
 Lofi: What the hell are you talking about?
-[rainbow](^'.'^) (^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)
+[rainbow](^'.'^) (^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)(^'.'^)
 Do you get it now?
+=> END
+
+~ kitty09
+there's something freaky up ahead.
+methinks its something bad
+be careful
+Lofi: Thanks for the heads up.
+=> END
+
+~ chromni
+No, I am not a catty.
+I am Unit C+111926
+Please refer to me as Chromni.
+Chromni: I am the keeper of this world's secrets. The lore of the Gods has been bestowed upon me.
+Chromni: Do you wish to listen? Please answer yes or no.
+- Yes
+	Chromni: Are you sure? It's kind of a long story...
+	- Yes!
+		Chromni:  ok
+		Chromni: Here goes...
+		do FadeTransition.fade(1, 1)
+		Once upon a time...
+		There were three creators.
+		Beings whose ages were so primordial that their names have been lost to time.
+		For efficiency's sake, I shall refer to them as Zero, One and Two.
+		Zero carried the archetype of the Fool.
+		Scholars suggest they were responsible for creativity and holding the balance of chaos and order.
+		Their counterpart, Two had domain over the lives and heat deaths of universes uncountable.
+		Zero and Two worked together and much like two human colleagues, had a shared creative vision. One that still affects us today.
+		This vision allowed for countless worlds to be formed. Stories were told. Lovers came and went. Civilizations rose and fell like cherry blossoms across the event horizon.
+		Anything goes.
+		That was their mantra. All except their divine intervention past initial creation and the seperation of different universes.
+		But One, fitting to this codename, had a special ambition.
+		He saught the unification of the universes. And one by one he took his hands and fused universes together like clay.
+		[color=yellow]  [i] Yawn...[/i] [color=yellow]
+		And then... ARE YOU YAWNING?!
+		do FadeTransition.fade(0, 2)
+		Lofi: So... boring... When does it get good?
+		Chromni: It was just about to get good.
+		Chromni: Do you wish to keep hearing the story?
+		- Yes
+			Chromni: ok
+		- No
+			Chromni: This conversation will now close.
+			=> END
+		
+	- Nevermind! 
+		Chromni: ok.
+		Chromni: This conversation will now close.
+- Maybe
+	Chromni: I did specify yes or no...
+	=> END
+	
+- No
+	Chromni: Perhaps attention spans are experiencing diminishing returns. 
+	This conversation will now close.
+	=> END
+- 
+	
+

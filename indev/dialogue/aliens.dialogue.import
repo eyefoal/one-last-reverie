@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://jjopmnsg8ne5"
+path="res://.godot/imported/aliens.dialogue-b154378cac6808f2591a501099334786.tres"
+
+[deps]
+
+source_file="res://indev/dialogue/aliens.dialogue"
+dest_files=["res://.godot/imported/aliens.dialogue-b154378cac6808f2591a501099334786.tres"]
+
+[params]
+
+defaults=true

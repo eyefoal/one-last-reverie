@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dn18gnwrwj4sx"
+path="res://.godot/imported/furniture.dialogue-49b2c44f56d43033ed243c87f34badd0.tres"
+
+[deps]
+
+source_file="res://content/apartment/furniture/furniture.dialogue"
+dest_files=["res://.godot/imported/furniture.dialogue-49b2c44f56d43033ed243c87f34badd0.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://wiqcdf80v0hf"]
+
+[ext_resource type="Script" uid="uid://b78qdb7o7k0qy" path="res://indev/entities/leanfi/gun.gd" id="1_1wyo6"]
+[ext_resource type="PackedScene" uid="uid://4oud7xsue53" path="res://indev/entities/leanfi/auto_bullet.tscn" id="2_o1lr6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2lqgq"]
+radius = 48.09366
+
+[node name="Gun" type="Area2D" unique_id=1621147265]
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("1_1wyo6")
+weapon = ExtResource("2_o1lr6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2124735255]
+shape = SubResource("CircleShape2D_2lqgq")
+
+[node name="Timer" type="Timer" parent="." unique_id=1831919612]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

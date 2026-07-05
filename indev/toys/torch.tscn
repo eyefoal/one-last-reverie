@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://cd6w1sfquljpn"]
+
+[ext_resource type="Texture2D" uid="uid://b0s5hgwi1y8sk" path="res://indev/resources/tilesets/leanfi.png" id="1_7o86l"]
+[ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://indev/entities/lofi/32gradient.tres" id="2_gjoqf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cvi8"]
+atlas = ExtResource("1_7o86l")
+region = Rect2(32, 40, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6duvp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cvi8")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssvk6"]
+atlas = ExtResource("1_7o86l")
+region = Rect2(32, 32, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_423to"]
+atlas = ExtResource("1_7o86l")
+region = Rect2(40, 32, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4avm"]
+atlas = ExtResource("1_7o86l")
+region = Rect2(40, 40, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nswqg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssvk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_423to")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4avm")
+}],
+"loop": 1,
+"name": &"flame",
+"speed": 5.0
+}]
+
+[node name="Torch" type="Node2D" unique_id=1401160606]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=860341498]
+sprite_frames = SubResource("SpriteFrames_6duvp")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=785762493]
+position = Vector2(0, -6)
+sprite_frames = SubResource("SpriteFrames_nswqg")
+animation = &"flame"
+autoplay = "flame"
+frame_progress = 0.6707777
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1155284860]
+energy = 0.8
+shadow_enabled = true
+texture = ExtResource("2_gjoqf")
+texture_scale = 1.5
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=122871850]

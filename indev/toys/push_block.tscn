@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bpq1xnpw0g2jk"]
+
+[ext_resource type="Script" uid="uid://c4lhqpj5qvay2" path="res://systems/components/blocks/push_block.gd" id="1_3s7fy"]
+[ext_resource type="Texture2D" uid="uid://b0s5hgwi1y8sk" path="res://indev/resources/tilesets/leanfi.png" id="2_3s7fy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nswqg"]
+size = Vector2(16, 16)
+
+[node name="PushBlock" type="StaticBody2D" unique_id=515361372]
+script = ExtResource("1_3s7fy")
+pushable = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1592488216]
+texture = ExtResource("2_3s7fy")
+hframes = 8
+vframes = 8
+frame = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2064710766]
+shape = SubResource("RectangleShape2D_nswqg")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=617401719]
+target_position = Vector2(0, 16)

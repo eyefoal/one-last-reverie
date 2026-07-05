@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://bigr4kk0fgl8r"]
 
 [ext_resource type="Script" uid="uid://bdmxfkocr4i08" path="res://indev/entities/lofi/dev_lofi.gd" id="1_8lx6r"]
+[ext_resource type="PackedScene" uid="uid://camresqrntdsc" path="res://indev/toys/bullet.tscn" id="2_ix3kf"]
 [ext_resource type="Texture2D" uid="uid://boy5aoewnoaae" path="res://indev/entities/lofi/32gradient.tres" id="3_a3vhr"]
 [ext_resource type="Texture2D" uid="uid://ccufhl3tre686" path="res://indev/entities/lofi/loafsheet.png" id="4_1ehcx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nnaav"]
-radius = 4.0
+radius = 5.0990195
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8lx6r"]
 
@@ -250,22 +251,31 @@ animation = &"idle_up"
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_bkok8"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_a3vhr")
 blend_point_0/pos = Vector2(0, -1)
+blend_point_0/name = &"0"
 blend_point_1/node = SubResource("AnimationNodeAnimation_1ehcx")
 blend_point_1/pos = Vector2(-1, -1)
+blend_point_1/name = &"1"
 blend_point_2/node = SubResource("AnimationNodeAnimation_nnaav")
 blend_point_2/pos = Vector2(-1, 0)
+blend_point_2/name = &"2"
 blend_point_3/node = SubResource("AnimationNodeAnimation_cslix")
 blend_point_3/pos = Vector2(0, 0)
+blend_point_3/name = &"3"
 blend_point_4/node = SubResource("AnimationNodeAnimation_rxkru")
 blend_point_4/pos = Vector2(1, 0)
+blend_point_4/name = &"4"
 blend_point_5/node = SubResource("AnimationNodeAnimation_s82rv")
 blend_point_5/pos = Vector2(0, 1)
+blend_point_5/name = &"5"
 blend_point_6/node = SubResource("AnimationNodeAnimation_qwprc")
 blend_point_6/pos = Vector2(-1, 1)
+blend_point_6/name = &"6"
 blend_point_7/node = SubResource("AnimationNodeAnimation_ss6c7")
 blend_point_7/pos = Vector2(1, 1)
+blend_point_7/name = &"7"
 blend_point_8/node = SubResource("AnimationNodeAnimation_bto7o")
 blend_point_8/pos = Vector2(1, -1)
+blend_point_8/name = &"8"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_01gi1"]
 animation = &"idle_down"
@@ -300,24 +310,34 @@ animation = &"walk_left"
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_7c8x1"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_01gi1")
 blend_point_0/pos = Vector2(0, 0)
+blend_point_0/name = &"0"
 blend_point_1/node = SubResource("AnimationNodeAnimation_l2gc4")
 blend_point_1/pos = Vector2(0, -1)
+blend_point_1/name = &"1"
 blend_point_2/node = SubResource("AnimationNodeAnimation_atfdc")
 blend_point_2/pos = Vector2(0, -1)
+blend_point_2/name = &"2"
 blend_point_3/node = SubResource("AnimationNodeAnimation_qbo6g")
 blend_point_3/pos = Vector2(-1, 0)
+blend_point_3/name = &"3"
 blend_point_4/node = SubResource("AnimationNodeAnimation_4ox3u")
 blend_point_4/pos = Vector2(1, 0)
+blend_point_4/name = &"4"
 blend_point_5/node = SubResource("AnimationNodeAnimation_xyb00")
 blend_point_5/pos = Vector2(0, 1)
+blend_point_5/name = &"5"
 blend_point_6/node = SubResource("AnimationNodeAnimation_bk0qj")
 blend_point_6/pos = Vector2(1, 1)
+blend_point_6/name = &"6"
 blend_point_7/node = SubResource("AnimationNodeAnimation_kom8n")
 blend_point_7/pos = Vector2(1, -1)
+blend_point_7/name = &"7"
 blend_point_8/node = SubResource("AnimationNodeAnimation_oojde")
 blend_point_8/pos = Vector2(-1, -1)
+blend_point_8/name = &"8"
 blend_point_9/node = SubResource("AnimationNodeAnimation_guat6")
 blend_point_9/pos = Vector2(-1, 1)
+blend_point_9/name = &"9"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_a3vhr"]
 advance_mode = 2
@@ -331,43 +351,59 @@ states/Walk/node = SubResource("AnimationNodeBlendSpace2D_7c8x1")
 states/Walk/position = Vector2(557, 100)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_a3vhr"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_1ehcx")]
 
-[node name="DevLofi" type="CharacterBody2D" unique_id=1286364634 node_paths=PackedStringArray("tree") groups=["Player"]]
+[node name="DevLofi" type="CharacterBody2D" unique_id=1286364634 node_paths=PackedStringArray("anim_player", "tree") groups=["Player"]]
 motion_mode = 1
 script = ExtResource("1_8lx6r")
-tree = NodePath("CheckDetection/AnimationPlayer/AnimationTree")
+anim_player = NodePath("AnimationPlayer")
+tree = NodePath("AnimationPlayer/AnimationTree")
+walk_speed = 25.5
+sprint_speed = 50.5
+current_weapon = ExtResource("2_ix3kf")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=561724238]
+z_index = 4
+y_sort_enabled = true
+color = Color(0.88715106, 0.8528852, 0, 1)
+energy = 0.5
+shadow_enabled = true
+texture = ExtResource("3_a3vhr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1750374186]
+z_index = 5
 texture = ExtResource("4_1ehcx")
 hframes = 8
 frame = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2059547862]
-position = Vector2(0, 4)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=2059547862]
+position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_nnaav")
 
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=561724238]
-position = Vector2(0, 2)
-color = Color(0.88715106, 0.8528852, 0, 1)
-texture = ExtResource("3_a3vhr")
-
 [node name="CheckDetection" type="Area2D" parent="." unique_id=1879264087]
-collision_layer = 0
+collision_layer = 128
 collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CheckDetection" unique_id=1487354071]
 shape = SubResource("CircleShape2D_8lx6r")
 debug_color = Color(0.7181799, 0.3872529, 0.7398932, 0.41960785)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CheckDetection" unique_id=951527851]
-root_node = NodePath("../..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=951527851]
 libraries/ = SubResource("AnimationLibrary_01gi1")
 autoplay = &"idle_down"
 
-[node name="AnimationTree" type="AnimationTree" parent="CheckDetection/AnimationPlayer" unique_id=228031646]
-root_node = NodePath("../../..")
+[node name="AnimationTree" type="AnimationTree" parent="AnimationPlayer" unique_id=228031646]
+root_node = NodePath("../..")
 tree_root = SubResource("AnimationNodeStateMachine_a3vhr")
 anim_player = NodePath("..")
 parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(0, 0)
 
+[node name="WeaponReload" type="Timer" parent="." unique_id=455765420]
+wait_time = 0.25
+one_shot = true
+
+[node name="PushTimer" type="Timer" parent="." unique_id=1318254546]
+wait_time = 0.8
+
 [connection signal="area_entered" from="CheckDetection" to="." method="_on_check_detection_area_entered"]
+[connection signal="timeout" from="WeaponReload" to="." method="_on_weapon_reload_timeout"]
+[connection signal="timeout" from="PushTimer" to="." method="_on_push_timer_timeout"]

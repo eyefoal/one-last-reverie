@@ -2,30 +2,63 @@
 
 [ext_resource type="Script" uid="uid://c5gh5yjx314jo" path="res://content/splish/dev/shark/shark.gd" id="1_von82"]
 [ext_resource type="Texture2D" uid="uid://c4ofep2c6lmju" path="res://icon.svg" id="2_jqws6"]
+[ext_resource type="Script" uid="uid://bwi1qgfapsc3q" path="res://systems/components/hitbox.gd" id="3_jqws6"]
+[ext_resource type="Texture2D" uid="uid://b0s5hgwi1y8sk" path="res://indev/resources/tilesets/leanfi.png" id="4_trknx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kym45"]
-size = Vector2(130, 14)
+size = Vector2(24, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nswqg"]
+size = Vector2(50, 7.333333)
 
 [node name="Shark" type="CharacterBody2D" unique_id=1461274065]
 scale = Vector2(3, 3)
+collision_layer = 0
+collision_mask = 0
 motion_mode = 1
 script = ExtResource("1_von82")
+SPEED = 480.5
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=514181083]
+visible = false
+position = Vector2(-64, -0.5103328)
 scale = Vector2(1, 0.109375)
 texture = ExtResource("2_jqws6")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=200651761]
-position = Vector2(-2.3841858e-07, -14)
+visible = false
+position = Vector2(-64, -14.510333)
 rotation = -0.5569069
 scale = Vector2(0.390625, 0.109375)
 texture = ExtResource("2_jqws6")
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1901785480]
-position = Vector2(1.0000019, -7)
+visible = false
+position = Vector2(-63, -7.510332)
 rotation = -0.053107172
 scale = Vector2(0.3935188, 0.119245924)
 texture = ExtResource("2_jqws6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2118618890]
+position = Vector2(-41.000004, 1.3333321)
 shape = SubResource("RectangleShape2D_kym45")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1765647960]
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1350941419]
+script = ExtResource("3_jqws6")
+metadata/_custom_type_script = "uid://bwi1qgfapsc3q"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1091061633]
+position = Vector2(-30.666668, 2.6666667)
+shape = SubResource("RectangleShape2D_nswqg")
+debug_color = Color(0.92358196, 0.24035683, 0.35711023, 0.41960785)
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1498714314]
+position = Vector2(-30.333334, -1.6666667)
+texture = ExtResource("4_trknx")
+hframes = 2
+vframes = 4
+frame = 7
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

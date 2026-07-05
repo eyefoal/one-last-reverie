@@ -1,0 +1,33 @@
+~ start
+Erm. Is this your first time playing?
+- Yes
+	=> questions
+- No
+	if Main.global_state == "Act 0"
+		Erm. It literally is. I'm checking the global state right now.
+		do Main.change_state("Act 0.1")
+		do Main.dev_print()
+		So do you need my assistance? 
+		- Yes
+			
+			=> questions
+		- No 
+			It's always ok to ask for help.
+		
+	else:
+		Oki, just making sure.
+=> END
+
+~ questions
+How may I assist you?	
+- Where are we?
+	We are in [b] The DevRooms.
+	=> questions
+- What should I do?
+	As my late friend Charlie would say, "Frolic around and find out".
+	Check things that catch your eye. You never know what collection of pixels can lead you to the correct path.
+	=> questions
+- Something is wrong...
+	Of course something is wrong. You're in a dream, silly!
+- Nevermind, no questions. Don't assist me.
+	You've made me waste precious lip moisture for this.

@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene format=4 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" uid="uid://d1wt4ma6055l8" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="FontFile" uid="uid://cc5ys13inmio4" path="res://graphics/fonts/earthbound-menu-extended.otf" id="2_nlsx6"]
+[ext_resource type="FontFile" uid="uid://cc5ys13inmio4" path="res://indev/graphics/fonts/earthbound-menu-extended.otf" id="2_nlsx6"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -100,7 +100,14 @@ _data = {
 &"progress": SubResource("Animation_qkmqt")
 }
 
-[node name="ExampleBalloon" type="CanvasLayer" unique_id=1434168376]
+[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_nlsx6"]
+data = PackedByteArray("cW9hZgAAChsBAKxEChsEKAAAAAAAAAAAAAAAAOAAQAA9ow/uyD0BQkBJVhIaJjILOJyswNg6tIlCUSrHK9QA0zQaI+bQHzRaMXMvVFfMEAEwSCZUCxOt4zaRLzLS+DIIMkAj6peCoXMxcyrqHHuAAEIIIKsJKZlnTMphG7qeEEg2iQRY3HOkWkBTKaJVjATFPIsTidK7oFEyzmZ4TLPACTBBABu8b1ReO3EouMXXdEAw00yJ4QvqrkJKYAL3EqBBJogAH7pL7742rmF8zcZ0CCKYJJ31J3c3ME7yiEsQeEFASmACwrCwiEaLRRaIDTTRMAkEifVMwVNESrGmAUw4wDYBAJX1TMYDREXVXUAOVEAyQCTu8fhYXj4S+b3j3V1RMEgEpvcIvUU8SLAXqF8zujNzBCpnhnnyP6nUkRhifMEwSAQDd0AKikDAKb1RF3iqNgfE73eBmFkzqJ0l0m9UGkJBBALljcLRN7y6ofLpXUgkQQSWN9S99kssbhVQYM+YNgEEWL6lLjc98fmZ8Wl95EZAJBn3jBQ+NtGeNXfMz75CQWgXLKiSCiI73yfy3613MSgncy6gnUE2kTPCZ8WRLD+PydjlCNzINCoqooXUo3A+pTLPvAzPizIjD3Qn3QE5PfGyy7oo3eAyvABQgPNzdEqcqcbRIKsYNiEtIMkQkgkxLvKNygDdSiK7wX1C+6QAMfD4/Mkhyxkw8wyISTugCTI3I3Tz+HxIQFpVKhMK7oo2V8SbAzvcSUJlRVlQcYaBMElTpoEXGgA0bvDdQimxuCQKaYJLD3y4MmfEzywyvfMwGiQAR8rPCDC+qIuqcbl1QgJkEgOVNEkyJ9U5Y0yRvDI+BIHwH3jCNzxgAUboG64+dWju1PLAyDJ3SYM+JIJ3NTpWA3Nyp588vqABd82vlz1n1O733juqNVWEhiVJkEQ/rPvh9dzqmjuNCIRu6jbzNfWWWWfOwkhFUCLmxKiCCT1e6n1lOpABNwVTz5fdbhc81YPj8fiwSTCsHhE4lhIJMB6mUHcAgAgxZRugbvqNwDKdwdzT+DBnNKz4knc75ggyCCCNyiCmhzzTlABF3zVTNEgBokghgh4+c/gwHud8fiaaaJAAIA8iP6iUAECxz6gs6U0SGt6RvUTTABIJCaYKMmwAg2Ap3GxGiGmACBYLGT3G4B3IO73EOofMEkEiWfc98fgbAbF450ljIInQKZTTOWN7qcbzqfc4PmD8HuRu9T3Tlgs+sFlOP6kHdAm4j5c5c7uJZZZ8fjPxNhIBO5EoOdSyymNOdTo92twQCAbE7jJsudzu8NzNOA/Ehpgg7tE9zuDuNzunqTI3AJRIBA+IMiwrwD4mwEg/gwQQ0SUwdzBBEpB3AJEbGApogAgAEAEx8SmAfgSCQB5BJJIJJBJBIgghokZ0gEgMOiAAAAAAAA==")
+format = 3
+mix_rate = 32800
+stereo = true
+
+[node name="MyBalloon" type="CanvasLayer" unique_id=1434168376]
+process_mode = 3
 layer = 100
 script = ExtResource("1_36de5")
 
@@ -114,85 +121,103 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_qq3yp")
 
-[node name="MarginContainer" type="MarginContainer" parent="Balloon" unique_id=1011109179]
+[node name="DialoguePanel" type="MarginContainer" parent="Balloon" unique_id=1011109179]
+custom_maximum_size = Vector2(360, 128)
+propagate_maximum_size = false
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = -1
+anchor_left = 0.572
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 11.0
-offset_top = -174.0
-offset_right = -12.0
-offset_bottom = -3.0
-grow_horizontal = 2
-grow_vertical = 0
+anchor_bottom = 0.36100003
+offset_left = -0.08001709
+offset_bottom = 0.039993286
+grow_horizontal = 0
 
-[node name="PanelContainer" type="PanelContainer" parent="Balloon/MarginContainer" unique_id=810051587]
+[node name="PanelContainer" type="PanelContainer" parent="Balloon/DialoguePanel" unique_id=810051587]
 clip_children = 2
 layout_mode = 2
 mouse_filter = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/PanelContainer" unique_id=1030936092]
+[node name="MarginContainer" type="MarginContainer" parent="Balloon/DialoguePanel/PanelContainer" unique_id=1030936092]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer" unique_id=1428277592]
+[node name="HBoxContainer" type="HBoxContainer" parent="Balloon/DialoguePanel/PanelContainer/MarginContainer" unique_id=1428277592]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1624289611]
+[node name="VBoxContainer" type="VBoxContainer" parent="Balloon/DialoguePanel/PanelContainer/MarginContainer/HBoxContainer" unique_id=1624289611]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=507199029]
+[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/DialoguePanel/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=507199029]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
 theme_override_fonts/normal_font = ExtResource("2_nlsx6")
+theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
+theme_override_font_sizes/bold_italics_font_size = 16
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/mono_font_size = 16
 bbcode_enabled = true
 text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1225160028 instance=ExtResource("2_a8ve6")]
+[node name="DialogueLabel" parent="Balloon/DialoguePanel/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1225160028 instance=ExtResource("2_a8ve6")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/normal_font = ExtResource("2_nlsx6")
+theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
+theme_override_font_sizes/bold_italics_font_size = 16
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/mono_font_size = 16
 text = "Dialogue..."
+skip_action = &"b"
+seconds_per_step = 0.042
+seconds_per_pause_step = 0.42
 
-[node name="Control" type="Control" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=1162966119]
+[node name="Control" type="Control" parent="Balloon/DialoguePanel/PanelContainer/MarginContainer/HBoxContainer" unique_id=1162966119]
 custom_minimum_size = Vector2(20, 10)
 layout_mode = 2
 size_flags_vertical = 8
 
-[node name="Progress" type="Polygon2D" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Control" unique_id=821575988]
+[node name="Progress" type="Polygon2D" parent="Balloon/DialoguePanel/PanelContainer/MarginContainer/HBoxContainer/Control" unique_id=821575988]
 unique_name_in_owner = true
+color = Color(1, 0.9764706, 0.13333334, 1)
+antialiased = true
 polygon = PackedVector2Array(0, 0, 10, 10, 20, 0)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Control" unique_id=452325722]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Balloon/DialoguePanel/PanelContainer/MarginContainer/HBoxContainer/Control" unique_id=452325722]
 libraries/ = SubResource("AnimationLibrary_1337t")
 autoplay = &"progress"
 
-[node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" unique_id=966297223 node_paths=PackedStringArray("response_template")]
+[node name="MarginContainer" type="MarginContainer" parent="Balloon" unique_id=1665437303]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -33.0
+offset_bottom = 33.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="ResponsesMenu" type="VBoxContainer" parent="Balloon/MarginContainer" unique_id=966297223 node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(20, 20)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.38300002
-anchor_top = 0.45000002
-anchor_right = 0.61700004
-anchor_bottom = 0.55
-offset_left = -0.120010376
-offset_right = 0.1199646
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 10
 alignment = 1
 script = ExtResource("3_72ixx")
 response_template = NodePath("ResponseExample")
 
-[node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=914537232]
+[node name="ResponseExample" type="Button" parent="Balloon/MarginContainer/ResponsesMenu" unique_id=914537232]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_nlsx6")
@@ -201,6 +226,11 @@ autowrap_trim_flags = 192
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1116280512]
 unique_name_in_owner = true
+stream = SubResource("AudioStreamWAV_nlsx6")
+volume_db = -18.0
+bus = &"Effects"
+playback_type = 1
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
-[connection signal="response_selected" from="Balloon/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
+[connection signal="spoke" from="Balloon/DialoguePanel/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/DialogueLabel" to="." method="_on_dialogue_label_spoke"]
+[connection signal="response_selected" from="Balloon/MarginContainer/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

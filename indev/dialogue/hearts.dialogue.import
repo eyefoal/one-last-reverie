@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dyqhw3jxlygq8"
+path="res://.godot/imported/hearts.dialogue-23ace21ad79ef2ca5014f2b840a54dc4.tres"
+
+[deps]
+
+source_file="res://indev/dialogue/hearts.dialogue"
+dest_files=["res://.godot/imported/hearts.dialogue-23ace21ad79ef2ca5014f2b840a54dc4.tres"]
+
+[params]
+
+defaults=true

@@ -2,6 +2,8 @@ extends Node
 class_name Spawner
 
 @export var spawnables: Array[PackedScene]
+@export var max_spawn_height := 360
+@export var min_spawn_height := 50
 @onready var marker: Marker2D = $Marker2D
 
 func _ready() -> void:
@@ -15,5 +17,5 @@ func _on_timer_timeout() -> void:
 	
 	random_platform_instance.position = marker.position
 	
-	var random_y_position: float = randf_range(50, 360)
+	var random_y_position: float = randf_range(min_spawn_height, max_spawn_height)
 	random_platform_instance.position.y = random_y_position

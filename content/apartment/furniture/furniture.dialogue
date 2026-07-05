@@ -1,0 +1,73 @@
+~ start
+An unassuming bookcase.
+=> END
+
+~ bookcase
+What a huge bookcase. Each book is it's own story of pure dialogue text.
+If you'd like to not read anything, now's the time to choose.
+- Select a book
+	Which book?
+	- Book One
+		=> book01
+	- Book Two
+		=> book02
+
+~ book01
+I'm book number one! Yippie. 
+Oh, I guess this is the part where I exposition dump.
+It's easier to just tell you that everything is sentient.
+Make of that what you will.
+=> END
+
+~ book02
+"Oh The Places You Won't Go" by De Veloper
+Want to read?
+- Sure
+	bob.
+- Read blurb.
+	A short read about the game design of OneLastReverie. Could've been a zine.
+	Will you read it?
+	- Yes
+	- No
+	=> END
+
+
+~ devlaptop
+Beep boop!
+Welcome to MilkOS.
+
+=> devlapque
+
+~ devlapque
+Please select an application.
+- Splish
+	=> splish
+	~ splish
+	What do you wish to do?
+	- Play Game
+		do Main.switch_level("uid://bj5gle77lgfma")
+	- Read manual
+		Use arrow keys or WASD to move. Bumping into sharks is an instant death. (shark fins are safe to pass through)
+		Collect falling treasure to further increase your score.
+		Beat Maxine's high score of 420.
+		=> splish
+	- Nothing.
+	=> devlapque
+	
+- Read diary
+	Dear diary,
+	To be or not to be. 
+	That is the question.
+	=> END
+- Save Game
+	do SaveLoad._save()
+	do FadeTransition.fade(1, 1)
+	Saving...[wait=1]
+	do Main.get_tree().paused = true
+	By the power of laptop heat, the game is saved.
+	do FadeTransition.fade(0, 2)
+	do Main.get_tree().paused = false
+	
+	=> END
+- Close laptop.
+	=> END

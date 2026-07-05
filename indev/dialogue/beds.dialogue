@@ -1,0 +1,37 @@
+~ start
+Wow, what a comfy bed!
+Its texture and softness feel like it could take you to another dimension.
+...
+Would you like to rest here?
+- Save the game and continue.
+	do SaveLoad._save()
+	do FadeTransition.fade(1, 1)
+	Saving......[wait=1]
+	do Main.get_tree().paused = true
+	Save complete.
+	do FadeTransition.fade(0, 2)
+	do Main.get_tree().paused = false
+	Good luck on your adventure!
+	Fold the sheets on your way out.
+- Wake up?
+	[rainbow] WARNING![/rainbow]
+	When you wake up, you won't be able to return here for some time. In the waking world, you will find a way to return.
+	I trust that you will know how to dream again.
+	So do you wish to wake from this Reverie?
+	- I want to eep.
+		do SaveLoad._save()
+		do FadeTransition.fade(1, 1)
+		Your eyes grow heavy. 
+		...
+		By the power of reversing REM sleep, the game is saved.
+		do Main.get_tree().paused = true
+		Save complete.
+		do Main.switch_level("res://indev/rooms/dev_room_05.tscn")
+		do FadeTransition.fade(0, 2)
+		do Main.get_tree().paused = false
+	- I'm not tired.
+		One day you will be. And you will be groggy, overencumbered and crawling back to me.
+- No
+	You work hard! But don't work yourself too hard.
+	
+=> END
