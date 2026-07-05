@@ -9,6 +9,7 @@ var contents_to_save : Dictionary = {
 	"current_act" : "Act 0",
 	"current_player" : "",
 	"splish_hi" : 64,
+	"bob" : "bob"
 }
 
 
