@@ -102,7 +102,7 @@ offset_top = 0.039978027
 grow_horizontal = 2
 grow_vertical = 0
 bbcode_enabled = true
-text = "[rainbow]version: alpha 0.1"
+text = "[rainbow]version: alpha 0.1.0.1.bob"
 fit_content = true
 
 [connection signal="pressed" from="Control/MainButtons/PanelContainer/VBoxContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
