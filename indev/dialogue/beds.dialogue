@@ -13,23 +13,25 @@ Would you like to rest here?
 	do Main.get_tree().paused = false
 	Good luck on your adventure!
 	Fold the sheets on your way out.
-- Wake up.
-	if Main.global_state == "Act 0"
-		[rainbow] A voice reaches you from afar...
-		You can return to this world at anytime by sleeping at rest spots. Find them in the waking world to travel into Dream Domains.
-		If you need food you can find a BobTart in the cabinet.
-		I shall return to my slumber. [/rainbow]
-		
+- Wake up?
+	[rainbow] WARNING![/rainbow]
+	When you wake up, you won't be able to return here for some time. In the waking world, you will find a way to return.
+	I trust that you will know how to dream again.
+	So do you wish to wake from this Reverie?
+	- I want to eep.
 		do SaveLoad._save()
 		do FadeTransition.fade(1, 1)
-		Saving......
+		Your eyes grow heavy. 
+		...
+		By the power of reversing REM sleep, the game is saved.
 		do Main.get_tree().paused = true
 		Save complete.
 		do Main.switch_level("res://indev/rooms/dev_room_05.tscn")
 		do FadeTransition.fade(0, 2)
 		do Main.get_tree().paused = false
-		
+	- I'm not tired.
+		One day you will be. And you will be groggy, overencumbered and crawling back to me.
 - No
-	ok. have a good one.
+	You work hard! But don't work yourself too hard.
 	
 => END

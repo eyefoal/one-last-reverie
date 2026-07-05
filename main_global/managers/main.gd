@@ -6,6 +6,7 @@ var player_pos : Vector2
 var splish_high_score : int
 
 func _ready() -> void:
+	_load()
 	global_state = "Act 0"
 	dev_print()
 	
@@ -23,6 +24,7 @@ func _save() -> void:
 
 func _load() -> void:
 	print("underload")
+	splish_high_score = SaveLoad.contents_to_save.splish_hi
 	
 
 func change_state(to_state: String):

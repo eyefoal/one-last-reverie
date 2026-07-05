@@ -8,11 +8,11 @@ var contents_to_save : Dictionary = {
 	"player_pos" : Vector2(0.0, 0.0),
 	"current_act" : "Act 0",
 	"current_player" : "",
-	"splish_hi" : 128,
+	"splish_hi" : 64,
 }
 
 
-func _save():
+func _save(): 
 	var file = FileAccess.open(save_location, FileAccess.WRITE)
 	file.store_var(contents_to_save.duplicate())
 	file.close()
