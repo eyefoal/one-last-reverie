@@ -4,6 +4,7 @@ class_name SplishManager
 @onready var label: Label = $CanvasLayer/Panel/HBoxContainer/ScoreLabel
 @onready var hi_score_label: RichTextLabel = $CanvasLayer/Panel/HBoxContainer/HiScoreLabel
 
+
 var score : int
 var hi_score : int #Maxine's high score
 
