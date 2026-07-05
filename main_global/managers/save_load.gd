@@ -8,7 +8,7 @@ var contents_to_save : Dictionary = {
 	"player_pos" : Vector2(0.0, 0.0),
 	"current_act" : "Act 0",
 	"current_player" : "",
-	"splish_hi" : 0,
+	"splish_hi" : 128,
 }
 
 

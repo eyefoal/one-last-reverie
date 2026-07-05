@@ -4,17 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://b0s5hgwi1y8sk" path="res://indev/resources/tilesets/leanfi.png" id="2_p7a2n"]
 [ext_resource type="Script" uid="uid://bwnishes82xne" path="res://systems/components/move_top.gd" id="3_p7a2n"]
 [ext_resource type="Script" uid="uid://ddfsqad7oka8w" path="res://systems/components/hurtbox.gd" id="3_rftqg"]
-[ext_resource type="AudioStream" uid="uid://dfkumc5if1xvp" path="res://explosion.wav" id="5_y50u2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m3cb0"]
 radius = 17.029387
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nswqg"]
-radius = 9.0
+radius = 6.0
 
-[node name="PinkThing" type="CharacterBody2D" unique_id=1756094662 node_paths=PackedStringArray("audio") groups=["Player"]]
+[node name="PinkThing" type="CharacterBody2D" unique_id=1756094662 groups=["Player"]]
 script = ExtResource("1_p7a2n")
-audio = NodePath("AudioStreamPlayer2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1659643043]
 texture = ExtResource("2_p7a2n")
@@ -29,6 +27,7 @@ shape = SubResource("CircleShape2D_m3cb0")
 [node name="MoveComponentTop" type="Node" parent="." unique_id=1250674649 node_paths=PackedStringArray("body")]
 script = ExtResource("3_p7a2n")
 body = NodePath("..")
+quirky = true
 metadata/_custom_type_script = "uid://bwnishes82xne"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=222874020]
@@ -44,10 +43,6 @@ metadata/_custom_type_script = "uid://ddfsqad7oka8w"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1192034063]
 shape = SubResource("CircleShape2D_nswqg")
 debug_color = Color(0.3957528, 0.59781045, 0.35476863, 0.41960785)
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2126986887]
-stream = ExtResource("5_y50u2")
-bus = &"Effects"
 
 [connection signal="area_entered" from="HurtBox" to="HurtBox" method="_on_area_entered"]
 [connection signal="hit" from="HurtBox" to="." method="_on_hurt_box_hit"]

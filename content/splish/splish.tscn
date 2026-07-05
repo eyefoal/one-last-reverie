@@ -110,5 +110,6 @@ shape = SubResource("WorldBoundaryShape2D_6duvp")
 
 [connection signal="timeout" from="VSpawner/Timer" to="VSpawner" method="_on_timer_timeout"]
 [connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]
+[connection signal="died" from="PinkThing" to="." method="_on_pink_thing_died"]
 
 [editable path="PinkThing"]
